@@ -329,14 +329,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  jumpForce: 1
-  jumpAirTime: 2
+  jumpForce: 3
+  jumpAirTime: 0.4
+  groundDifference: -0.84
+  checkSize: 0.49
+  groundLayer: 6
+  isOnGround: 1
+  isJumping: 0
+  canJump: 0
+  currentAirJumpTime: 0
   inputs: {fileID: 0}
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   movement: 0
   jumpPressed: 0
-  currentAirJumpTime: 0
   attackPressed: 0
   interactPressed: 0
   throwPressed: 0
@@ -875,7 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742967533}
   m_Layer: 0
-  m_Name: -BG-1-
+  m_Name: -BG0-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,8 +1167,8 @@ GameObject:
   - component: {fileID: 1012903138}
   - component: {fileID: 1012903139}
   - component: {fileID: 1012903140}
-  m_Layer: 0
-  m_Name: Square
+  m_Layer: 6
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,8 +1379,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043277427}
-  m_Layer: 0
-  m_Name: -BG1-
+  m_Layer: 6
+  m_Name: -BG1 - Player Ground -
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
