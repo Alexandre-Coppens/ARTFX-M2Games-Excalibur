@@ -20,6 +20,10 @@ public class Player_Behaviour : MonoBehaviour
     [Tooltip("To detect which layer is the Ground")]
     [SerializeField] private int groundLayer = 6;
     [Header("Attack")]
+    [Tooltip("If the player has the sword")]
+    [SerializeField] private bool hasSword = true;
+    [Tooltip("The Sword GameObject")]
+    [SerializeField] private GameObject sword;
     [Tooltip("Time taken for an attack")]
     [SerializeField] private float attackTime = 0.2f;
     [Tooltip("Time before combo reset (if we keep it)")]
@@ -28,6 +32,11 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private Vector2 attackDifference = Vector2.zero;
     [Tooltip("Changes the size of the attack collider")]
     [SerializeField] private Vector2 attackSize = Vector2.one;
+    [Tooltip("The strength used to throw the sword")]
+    [SerializeField] private Vector2 swordSpeed = Vector2.one;
+    [Header("Interaction")]
+    [Tooltip("The radius of the interaction range")]
+    [SerializeField] private float interactionRadius = 0.2f;
 
     [Header("Debug Jump")]
     private bool isOnGround = true;
@@ -40,6 +49,10 @@ public class Player_Behaviour : MonoBehaviour
     private float currentAttackTime;
     private int currentAttack;
     private float currentResetAttackTime;
+    private bool isAttackFlipped = false;
+
+    [Header("Debug Interaction")]
+    private bool hasInteracted = false;
 
     [Header("Debug Components")]
     private Player_Inputs inputs;
@@ -71,6 +84,8 @@ public class Player_Behaviour : MonoBehaviour
         CheckGround();
         Movements();
         Attack();
+        ThrowSword();
+        Interaction();
         Animations();
     }
 
@@ -100,7 +115,16 @@ public class Player_Behaviour : MonoBehaviour
 
     private void Movements()
     {
-        spriteRenderer.flipX = movement > 0 ? false : true;
+        if (currentAttackTime == 0)
+        {
+            if (movement > 0.2f) { spriteRenderer.flipX = false; }
+            else if (movement < -0.2f) { spriteRenderer.flipX = true; }
+        }
+        else
+        {
+            spriteRenderer.flipX = isAttackFlipped;
+        }
+        attackDifference = new Vector3(Mathf.Abs(attackDifference.x) * (isAttackFlipped ? -1 : 1), attackDifference.y);
         rb.velocity = new Vector2 (movement * movementSpeed, rb.velocity.y);
         Jump();
     }
@@ -130,21 +154,72 @@ public class Player_Behaviour : MonoBehaviour
 
     private void Attack() 
     {
-        if (attackPressed && !hasAttacked)
+        if (attackPressed && !hasAttacked && hasSword)
         {
-            if(currentAttackTime == 0)
+            hasAttacked = true;
+            if (currentAttackTime == 0)
             {
+                isAttackFlipped = spriteRenderer.flipX;
                 currentAttackTime += Time.deltaTime;
+                if (isOnGround) { animator.SetInteger("nbrAtt", 1); }
+                else { animator.SetInteger("nbrAtt", 0); }
+                animator.SetTrigger("Attack");
             }
-            else if(currentAttackTime < attackTime)
-            {
-                currentAttackTime += Time.deltaTime;
-            }
-            else { currentAttackTime = 0; }
         }
         else if (!attackPressed)
         {
             hasAttacked = false;
+        }
+
+        if (currentAttackTime < attackTime && currentAttackTime != 0)
+        {
+            currentAttackTime += Time.deltaTime;
+        }
+        else { currentAttackTime = 0; }
+    }
+
+    private void ThrowSword()
+    {
+        if(hasSword && throwPressed)
+        {
+            hasSword = false;
+            sword.transform.parent = null;
+            sword.GetComponent<Rigidbody2D>().simulated = true;
+            sword.GetComponent<Rigidbody2D>().velocity = swordSpeed;
+        }
+    }
+
+    private void Interaction()
+    {
+        if (interactPressed && !hasInteracted)
+        {
+            hasInteracted = true;
+            Collider2D[] allObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
+            Collider2D nearestInteractible = null;
+            foreach (Collider2D collider in allObjects)
+            {
+                Debug.Log("In Range: "+ collider.name + " / Tag: " + collider.tag);
+                if (collider.CompareTag("Interactible"))
+                {
+                    if(nearestInteractible == null)
+                    {
+                        nearestInteractible = collider;
+                    }
+                    else if(Vector3.Distance(transform.position, collider.transform.position) < Vector3.Distance(transform.position, nearestInteractible.transform.position))
+                    {
+                        nearestInteractible = collider;
+                    }
+                }
+            }
+            if(nearestInteractible != null)
+            {
+                nearestInteractible.gameObject.GetComponent<Interactible>().Interacted();
+                Debug.Log("Interacted with: " + nearestInteractible.name);
+            }
+        }
+        else if (!interactPressed)
+        {
+            hasInteracted = false;
         }
     }
 
@@ -159,7 +234,11 @@ public class Player_Behaviour : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position + new Vector3(0, groundDifference), checkSize);
-        if (attackTime > 0) 
+        Gizmos.color = Color.gray;
+        Gizmos.DrawWireSphere(transform.position, interactionRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, swordSpeed);
+        if (currentAttackTime > 0) 
         { 
             Gizmos.color = Color.red; 
             Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize); 
