@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_Behaviour : MonoBehaviour
 {
+    [HideInInspector] public static Player_Behaviour _instance;
+
     [Header("Variables")]
     [Tooltip("The player speed")]
     [SerializeField] private float movementSpeed = 3f;
@@ -21,7 +23,7 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private int groundLayer = 6;
     [Header("Attack")]
     [Tooltip("If the player has the sword")]
-    [SerializeField] private bool hasSword = true;
+    public bool hasSword = true;
     [Tooltip("The Sword GameObject")]
     [SerializeField] private GameObject sword;
     [Tooltip("Time taken for an attack")]
@@ -35,6 +37,8 @@ public class Player_Behaviour : MonoBehaviour
     [Tooltip("The strength used to throw the sword")]
     [SerializeField] private Vector2 swordSpeed = Vector2.one;
     [Header("Interaction")]
+    [Tooltip("The radius of the interaction range")]
+    public bool isInInteraction = false;
     [Tooltip("The radius of the interaction range")]
     [SerializeField] private float interactionRadius = 0.2f;
 
@@ -65,9 +69,12 @@ public class Player_Behaviour : MonoBehaviour
     private bool jumpPressed;
     private bool attackPressed;
     private bool interactPressed;
-    private bool throwPressed; 
+    private bool throwPressed;
 
-    
+    private void Awake()
+    {
+        _instance = this;
+    }
 
     void Start()
     {
@@ -82,10 +89,13 @@ public class Player_Behaviour : MonoBehaviour
     {
         GetInputs();
         CheckGround();
-        Movements();
-        Attack();
-        ThrowSword();
         Interaction();
+        if (!isInInteraction)
+        {
+            Movements();
+            Attack();
+            ThrowSword();
+        }
         Animations();
     }
 
@@ -184,8 +194,19 @@ public class Player_Behaviour : MonoBehaviour
         {
             hasSword = false;
             sword.transform.parent = null;
-            sword.GetComponent<Rigidbody2D>().simulated = true;
-            sword.GetComponent<Rigidbody2D>().velocity = swordSpeed;
+            Rigidbody2D swordRb = sword.GetComponent<Rigidbody2D>();
+            swordRb.simulated = true;
+            if (!spriteRenderer.flipX)
+            {
+                swordRb.angularVelocity = -600;
+                swordRb.velocity = swordSpeed;
+            }
+            else
+            {
+                swordRb.angularVelocity = 600;
+                swordRb.velocity = new Vector2(-swordSpeed.x, swordSpeed.y);
+            }
+            
         }
     }
 
