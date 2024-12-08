@@ -9,6 +9,10 @@ public class Player_Behaviour : MonoBehaviour
     [Header("Variables")]
     [Tooltip("The player speed")]
     [SerializeField] private float movementSpeed = 3f;
+    [Tooltip("The maximum of the player's life")]
+    [SerializeField] private int maxPlayerLife = 5;
+    [Tooltip("Current Player's life.")]
+    [SerializeField] private int playerLife = 5;
     [Tooltip("Player Y speed when he jumps")]
     [Header("Jump")]
     [SerializeField] private float jumpForce = 1f;
@@ -36,6 +40,8 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private Vector2 attackSize = Vector2.one;
     [Tooltip("The strength used to throw the sword")]
     [SerializeField] private Vector2 swordSpeed = Vector2.one;
+    [Tooltip("When the player is hit, it's the stun time before the player can move again")]
+    [SerializeField] private float stunTime = 0.2f
     [Header("Interaction")]
     [Tooltip("The radius of the interaction range")]
     public bool isInInteraction = false;
@@ -135,7 +141,7 @@ public class Player_Behaviour : MonoBehaviour
             spriteRenderer.flipX = isAttackFlipped;
         }
         attackDifference = new Vector3(Mathf.Abs(attackDifference.x) * (isAttackFlipped ? -1 : 1), attackDifference.y);
-        rb.velocity = new Vector2 (movement * movementSpeed, rb.velocity.y);
+        rb.position += new Vector2 (movement * movementSpeed, rb.velocity.y) * Time.deltaTime;
         Jump();
     }
 
@@ -249,6 +255,12 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetFloat("velX", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
+    }
+
+    public void GetHurt(Vector2 ejectForce)
+    {
+        playerLife -= 1;
+        rb.velocity = ejectForce;
     }
 
     private void OnDrawGizmosSelected()

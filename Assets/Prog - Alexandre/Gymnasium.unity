@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 70375287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.92, z: 0}
+  m_LocalPosition: {x: 0, y: -2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -398,6 +398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  maxPlayerLife: 5
+  playerLife: 5
   jumpForce: 3
   jumpAirTime: 0.4
   groundDifference: -0.8
@@ -410,6 +412,7 @@ MonoBehaviour:
   attackDifference: {x: 1.69, y: 0.34}
   attackSize: {x: 1.83, y: 1.69}
   swordSpeed: {x: 6, y: 4}
+  stunTime: 0.2
   isInInteraction: 0
   interactionRadius: 0.9
 --- !u!114 &70375292
@@ -890,7 +893,7 @@ Transform:
   m_GameObject: {fileID: 440197317}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.07, z: -10}
+  m_LocalPosition: {x: 0, y: -1.38, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4870,13 +4873,13 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.5500001
-  m_ScreenY: 0.35
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
   m_DeadZoneWidth: 0.247
   m_DeadZoneHeight: 0.3
   m_SoftZoneWidth: 0.8
   m_SoftZoneHeight: 0.8
-  m_BiasX: 0
+  m_BiasX: 0.01
   m_BiasY: 0
   m_CenterOnActivate: 1
 --- !u!114 &1909618213
@@ -5216,10 +5219,11 @@ MonoBehaviour:
   ennCheckSize: {x: 3.45, y: 1}
   ennWalkSpeed: 2
   ennWalkRange: {x: -4.24, y: 1.88}
-  attackTime: 0.2
-  attackDifference: {x: 0, y: 0}
+  attackTime: 0.5
+  hurtTime: 0.2
+  hitForce: {x: 6, y: 2}
+  attackDifference: {x: -1.21, y: 0}
   attackSize: {x: 1, y: 1}
-  swordSpeed: {x: 1, y: 1}
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
 --- !u!1 &2119912742
