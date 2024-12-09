@@ -75,12 +75,18 @@ public class Enemy : MonoBehaviour
 
     private void Roaming()
     {
-        if (spriteRenderer.flipX) { rb.velocity = new Vector2(ennWalkSpeed, 0); }
-        else { rb.velocity = new Vector2(-ennWalkSpeed, 0); }
+        if (spriteRenderer.flipX) { rb.velocity = new Vector2(ennWalkSpeed, rb.velocity.y); }
+        else { rb.velocity = new Vector2(-ennWalkSpeed, rb.velocity.y); }
+
+        if(rb.velocity == Vector2.zero) rb.velocity = new Vector2(0,0.1f);
+
+        RaycastHit2D hitL = Physics2D.Raycast(new Vector2(transform.position.x - transform.localScale.x * 0.5f - 0.05f, transform.position.y), Vector2.left, 0.3f);
+        RaycastHit2D hitR = Physics2D.Raycast(new Vector2(transform.position.x + transform.localScale.x * 0.5f + 0.05f, transform.position.y), Vector2.right, 0.3f);
 
         if (transform.position.x < ennWalkBoundaries.x) { spriteRenderer.flipX = true; }
         else if (transform.position.x > ennWalkBoundaries.y) { spriteRenderer.flipX = false; }
-
+        else if (hitL) { spriteRenderer.flipX = true; }
+        else if (hitR) { spriteRenderer.flipX = false; }
     }
 
     private void Attack()
@@ -167,6 +173,8 @@ public class Enemy : MonoBehaviour
 
         Gizmos.color = Color.gray;
         Gizmos.DrawWireCube(transform.position, ennCheckSize);
+        Gizmos.DrawLine(new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.05f, transform.position.y), new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.4f, transform.position.y));
+        Gizmos.DrawLine(new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.05f, transform.position.y), new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.4f, transform.position.y));
 
         if(currentAttackTime > 0)
         {
