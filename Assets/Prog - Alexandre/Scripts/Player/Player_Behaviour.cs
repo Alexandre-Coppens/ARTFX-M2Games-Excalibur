@@ -41,7 +41,7 @@ public class Player_Behaviour : MonoBehaviour
     [Tooltip("The strength used to throw the sword")]
     [SerializeField] private Vector2 swordSpeed = Vector2.one;
     [Tooltip("When the player is hit, it's the stun time before the player can move again")]
-    [SerializeField] private float stunTime = 0.2f
+    [SerializeField] private float stunTime = 0.2f;
     [Header("Interaction")]
     [Tooltip("The radius of the interaction range")]
     public bool isInInteraction = false;
@@ -261,6 +261,14 @@ public class Player_Behaviour : MonoBehaviour
     {
         playerLife -= 1;
         rb.velocity = ejectForce;
+        StartCoroutine("PlayerStun");
+    }
+
+    private IEnumerator PlayerStun()
+    {
+        isInInteraction = true;
+        yield return new WaitForSeconds(stunTime);
+        isInInteraction = false;
     }
 
     private void OnDrawGizmosSelected()
