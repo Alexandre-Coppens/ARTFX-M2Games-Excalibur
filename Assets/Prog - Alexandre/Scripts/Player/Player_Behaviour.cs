@@ -32,8 +32,8 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private GameObject sword;
     [Tooltip("Time taken for an attack")]
     [SerializeField] private float attackTime = 0.2f;
-    [Tooltip("Time before combo reset (if we keep it)")]
-    [SerializeField] private float attackResetTime = 0.5f;
+    [Tooltip("Time before the player can throw the sword")]
+    [SerializeField] private float attackThrowTime = 1.5f;
     [Tooltip("Move the position of the center of the attack collider")]
     [SerializeField] private Vector2 attackDifference = Vector2.zero;
     [Tooltip("Changes the size of the attack collider")]
@@ -60,6 +60,7 @@ public class Player_Behaviour : MonoBehaviour
     private int currentAttack;
     private float currentResetAttackTime;
     private bool isAttackFlipped = false;
+    private float attackPressTime;
 
     [Header("Debug Interaction")]
     private bool hasInteracted = false;
@@ -74,8 +75,6 @@ public class Player_Behaviour : MonoBehaviour
     private float movement;
     private bool jumpPressed;
     private bool attackPressed;
-    private bool interactPressed;
-    private bool throwPressed;
 
     private void Awake()
     {
@@ -95,12 +94,10 @@ public class Player_Behaviour : MonoBehaviour
     {
         GetInputs();
         CheckGround();
-        Interaction();
+        InteractionAttack();
         if (!isInInteraction)
         {
             Movements();
-            Attack();
-            ThrowSword();
         }
         Animations();
     }
@@ -110,8 +107,6 @@ public class Player_Behaviour : MonoBehaviour
         movement = inputs.movement;
         jumpPressed = inputs.jumpPressed;
         attackPressed = inputs.attackPressed;
-        interactPressed = inputs.interactionPressed;
-        throwPressed = inputs.throwPressed;
     }
 
     private void CheckGround()
@@ -168,35 +163,9 @@ public class Player_Behaviour : MonoBehaviour
         }
     }
 
-    private void Attack() 
-    {
-        if (attackPressed && !hasAttacked && hasSword)
-        {
-            hasAttacked = true;
-            if (currentAttackTime == 0)
-            {
-                isAttackFlipped = spriteRenderer.flipX;
-                currentAttackTime += Time.deltaTime;
-                if (isOnGround) { animator.SetInteger("nbrAtt", 1); }
-                else { animator.SetInteger("nbrAtt", 0); }
-                animator.SetTrigger("Attack");
-            }
-        }
-        else if (!attackPressed)
-        {
-            hasAttacked = false;
-        }
-
-        if (currentAttackTime < attackTime && currentAttackTime != 0)
-        {
-            currentAttackTime += Time.deltaTime;
-        }
-        else { currentAttackTime = 0; }
-    }
-
     private void ThrowSword()
     {
-        if(hasSword && throwPressed)
+        if(hasSword)
         {
             hasSword = false;
             sword.transform.parent = null;
@@ -216,38 +185,72 @@ public class Player_Behaviour : MonoBehaviour
         }
     }
 
-    private void Interaction()
+    private void InteractionAttack()
     {
-        if (interactPressed && !hasInteracted)
+        if (attackPressed)
         {
-            hasInteracted = true;
+            attackPressTime += Time.deltaTime;
+
+            if(hasAttacked) { return; }
+
             Collider2D[] allObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
             Collider2D nearestInteractible = null;
+            bool enemiesNear = false;
             foreach (Collider2D collider in allObjects)
             {
-                Debug.Log("In Range: "+ collider.name + " / Tag: " + collider.tag);
+                Debug.Log("In Range: " + collider.name + " / Tag: " + collider.tag);
                 if (collider.CompareTag("Interactible"))
                 {
-                    if(nearestInteractible == null)
+                    if (nearestInteractible == null)
                     {
                         nearestInteractible = collider;
                     }
-                    else if(Vector3.Distance(transform.position, collider.transform.position) < Vector3.Distance(transform.position, nearestInteractible.transform.position))
+                    else if (Vector3.Distance(transform.position, collider.transform.position) < Vector3.Distance(transform.position, nearestInteractible.transform.position))
                     {
                         nearestInteractible = collider;
                     }
+                    
+                }
+                else if (collider.CompareTag("Enemies"))
+                {
+                    enemiesNear = true;
                 }
             }
-            if(nearestInteractible != null)
+
+            if (nearestInteractible != null && !enemiesNear)
             {
+                hasAttacked = true;
                 nearestInteractible.gameObject.GetComponent<Interactible>().Interacted();
                 Debug.Log("Interacted with: " + nearestInteractible.name);
             }
+            else if (hasSword)
+            {
+                if (currentAttackTime == 0)
+                {
+                    hasAttacked = true;
+                    isAttackFlipped = spriteRenderer.flipX;
+                    currentAttackTime += Time.deltaTime;
+                    if (isOnGround) { animator.SetInteger("nbrAtt", 1); }
+                    else { animator.SetInteger("nbrAtt", 0); }
+                    animator.SetTrigger("Attack");
+                }
+            }
         }
-        else if (!interactPressed)
+        else
         {
-            hasInteracted = false;
+            if(attackPressTime > attackThrowTime)
+            {
+                ThrowSword();
+            }
+            attackPressTime = 0;
+            hasAttacked = false;
         }
+
+        if (currentAttackTime < attackTime && currentAttackTime != 0)
+        {
+            currentAttackTime += Time.deltaTime;
+        }
+        else { currentAttackTime = 0; }
     }
 
     private void Animations()
