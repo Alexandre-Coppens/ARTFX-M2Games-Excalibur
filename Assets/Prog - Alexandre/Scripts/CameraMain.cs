@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraMain : MonoBehaviour
@@ -15,6 +16,10 @@ public class CameraMain : MonoBehaviour
     [SerializeField] private float ySpeed = 2;
     [Tooltip("The part the player need to reach to move the camera up & down (x = down, y = up")]
     [SerializeField] private Vector2 blindYSpot;
+
+    [Header("Max Camera Spot")]
+    [Tooltip("The leftest & rightest points the camera can reach (x = left, y = right")]
+    [SerializeField] private Vector2 maxCameraX;
     [Tooltip("The lowest & highest points the camera can reach (x = down, y = up")]
     [SerializeField] private Vector2 maxCameraY;
 
@@ -40,34 +45,45 @@ public class CameraMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.x <= xStops[0])
+        if(player.transform.position.x > maxCameraX.x && player.transform.position.x < maxCameraX.y)
         {
-            transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+            if(xStops.Count > 0) 
+            {
+                if (player.transform.position.x <= xStops[0])
+                {
+                    transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+                }
+            }
+            else
+            {
+                transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+            }
+            
         }
 
-        Vector3 playerCamPos = mainCamera.WorldToScreenPoint(player.transform.position);
+        Vector3 playerCamPos = mainCamera.WorldToViewportPoint(player.transform.position);
         if(playerCamPos.y < blindYSpot.x && transform.position.y > maxCameraY.x) { transform.position -= new Vector3(0,ySpeed * Time.deltaTime); }
         if(playerCamPos.y > blindYSpot.y && transform.position.y < maxCameraY.y) { transform.position += new Vector3(0,ySpeed * Time.deltaTime); }
     }
 
-    //public void RemoveBlock()
-    //{
-    //    xStops.RemoveAt(0)
-    //}
+    public void RemoveBlock()
+    {
+        xStops.RemoveAt(0);
+    }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         foreach (float stop in xStops)
         {
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.yellow;
             Gizmos.DrawLine(new Vector3(stop, 10), new Vector3(stop, -10));
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.magenta;
             Gizmos.DrawLine(new Vector3(stop + xDifference, 10), new Vector3(stop + xDifference, -10));
         }
 
-        Vector2 blindSpotWorldX = mainCamera.ScreenToWorldPoint(new Vector3(0, 275 - blindYSpot.x,-10));
-        Vector2 blindSpotWorldY = mainCamera.ScreenToWorldPoint(new Vector3(0, 275 - blindYSpot.y,-10));
+        Vector2 blindSpotWorldX = mainCamera.ViewportToWorldPoint(new Vector3(0, blindYSpot.x, 10));
+        Vector2 blindSpotWorldY = mainCamera.ViewportToWorldPoint(new Vector3(0, blindYSpot.y, 10));
 
 
         Gizmos.color = Color.gray;
@@ -80,8 +96,12 @@ public class CameraMain : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawLine(new Vector3(transform.position.x - 17.5f, maxCameraY.x), new Vector3(transform.position.x + 17.5f, maxCameraY.x));
         Gizmos.DrawLine(new Vector3(transform.position.x - 17.5f, maxCameraY.y), new Vector3(transform.position.x + 17.5f, maxCameraY.y));
+        Gizmos.DrawLine(new Vector3(maxCameraX.x, transform.position.y - 12.5f), new Vector3(maxCameraX.x, transform.position.y + 12.5f));
+        Gizmos.DrawLine(new Vector3(maxCameraX.y, transform.position.y - 12.5f), new Vector3(maxCameraX.y, transform.position.y + 12.5f));
         Gizmos.color = Color.red;
         Gizmos.DrawLine(new Vector3(transform.position.x - 20f, maxCameraY.x - yDifference), new Vector3(transform.position.x + 20f, maxCameraY.x - yDifference));
         Gizmos.DrawLine(new Vector3(transform.position.x - 20f, maxCameraY.y + yDifference), new Vector3(transform.position.x + 20f, maxCameraY.y + yDifference));
+        Gizmos.DrawLine(new Vector3(maxCameraX.x - xDifference, transform.position.y - 12.5f), new Vector3(maxCameraX.x - xDifference, transform.position.y + 12.5f));
+        Gizmos.DrawLine(new Vector3(maxCameraX.y + xDifference, transform.position.y - 12.5f), new Vector3(maxCameraX.y + xDifference, transform.position.y + 12.5f));
     }
 }
