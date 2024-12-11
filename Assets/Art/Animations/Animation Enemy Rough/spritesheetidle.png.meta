@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,11 +140,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 931
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 12
+        width: 920
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: spritesheetidle_1
       rect:
         serializedVersion: 2
-        x: 931
-        y: 0
-        width: 931
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 920
+        y: 12
+        width: 920
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: spritesheetidle_2
       rect:
         serializedVersion: 2
-        x: 1862
-        y: 0
-        width: 931
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1840
+        y: 12
+        width: 920
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,18 +202,18 @@ TextureImporter:
       name: spritesheetidle_3
       rect:
         serializedVersion: 2
-        x: 2793
-        y: 0
-        width: 931
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2760
+        y: 12
+        width: 920
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7176568631351fd4da3e59c0d65ffe27
+      spriteID: 9b23467f27e58eb4fab51627934ea21d
       internalID: 466364828
       vertices: []
       indices: 
@@ -223,18 +223,18 @@ TextureImporter:
       name: spritesheetidle_4
       rect:
         serializedVersion: 2
-        x: 3724
-        y: 0
-        width: 931
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3680
+        y: 12
+        width: 920
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf336a5d4620baa44982803462e49993
+      spriteID: 6df3d2f76c81e9e4b90b7d72985c3ad2
       internalID: 540086346
       vertices: []
       indices: 

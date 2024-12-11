@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 190
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,11 +140,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: spritesheetattack_1
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1332
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: spritesheetattack_2
       rect:
         serializedVersion: 2
-        x: 2658
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2664
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: spritesheetattack_3
       rect:
         serializedVersion: 2
-        x: 3987
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3996
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: spritesheetattack_4
       rect:
         serializedVersion: 2
-        x: 5316
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5328
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: spritesheetattack_5
       rect:
         serializedVersion: 2
-        x: 6645
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6660
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: spritesheetattack_6
       rect:
         serializedVersion: 2
-        x: 7974
-        y: 0
-        width: 1329
-        height: 931
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7992
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
