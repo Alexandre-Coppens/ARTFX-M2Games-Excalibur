@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -10,14 +11,25 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyAction currentAction;
     [Tooltip("The level of difficulty of the enemy")]
     [SerializeField, Range(1,3)] private int ennemyLevel = 1;
+
     [Header("CheckPlayer")]
     [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
     [SerializeField] private Vector2 ennCheckSize = Vector2.one;
+    [Tooltip("Enemy chasing range")]
+    [SerializeField] private float enChaseRange = 10f;
+
     [Header("Roaming")]
-    [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
+    [Tooltip("Enemy normal speed")]
     [SerializeField] private float ennWalkSpeed = 2f;
     [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
     [SerializeField] private Vector2 ennWalkRange;
+
+    [Header("Chasing")]
+    [Tooltip("When the enemy see the player he will stop for before chasing")]
+    [SerializeField] private float enStopTime = 2f;
+    [Tooltip("Enemy chasing speed")]
+    [SerializeField] private float ennChaseSpeed = 2f;
+
     [Header("Attack")]
     [Tooltip("Time taken for an attack")]
     [SerializeField] private float attackTime = 0.2f;
@@ -30,6 +42,13 @@ public class Enemy : MonoBehaviour
     [Tooltip("Changes the size of the attack collider")]
     [SerializeField] private Vector2 attackSize = Vector2.one;
 
+    [Header("Debug Idle")]
+    private float idleLeft;
+    private EnemyAction nextAction;
+
+    [Header("Debug Chase")]
+    private Vector3 chasePoint;
+
     [Header("Debug Roaming")]
     private Vector2 ennWalkBoundaries;
 
@@ -40,6 +59,7 @@ public class Enemy : MonoBehaviour
     [Header("Elements")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Player_Behaviour player;
 
     public enum EnemyAction
     {
@@ -47,6 +67,7 @@ public class Enemy : MonoBehaviour
         Roaming,
         Attacking,
         Hit,
+        Chase,
     }
 
     void Start()
@@ -54,6 +75,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ennWalkBoundaries = new Vector2(transform.position.x + ennWalkRange.x, transform.position.x + ennWalkRange.y);
+        player = Player_Behaviour._instance;
     }
 
     void Update()
@@ -69,6 +91,10 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyAction.Attacking:
                 Attack();
+                break;
+            case EnemyAction.Chase:
+                CheckForPlayer();
+                Chase();
                 break;
         }
     }
@@ -121,10 +147,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void Chase()
+    {
+
+    }
+
     private void CheckForPlayer()
     {
         Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position, ennCheckSize, 0);
+        RaycastHit2D[] ray = Physics2D.RaycastAll(transform.position, player.transform.position.x<transform.position.x?Vector2.left:Vector2.right, enChaseRange);
         bool playerInRange = false;
+        bool playerCanChase = false;
         bool playerIsLeft = false;
         foreach (Collider2D col in hit)
         {
@@ -132,16 +165,32 @@ public class Enemy : MonoBehaviour
             {
                 playerInRange = true;
                 playerIsLeft = transform.position.x > col.transform.position.x;
-                break;
+                rb.velocity = Vector2.zero;
+                currentAction = EnemyAction.Attacking;
+                if (currentAttackTime == 0) { spriteRenderer.flipX = !playerIsLeft; }
+                return;
             }
         }
-        if (playerInRange)
+        foreach (RaycastHit2D raycast in ray)
         {
-            rb.velocity = Vector2.zero;
-            currentAction = EnemyAction.Attacking;
-            if(currentAttackTime == 0) { spriteRenderer.flipX = !playerIsLeft; }
+            if (raycast.collider.CompareTag("Player"))
+            {
+                playerCanChase = true;
+                if(currentAction == EnemyAction.Chase)
+                {
+                    chasePoint = player.transform.position;
+                }
+                else
+                {
+                    nextAction = EnemyAction.Chase;
+                    idleLeft = enStopTime;
+                    currentAction = EnemyAction.Idle;
+                }
+                return;
+            }
         }
-        else
+
+        if(currentAction != EnemyAction.Chase)
         {
             currentAction = EnemyAction.Roaming;
         }
