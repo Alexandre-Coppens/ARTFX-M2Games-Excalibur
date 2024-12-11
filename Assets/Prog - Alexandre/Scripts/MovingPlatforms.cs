@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class MovingPlatforms : MonoBehaviour
 {
     [Tooltip("The position the platform goes when the lock is activated")]
-    [SerializeField] private Vector2 openPosition;
+    public Vector2 openPosition;
     [Tooltip("The position the platform goes when the lock is deactivated")]
-    [SerializeField] private Vector2 closedPosition;
+    public Vector2 closedPosition;
 
     private Vector2 currentTarget = Vector2.zero;
 
