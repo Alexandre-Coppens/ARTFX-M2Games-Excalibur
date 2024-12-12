@@ -547,6 +547,37 @@ RectTransform:
   m_AnchoredPosition: {x: 300.5, y: 169}
   m_SizeDelta: {x: 601, y: 338}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &322138352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322138353}
+  m_Layer: 6
+  m_Name: Map Boundaries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322138353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322138352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043277427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440197317
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +741,7 @@ MonoBehaviour:
   xStopsBorder: 0
   yStopsBorder: 0
   mainCamera: {fileID: 440197319}
+  screenBounds: {x: 0, y: 0}
 --- !u!4 &473913563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8696784704678086862, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
@@ -1478,6 +1510,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1141698124}
+  - {fileID: 322138353}
   m_Father: {fileID: 1321889370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105786100
@@ -7391,11 +7424,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_Size.x
-      value: 2.742857
+      value: 19.199999
       objectReference: {fileID: 0}
     - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_Size.y
-      value: 1.542857
+      value: 10.799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 713065552, guid: f1b693f2bf0e59149b225ab0f2c0556f, type: 3}
+    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3008132212000594439, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -7444,6 +7485,10 @@ PrefabInstance:
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: checkSize
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: jumpForce
