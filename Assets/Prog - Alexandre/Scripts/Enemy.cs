@@ -1,11 +1,15 @@
+using Cinemachine.Utility;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //ENEMY FLIP IS RIGHT
     [Header("Variables")]
     [Tooltip("Define what the enemy is currently doing")]
     [SerializeField] private EnemyAction currentAction;
@@ -17,6 +21,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Vector2 ennCheckSize = Vector2.one;
     [Tooltip("Enemy chasing range")]
     [SerializeField] private float enChaseRange = 10f;
+    [Tooltip("Left Check to not fall from platforms")]
+    [SerializeField] private Vector3 leftPlatCheck = Vector2.zero;
+    [Tooltip("Right Check to not fall from platforms")]
+    [SerializeField] private Vector3 rightPlatCheck = Vector2.zero;
 
     [Header("Roaming")]
     [Tooltip("Enemy normal speed")]
@@ -83,7 +91,7 @@ public class Enemy : MonoBehaviour
         switch (currentAction)
         {
             case EnemyAction.Idle:
-                CheckForPlayer();
+                IdleWait();
                 break;
             case EnemyAction.Roaming:
                 CheckForPlayer();
@@ -96,6 +104,18 @@ public class Enemy : MonoBehaviour
                 CheckForPlayer();
                 Chase();
                 break;
+        }
+    }
+
+    private void IdleWait()
+    {
+        if (idleLeft <= 0)
+        {
+            currentAction = nextAction;
+        }
+        else
+        {
+            idleLeft -= Time.deltaTime;
         }
     }
 
@@ -117,6 +137,7 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
+        rb.velocity = Vector2.zero;
         if(currentAttackTime == 0)
         {
             currentAttackTime += Time.deltaTime;
@@ -143,44 +164,75 @@ public class Enemy : MonoBehaviour
         {
             currentAttackTime = 0;
             hasAttacked = false;
-            currentAction = EnemyAction.Idle;
+            CheckForPlayer();
         }
     }
 
     private void Chase()
     {
+        if (chasePoint.x > transform.position.x) spriteRenderer.flipX = true;
+        else spriteRenderer.flipX = false;
 
+        Debug.Log(Vector3.Distance(chasePoint, transform.position));
+        if (Vector3.Distance(chasePoint, transform.position) > 1f)
+        {
+            if (spriteRenderer.flipX) { rb.velocity = new Vector2(ennChaseSpeed, rb.velocity.y); }
+            else { rb.velocity = new Vector2(-ennChaseSpeed, rb.velocity.y); }
+        }
+        else
+        {
+            idleLeft = 1f;
+            nextAction = EnemyAction.Roaming;
+            currentAction = EnemyAction.Idle;
+            CheckForPlayer();
+        }
     }
 
     private void CheckForPlayer()
     {
         Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position, ennCheckSize, 0);
         RaycastHit2D[] ray = Physics2D.RaycastAll(transform.position, player.transform.position.x<transform.position.x?Vector2.left:Vector2.right, enChaseRange);
-        bool playerInRange = false;
-        bool playerCanChase = false;
-        bool playerIsLeft = false;
         foreach (Collider2D col in hit)
         {
             if (col.CompareTag("Player"))
             {
-                playerInRange = true;
-                playerIsLeft = transform.position.x > col.transform.position.x;
                 rb.velocity = Vector2.zero;
                 currentAction = EnemyAction.Attacking;
-                if (currentAttackTime == 0) { spriteRenderer.flipX = !playerIsLeft; }
+                if (currentAttackTime == 0) { spriteRenderer.flipX = transform.position.x < player.transform.position.x; }
                 return;
             }
         }
+
+        bool grounded = false;
+        hit = !spriteRenderer.flipX?Physics2D.OverlapCircleAll(transform.position + leftPlatCheck, 0.05f): Physics2D.OverlapCircleAll(transform.position + rightPlatCheck, 0.05f);
+        foreach (Collider2D col in hit)
+        {
+            if (col.CompareTag("Ground"))
+            {
+                grounded = true;
+                break;
+            }
+        }
+        if (!grounded) 
+        {
+            rb.velocity = Vector2.zero;
+            if (currentAction == EnemyAction.Roaming)
+            {
+                spriteRenderer.flipX = !spriteRenderer.flipX;
+            }
+            if (currentAction == EnemyAction.Chase)
+            {
+                chasePoint = transform.position;
+            }
+            return; 
+        }
+        if (ennemyLevel == 1) { return; }
         foreach (RaycastHit2D raycast in ray)
         {
             if (raycast.collider.CompareTag("Player"))
             {
-                playerCanChase = true;
-                if(currentAction == EnemyAction.Chase)
-                {
-                    chasePoint = player.transform.position;
-                }
-                else
+                chasePoint = player.transform.position;
+                if (currentAction != EnemyAction.Chase)
                 {
                     nextAction = EnemyAction.Chase;
                     idleLeft = enStopTime;
@@ -230,6 +282,12 @@ public class Enemy : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
         }
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(chasePoint, 0.1f);
+        Gizmos.DrawWireSphere(transform.position + leftPlatCheck, 0.1f);
+        Gizmos.DrawWireSphere(transform.position + rightPlatCheck, 0.1f);
+
 
     }
 }

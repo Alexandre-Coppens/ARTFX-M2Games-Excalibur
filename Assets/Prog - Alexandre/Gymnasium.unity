@@ -372,8 +372,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 2034464870}
     m_Modifications:
     - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: currentAction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
       propertyPath: ennWalkRange.x
       value: -6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: leftPlatCheck.x
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: leftPlatCheck.y
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: rightPlatCheck.x
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: rightPlatCheck.y
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 6559912219511761232, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
       propertyPath: m_Name
@@ -723,7 +743,7 @@ Transform:
   m_GameObject: {fileID: 522052519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.23, y: -0.5, z: 0}
+  m_LocalPosition: {x: -28.87, y: -0.5, z: 0}
   m_LocalScale: {x: 26.432787, y: 1.76, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -838,8 +858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c32853b067928429455562ee63dbef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openPosition: {x: -25, y: -0.5}
-  closedPosition: {x: -29.2, y: -0.5}
+  openPosition: {x: -25.9, y: -0.5}
+  closedPosition: {x: -28.87, y: -0.5}
 --- !u!4 &578034095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1856911452384981665, guid: 228f975e254f3df4f81113414f65bff8, type: 3}
@@ -2464,7 +2484,7 @@ Transform:
   m_GameObject: {fileID: 1830256064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.74, z: 0}
+  m_LocalPosition: {x: 0, y: -1.29, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7051,12 +7071,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 2034464870}
     m_Modifications:
     - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: enStopTime
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: ennemyLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: attackSize.x
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
       propertyPath: ennWalkSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
       propertyPath: currentAction
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: ennChaseSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: leftPlatCheck.x
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: leftPlatCheck.y
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: rightPlatCheck.x
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: rightPlatCheck.y
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301971126963263596, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      propertyPath: attackDifference.x
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 6559912219511761232, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
       propertyPath: m_Name
@@ -7105,8 +7161,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7275713684323572180, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1166754356128145414}
   m_SourcePrefab: {fileID: 100100000, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+--- !u!1 &1166754356128145413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7275713684323572180, guid: 36c20dca716dd0a4f9edf878b893fe5e, type: 3}
+  m_PrefabInstance: {fileID: 1166754356128145412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1166754356128145414
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166754356128145413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de40f0ceef13cbb45a5388c3fe68d776, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4119710809557631141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7237,6 +7322,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2034464870}
     m_Modifications:
+    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: m_Size.x
+      value: 2.742857
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: m_Size.y
+      value: 1.542857
+      objectReference: {fileID: 0}
     - target: {fileID: 3008132212000594439, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
