@@ -50,6 +50,12 @@ public class Enemy : MonoBehaviour
     [Tooltip("Changes the size of the attack collider")]
     [SerializeField] private Vector2 attackSize = Vector2.one;
 
+    [Header("Hit")]
+    [Tooltip("Velocity with wich the ennemy will move when hit")]
+    [SerializeField] private float hitVelocity = 3f;
+    [Tooltip("Nbr in seconds of stun when hit")]
+    [SerializeField] private float hitStunTime = 0.7f;
+
     [Header("Debug Idle")]
     private float idleLeft;
     private EnemyAction nextAction;
@@ -248,6 +254,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void Attacked()
+    {
+        idleLeft = hitStunTime;
+        nextAction = EnemyAction.Attacking;
+        currentAction = EnemyAction.Idle;
+        rb.velocity = new Vector2(hitVelocity * (player.transform.position.x > transform.position.x?-1:1), 0);
+    }
     private void OnDrawGizmosSelected()
     {
         if (!EditorApplication.isPlaying)

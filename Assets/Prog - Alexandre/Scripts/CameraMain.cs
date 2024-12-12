@@ -36,10 +36,12 @@ public class CameraMain : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private Vector2  screenBounds;
 
     private void Start()
     {
         mainCamera = GetComponent<Camera>();
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, -10));
     }
 
     // Update is called once per frame
@@ -64,6 +66,11 @@ public class CameraMain : MonoBehaviour
         Vector3 playerCamPos = mainCamera.WorldToViewportPoint(player.transform.position);
         if(playerCamPos.y < blindYSpot.x && transform.position.y > maxCameraY.x) { transform.position -= new Vector3(0,ySpeed * Time.deltaTime); }
         if(playerCamPos.y > blindYSpot.y && transform.position.y < maxCameraY.y) { transform.position += new Vector3(0,ySpeed * Time.deltaTime); }
+
+        Vector3 viewPos = player.transform.position;
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x, screenBounds.x * -1);
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y, screenBounds.y * -1);
+        player.transform.position = viewPos;
     }
 
     public void RemoveBlock()
