@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 190
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,7 +134,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spritesheetattack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae01c7775a6fad4bbf0429d7584d16e
+      internalID: 584318998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetattack_1
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73eceae948220164381e9ba948c2d09a
+      internalID: -600933116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetattack_2
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75179b7df2e66964c8522edac1236989
+      internalID: -2088255228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetattack_3
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1faf4439f3cbf4e4eb94a048a1fcb497
+      internalID: 314338254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetattack_4
+      rect:
+        serializedVersion: 2
+        x: 5328
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5341bb4774dbf224d88f0024004a35d6
+      internalID: -1578447017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetattack_5
+      rect:
+        serializedVersion: 2
+        x: 6660
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fbce842ef5fec4e9a5b37f9cb06185
+      internalID: 1712158872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetattack_6
+      rect:
+        serializedVersion: 2
+        x: 7992
+        y: 12
+        width: 1332
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dec99cb1d6a13409f6eb779f497e01
+      internalID: -553554775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +292,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spritesheetattack_0: 584318998
+      spritesheetattack_1: -600933116
+      spritesheetattack_2: -2088255228
+      spritesheetattack_3: 314338254
+      spritesheetattack_4: -1578447017
+      spritesheetattack_5: 1712158872
+      spritesheetattack_6: -553554775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
