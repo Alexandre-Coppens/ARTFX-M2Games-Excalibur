@@ -230,7 +230,7 @@ public class Enemy : MonoBehaviour
         }
         if (!grounded) 
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = new Vector2(0, rb.velocity.y);
             if (currentAction == EnemyAction.Roaming)
             {
                 spriteRenderer.flipX = !spriteRenderer.flipX;
