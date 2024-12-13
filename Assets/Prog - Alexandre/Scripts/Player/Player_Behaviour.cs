@@ -13,11 +13,15 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
     [SerializeField] private int playerLife = 5;
-    [Tooltip("Player Y speed when he jumps")]
+    
     [Header("Jump")]
+    [Tooltip("Player Y speed when he jumps")]
     [SerializeField] private float jumpForce = 1f;
     [Tooltip("Max time the player can press the jump button to get higher")]
     [SerializeField] private float jumpAirTime = 2f;
+    [Tooltip("The gravity left:normal - right: falling")]
+    [SerializeField] private Vector2 gravityScale = new Vector2(9.8f, 15);
+
     [Header("GroundCheck")]
     [Tooltip("Controll the Y center of the circle")]
     [SerializeField] private float groundDifference = 1f;
@@ -25,6 +29,7 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private float checkSize = 1f;
     [Tooltip("To detect which layer is the Ground")]
     [SerializeField] private int groundLayer = 6;
+
     [Header("Attack")]
     [Tooltip("If the player has the sword")]
     public bool hasSword = true;
@@ -42,6 +47,7 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private Vector2 swordSpeed = Vector2.one;
     [Tooltip("When the player is hit, it's the stun time before the player can move again")]
     [SerializeField] private float stunTime = 0.2f;
+
     [Header("Interaction")]
     [Tooltip("The radius of the interaction range")]
     public bool isInInteraction = false;
@@ -138,6 +144,8 @@ public class Player_Behaviour : MonoBehaviour
         }
         attackDifference = new Vector3(Mathf.Abs(attackDifference.x) * (isAttackFlipped ? -1 : 1), attackDifference.y);
         rb.position += new Vector2 (movement * movementSpeed, rb.velocity.y) * Time.deltaTime;
+        if (rb.velocity.y < -0.1f) { rb.gravityScale = gravityScale.y; }
+        else { rb.gravityScale = gravityScale.x; }
         Jump();
     }
 
@@ -277,7 +285,7 @@ public class Player_Behaviour : MonoBehaviour
 
     private void Animations()
     {
-        animator.SetFloat("velX", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("velX", Mathf.Abs(movement));
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
     }
@@ -286,6 +294,7 @@ public class Player_Behaviour : MonoBehaviour
     {
         playerLife -= 1;
         rb.velocity = ejectForce;
+        animator.SetTrigger("Hit");
         StartCoroutine("PlayerStun");
     }
 
