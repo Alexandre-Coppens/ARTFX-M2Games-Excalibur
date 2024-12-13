@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyAction currentAction;
     [Tooltip("The level of difficulty of the enemy")]
     [SerializeField, Range(1,3)] private int ennemyLevel = 1;
+    [Tooltip("The number of health of the ennemy")]
+    [SerializeField, Range(1, 10)] private int health = 3;
 
     [Header("CheckPlayer")]
     [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
@@ -73,6 +75,7 @@ public class Enemy : MonoBehaviour
     [Header("Elements")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
     [SerializeField] private Player_Behaviour player;
 
     public enum EnemyAction
@@ -82,6 +85,7 @@ public class Enemy : MonoBehaviour
         Attacking,
         Hit,
         Chase,
+        Dead,
     }
 
     void Start()
@@ -90,6 +94,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ennWalkBoundaries = new Vector2(transform.position.x + ennWalkRange.x, transform.position.x + ennWalkRange.y);
         player = Player_Behaviour._instance;
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -100,13 +105,16 @@ public class Enemy : MonoBehaviour
                 IdleWait();
                 break;
             case EnemyAction.Roaming:
+                if(animator.GetInteger("State") != 1) { animator.SetInteger("State", 1); animator.SetTrigger("Change"); }
                 CheckForPlayer();
                 Roaming();
                 break;
             case EnemyAction.Attacking:
+                if (animator.GetInteger("State") != 2) { animator.SetInteger("State", 2); animator.SetTrigger("Change"); }
                 Attack();
                 break;
             case EnemyAction.Chase:
+                if (animator.GetInteger("State") != 4) { animator.SetInteger("State", 4); animator.SetTrigger("Change"); }
                 CheckForPlayer();
                 Chase();
                 break;
@@ -149,7 +157,7 @@ public class Enemy : MonoBehaviour
             currentAttackTime += Time.deltaTime;
             attackDifference = new Vector3(Mathf.Abs(attackDifference.x) * (spriteRenderer.flipX ? 1 : -1), attackDifference.y);
         }
-        else if (currentAttackTime < attackTime && !hasAttacked)
+        else if (currentAttackTime < attackTime && currentAttackTime > hurtTime && !hasAttacked)
         {
             hasAttacked = true;
             Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize, 0);
@@ -188,6 +196,7 @@ public class Enemy : MonoBehaviour
         else
         {
             idleLeft = 1f;
+            if (animator.GetInteger("State") != 0) { animator.SetInteger("State", 0); animator.SetTrigger("Change"); }
             nextAction = EnemyAction.Roaming;
             currentAction = EnemyAction.Idle;
             CheckForPlayer();
@@ -241,6 +250,7 @@ public class Enemy : MonoBehaviour
                 if (currentAction != EnemyAction.Chase)
                 {
                     nextAction = EnemyAction.Chase;
+                    if (animator.GetInteger("State") != 0) { animator.SetInteger("State", 0); animator.SetTrigger("Change"); }
                     idleLeft = enStopTime;
                     currentAction = EnemyAction.Idle;
                 }
@@ -256,10 +266,22 @@ public class Enemy : MonoBehaviour
 
     public void Attacked()
     {
-        idleLeft = hitStunTime;
-        nextAction = EnemyAction.Attacking;
-        currentAction = EnemyAction.Idle;
-        rb.velocity = new Vector2(hitVelocity * (player.transform.position.x > transform.position.x?-1:1), 0);
+        health -= 1;
+        if (health > 0)
+        {
+            idleLeft = hitStunTime;
+            if (animator.GetInteger("State") != 3) { animator.SetInteger("State", 3); animator.SetTrigger("Change"); }
+            nextAction = EnemyAction.Attacking;
+            currentAction = EnemyAction.Idle;
+            rb.velocity = new Vector2(hitVelocity * (player.transform.position.x > transform.position.x ? -1 : 1), 0);
+        }
+        else
+        {
+            animator.SetTrigger("Dead");
+            currentAction = EnemyAction.Dead;
+            gameObject.tag = "Untagged";
+            Destroy(GetComponent<CanBeHit>());
+        }
     }
     private void OnDrawGizmosSelected()
     {
