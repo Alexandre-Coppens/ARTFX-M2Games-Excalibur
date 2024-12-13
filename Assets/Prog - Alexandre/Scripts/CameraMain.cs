@@ -67,12 +67,19 @@ public class CameraMain : MonoBehaviour
         if(playerCamPos.y < blindYSpot.x && transform.position.y > maxCameraY.x) { transform.position -= new Vector3(0,ySpeed * Time.deltaTime); }
         if(playerCamPos.y > blindYSpot.y && transform.position.y < maxCameraY.y) { transform.position += new Vector3(0,ySpeed * Time.deltaTime); }
 
+        //OMFG
+        float cameraHeight = mainCamera.orthographicSize;
+        float cameraWidth = cameraHeight * mainCamera.aspect;
 
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(1f, 1f, -10));
-        Vector3 viewPos = player.transform.position;
-        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x + player.transform.localScale.x * 0.5f, (screenBounds.x * -1) - player.transform.localScale.x * 0.5f);
-        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y + player.transform.localScale.y * 0.5f, (screenBounds.y * -1) - player.transform.localScale.y * 0.5f);
-        player.transform.position = viewPos;
+        float leftBoundary = transform.position.x - cameraWidth - player.transform.localScale.x;
+        float rightBoundary = transform.position.x + cameraWidth + player.transform.localScale.x;
+        float bottomBoundary = transform.position.y - cameraHeight;
+        float topBoundary = transform.position.y + cameraHeight;
+
+        float clampedX = Mathf.Clamp(player.transform.position.x, leftBoundary, rightBoundary);
+        float clampedY = Mathf.Clamp(player.transform.position.y, bottomBoundary, topBoundary);
+
+        player.transform.position = new Vector3(clampedX, clampedY, player.transform.position.z);
     }
 
     public void RemoveBlock()
@@ -114,7 +121,6 @@ public class CameraMain : MonoBehaviour
         Gizmos.DrawLine(new Vector3(maxCameraX.y + xDifference, transform.position.y - 12.5f), new Vector3(maxCameraX.y + xDifference, transform.position.y + 12.5f));
 
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(screenBounds, 0.1f);
-        Gizmos.DrawWireCube(transform.position + new Vector3(0,0,10), new Vector3(screenBounds.x, screenBounds.y, 0.01f));
+        Gizmos.DrawWireCube(transform.position + new Vector3(0, 0, 10), new Vector3(screenBounds.x, screenBounds.y, 0.01f));
     }
 }
