@@ -36,12 +36,12 @@ public class CameraMain : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private Camera mainCamera;
-    [SerializeField] private Vector2  screenBounds;
+     private Vector2  screenBounds;
+
 
     private void Start()
     {
         mainCamera = GetComponent<Camera>();
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, -10));
     }
 
     // Update is called once per frame
@@ -67,9 +67,11 @@ public class CameraMain : MonoBehaviour
         if(playerCamPos.y < blindYSpot.x && transform.position.y > maxCameraY.x) { transform.position -= new Vector3(0,ySpeed * Time.deltaTime); }
         if(playerCamPos.y > blindYSpot.y && transform.position.y < maxCameraY.y) { transform.position += new Vector3(0,ySpeed * Time.deltaTime); }
 
+
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(1f, 1f, -10));
         Vector3 viewPos = player.transform.position;
-        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x, screenBounds.x * -1);
-        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y, screenBounds.y * -1);
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x + player.transform.localScale.x * 0.5f, (screenBounds.x * -1) - player.transform.localScale.x * 0.5f);
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y + player.transform.localScale.y * 0.5f, (screenBounds.y * -1) - player.transform.localScale.y * 0.5f);
         player.transform.position = viewPos;
     }
 
@@ -110,5 +112,9 @@ public class CameraMain : MonoBehaviour
         Gizmos.DrawLine(new Vector3(transform.position.x - 20f, maxCameraY.y + yDifference), new Vector3(transform.position.x + 20f, maxCameraY.y + yDifference));
         Gizmos.DrawLine(new Vector3(maxCameraX.x - xDifference, transform.position.y - 12.5f), new Vector3(maxCameraX.x - xDifference, transform.position.y + 12.5f));
         Gizmos.DrawLine(new Vector3(maxCameraX.y + xDifference, transform.position.y - 12.5f), new Vector3(maxCameraX.y + xDifference, transform.position.y + 12.5f));
+
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(screenBounds, 0.1f);
+        Gizmos.DrawWireCube(transform.position + new Vector3(0,0,10), new Vector3(screenBounds.x, screenBounds.y, 0.01f));
     }
 }
