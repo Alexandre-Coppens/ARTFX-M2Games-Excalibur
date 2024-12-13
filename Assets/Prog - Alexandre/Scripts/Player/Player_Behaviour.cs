@@ -277,7 +277,7 @@ public class Player_Behaviour : MonoBehaviour
 
     private void Animations()
     {
-        animator.SetFloat("velX", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("velX", Mathf.Abs(movement));
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
     }
@@ -286,6 +286,7 @@ public class Player_Behaviour : MonoBehaviour
     {
         playerLife -= 1;
         rb.velocity = ejectForce;
+        animator.SetTrigger("Hit");
         StartCoroutine("PlayerStun");
     }
 
