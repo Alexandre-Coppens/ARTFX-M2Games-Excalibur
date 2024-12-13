@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5298be6a8bee2b74fbaea529701257a4
+guid: 5461e3d3c3c138642a271552273d9655
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_InsertSword_0
+      name: Sprite_InsertSword 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e737841c8c3aca4fb9fa27ec6a9058a
-      internalID: 1780471432
+      spriteID: 2ed5725603a130e4dabeb2195cd83e03
+      internalID: 1212568038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_1
+      name: Sprite_InsertSword 1_1
       rect:
         serializedVersion: 2
         x: 1920
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a904cb8259a0db048b97ff925a52b88a
-      internalID: -1112973726
+      spriteID: 75e849cac8628624d8431d12c0b6e3be
+      internalID: 1191657394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_2
+      name: Sprite_InsertSword 1_2
       rect:
         serializedVersion: 2
         x: 3840
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b2066997b7b7f542ba4cf5c8c7cfe5e
-      internalID: 1554953621
+      spriteID: 53d75d32de564564fa72d00705fb51d7
+      internalID: 997587063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_3
+      name: Sprite_InsertSword 1_3
       rect:
         serializedVersion: 2
         x: 5760
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a0aa8c708b0a254d9a67b387ad77753
-      internalID: 500629219
+      spriteID: 074f8b7eb029d3c41aed6d1cb4bada6a
+      internalID: 505447565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_4
+      name: Sprite_InsertSword 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d04ef4b468d4c8742aeae16bdafcb0a4
-      internalID: 604765920
+      spriteID: fadf7f81f9199b34cb36508077052ea2
+      internalID: -2104916537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_5
+      name: Sprite_InsertSword 1_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca22967204491544683bdf604c3cdc03
-      internalID: 1802178566
+      spriteID: 09087891036065f48864c4aae5e7848a
+      internalID: 744229398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_6
+      name: Sprite_InsertSword 1_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cbfd2893a5661149bc0544fee136705
-      internalID: -857128226
+      spriteID: b306c9d1650ee214f80b4918120cbb63
+      internalID: 2061467251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_7
+      name: Sprite_InsertSword 1_7
       rect:
         serializedVersion: 2
         x: 5760
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d27b8cf96a71d43b78495843c01515
-      internalID: -749300913
+      spriteID: 05742bfae41fe0244bfedc344536e7f5
+      internalID: -228088930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_8
+      name: Sprite_InsertSword 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f9302084d9460d40819ad265e10896e
-      internalID: 707652148
+      spriteID: e2a73a163fc6ab64498f6b4fa9bb3bc8
+      internalID: 854410987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_9
+      name: Sprite_InsertSword 1_9
       rect:
         serializedVersion: 2
         x: 1920
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7501f84a081c08048b5dcef7e4408534
-      internalID: 392315813
+      spriteID: fe02165f46e368a4bb212d1b48e5dd67
+      internalID: 408450340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_InsertSword_10
+      name: Sprite_InsertSword 1_10
       rect:
         serializedVersion: 2
         x: 3840
@@ -360,8 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31693ea72ceea2547a19c2721c8ed8da
-      internalID: 532861663
+      spriteID: 4bfe7768932821545bbcb0abe58b1a91
+      internalID: -904347518
       vertices: []
       indices: 
       edges: []
@@ -377,17 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_InsertSword_0: 1780471432
-      Sprite_InsertSword_1: -1112973726
-      Sprite_InsertSword_10: 532861663
-      Sprite_InsertSword_2: 1554953621
-      Sprite_InsertSword_3: 500629219
-      Sprite_InsertSword_4: 604765920
-      Sprite_InsertSword_5: 1802178566
-      Sprite_InsertSword_6: -857128226
-      Sprite_InsertSword_7: -749300913
-      Sprite_InsertSword_8: 707652148
-      Sprite_InsertSword_9: 392315813
+      Sprite_InsertSword 1_0: 1212568038
+      Sprite_InsertSword 1_1: 1191657394
+      Sprite_InsertSword 1_10: -904347518
+      Sprite_InsertSword 1_2: 997587063
+      Sprite_InsertSword 1_3: 505447565
+      Sprite_InsertSword 1_4: -2104916537
+      Sprite_InsertSword 1_5: 744229398
+      Sprite_InsertSword 1_6: 2061467251
+      Sprite_InsertSword 1_7: -228088930
+      Sprite_InsertSword 1_8: 854410987
+      Sprite_InsertSword 1_9: 408450340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
