@@ -37,6 +37,8 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private GameObject sword;
     [Tooltip("Time taken for an attack")]
     [SerializeField] private float attackTime = 0.2f;
+    [Tooltip("Time taken to make the hitbox for the attack")]
+    [SerializeField] private float attackHitTime = 0.2f;
     [Tooltip("Time before the player can throw the sword")]
     [SerializeField] private float attackThrowTime = 1.5f;
     [Tooltip("Move the position of the center of the attack collider")]
@@ -255,9 +257,8 @@ public class Player_Behaviour : MonoBehaviour
             hasAttacked = false;
         }
 
-        if (currentAttackTime < attackTime && currentAttackTime != 0)
+        if(currentAttackTime < attackTime && currentAttackTime != 0 && currentAttackTime > attackHitTime && !hasHit)
         {
-            currentAttackTime += Time.deltaTime;
             if (!hasHit)
             {
                 Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize, 0);
@@ -279,6 +280,10 @@ public class Player_Behaviour : MonoBehaviour
                 }
                 hasHit = true;
             }
+        }
+        else if (currentAttackTime < attackTime && currentAttackTime != 0)
+        {
+            currentAttackTime += Time.deltaTime;
         }
         else { currentAttackTime = 0; hasHit = false; }
     }
