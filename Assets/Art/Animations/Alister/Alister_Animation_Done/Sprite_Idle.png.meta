@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e8599ee8a7ebc1a40aed30295ecf2ee9
+guid: df803cc762abaa34a8a48dbbb3b648cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Throw_0
+      name: Sprite_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 450d918f094b1164ca9727fcdca8de4a
-      internalID: -1356910971
+      spriteID: a3f2b885941549543ba52a43722b1485
+      internalID: -859596805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_1
+      name: Sprite_Idle_1
       rect:
         serializedVersion: 2
         x: 1920
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3cebe0795286245b3b8cb4fded4d16
-      internalID: 600402027
+      spriteID: 13b21ff771c7b7d43ad84a7b58b1ef72
+      internalID: 1589120584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_2
+      name: Sprite_Idle_2
       rect:
         serializedVersion: 2
         x: 3840
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ca2c4c653523a146a856e05a1462f4b
-      internalID: -1987191382
+      spriteID: 4c52a40e260ed9f4096ceb6b75ab090e
+      internalID: -1897766431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_3
+      name: Sprite_Idle_3
       rect:
         serializedVersion: 2
         x: 5760
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b09d4cd32ac45ba4995722c1ce355743
-      internalID: -1992007044
+      spriteID: eeb6e283151fdcc408229c5c22561bea
+      internalID: 703242365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_4
+      name: Sprite_Idle_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e07f9e052fe1eef4eb533bff8568c85b
-      internalID: -142463718
+      spriteID: 0c3b5f0339bf35847bafbcb3ea0a0e3f
+      internalID: 162226606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_5
+      name: Sprite_Idle_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae352ab27f40c8043b1fdd9059f972a3
-      internalID: 800488239
+      spriteID: 5b8e71802b2eb8048b0c4e666a769826
+      internalID: -64876107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_6
+      name: Sprite_Idle_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052dd1676a0f3294a99fe687b3d40de1
-      internalID: -500119953
+      spriteID: 938dd652d6d161341badf01aa925cf19
+      internalID: -1997086433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_7
+      name: Sprite_Idle_7
       rect:
         serializedVersion: 2
         x: 5760
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6c654bfb60cff4295729328e329e71
-      internalID: -638569293
+      spriteID: e2cf047181d6ab64fb3cd405843cab96
+      internalID: 1458612605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_8
+      name: Sprite_Idle_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a2e45ea11bb6c247a595cddf6a7627c
-      internalID: 2062611268
+      spriteID: 6fd09ea1254e3044a91e0cf7334a6dbb
+      internalID: -523087779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_9
+      name: Sprite_Idle_9
       rect:
         serializedVersion: 2
         x: 1920
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a5930169561d543beb857a42c04f30
-      internalID: -272018161
+      spriteID: 948a4167b86329241b7e838cde71fb0a
+      internalID: 700747334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_10
+      name: Sprite_Idle_10
       rect:
         serializedVersion: 2
         x: 3840
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8790224a25ead54f9bf328e0341f95e
-      internalID: 185871079
+      spriteID: aa27758dd8c6504479b45a2879f349bf
+      internalID: 533785203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_11
+      name: Sprite_Idle_11
       rect:
         serializedVersion: 2
         x: 5760
@@ -381,8 +381,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f89ddf553b5da44bec4a8a4a49351f
-      internalID: -1141522022
+      spriteID: c17cecb047222524db3c4e2e9d2e1782
+      internalID: -37297512
       vertices: []
       indices: 
       edges: []
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_Throw_0: -1356910971
-      Sprite_Throw_1: 600402027
-      Sprite_Throw_10: 185871079
-      Sprite_Throw_11: -1141522022
-      Sprite_Throw_2: -1987191382
-      Sprite_Throw_3: -1992007044
-      Sprite_Throw_4: -142463718
-      Sprite_Throw_5: 800488239
-      Sprite_Throw_6: -500119953
-      Sprite_Throw_7: -638569293
-      Sprite_Throw_8: 2062611268
-      Sprite_Throw_9: -272018161
+      Sprite_Idle_0: -859596805
+      Sprite_Idle_1: 1589120584
+      Sprite_Idle_10: 533785203
+      Sprite_Idle_11: -37297512
+      Sprite_Idle_2: -1897766431
+      Sprite_Idle_3: 703242365
+      Sprite_Idle_4: 162226606
+      Sprite_Idle_5: -64876107
+      Sprite_Idle_6: -1997086433
+      Sprite_Idle_7: 1458612605
+      Sprite_Idle_8: -523087779
+      Sprite_Idle_9: 700747334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

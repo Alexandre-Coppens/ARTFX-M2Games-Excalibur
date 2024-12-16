@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e8599ee8a7ebc1a40aed30295ecf2ee9
+guid: a25b359a9d370554dac794e7f041486a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Throw_0
+      name: Sprite_InsertSword_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 450d918f094b1164ca9727fcdca8de4a
-      internalID: -1356910971
+      spriteID: 46afbebe8b4d1414f8eddfcd8bcc6df1
+      internalID: -1166745425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_1
+      name: Sprite_InsertSword_1
       rect:
         serializedVersion: 2
         x: 1920
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3cebe0795286245b3b8cb4fded4d16
-      internalID: 600402027
+      spriteID: 5f2b2ef01794c4448ad3e811aec33747
+      internalID: -383685150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_2
+      name: Sprite_InsertSword_2
       rect:
         serializedVersion: 2
         x: 3840
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ca2c4c653523a146a856e05a1462f4b
-      internalID: -1987191382
+      spriteID: 8a0cdfd73ea0e06409756b73b1ddf294
+      internalID: 48659944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_3
+      name: Sprite_InsertSword_3
       rect:
         serializedVersion: 2
         x: 5760
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b09d4cd32ac45ba4995722c1ce355743
-      internalID: -1992007044
+      spriteID: ffc9aa3f0f22d5c44999b6c4c0fdbbed
+      internalID: 2132281755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_4
+      name: Sprite_InsertSword_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e07f9e052fe1eef4eb533bff8568c85b
-      internalID: -142463718
+      spriteID: 031e3e57bb9b70745986e3869e810507
+      internalID: -2098734213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_5
+      name: Sprite_InsertSword_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae352ab27f40c8043b1fdd9059f972a3
-      internalID: 800488239
+      spriteID: 8081f52850351c74087b8a12f79ce816
+      internalID: 2055410186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_6
+      name: Sprite_InsertSword_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052dd1676a0f3294a99fe687b3d40de1
-      internalID: -500119953
+      spriteID: f5a7dde993ca0034386e7cfa4efe1afe
+      internalID: -427556855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_7
+      name: Sprite_InsertSword_7
       rect:
         serializedVersion: 2
         x: 5760
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6c654bfb60cff4295729328e329e71
-      internalID: -638569293
+      spriteID: 5c9e806eee0b74348b796b07f64e7076
+      internalID: -322458320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_8
+      name: Sprite_InsertSword_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a2e45ea11bb6c247a595cddf6a7627c
-      internalID: 2062611268
+      spriteID: 560db470883e453418eef1a74e7a2a49
+      internalID: 246971616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_9
+      name: Sprite_InsertSword_9
       rect:
         serializedVersion: 2
         x: 1920
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a5930169561d543beb857a42c04f30
-      internalID: -272018161
+      spriteID: faeca65dd3f79a047ada601b374dca0c
+      internalID: 355366942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_10
+      name: Sprite_InsertSword_10
       rect:
         serializedVersion: 2
         x: 3840
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8790224a25ead54f9bf328e0341f95e
-      internalID: 185871079
+      spriteID: aeb83043c5157b045a76b6c59c2e4332
+      internalID: -554607762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Throw_11
+      name: Sprite_InsertSword_11
       rect:
         serializedVersion: 2
         x: 5760
@@ -381,8 +381,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1f89ddf553b5da44bec4a8a4a49351f
-      internalID: -1141522022
+      spriteID: a5b31b78685fce348bf6cd87bff9ee2d
+      internalID: 1636295543
       vertices: []
       indices: 
       edges: []
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_Throw_0: -1356910971
-      Sprite_Throw_1: 600402027
-      Sprite_Throw_10: 185871079
-      Sprite_Throw_11: -1141522022
-      Sprite_Throw_2: -1987191382
-      Sprite_Throw_3: -1992007044
-      Sprite_Throw_4: -142463718
-      Sprite_Throw_5: 800488239
-      Sprite_Throw_6: -500119953
-      Sprite_Throw_7: -638569293
-      Sprite_Throw_8: 2062611268
-      Sprite_Throw_9: -272018161
+      Sprite_InsertSword_0: -1166745425
+      Sprite_InsertSword_1: -383685150
+      Sprite_InsertSword_10: -554607762
+      Sprite_InsertSword_11: 1636295543
+      Sprite_InsertSword_2: 48659944
+      Sprite_InsertSword_3: 2132281755
+      Sprite_InsertSword_4: -2098734213
+      Sprite_InsertSword_5: 2055410186
+      Sprite_InsertSword_6: -427556855
+      Sprite_InsertSword_7: -322458320
+      Sprite_InsertSword_8: 246971616
+      Sprite_InsertSword_9: 355366942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
