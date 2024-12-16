@@ -782,6 +782,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 7824688812689226360}
     m_Position: {x: 960, y: 960, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1017607248656074516}
+    m_Position: {x: 995, y: 1025, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1552547955891145586}
@@ -1107,6 +1110,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &1017607248656074516
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Alister_Animation_Interact
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 46dd2f34378543747b5e7727afeb090c, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &1362914632091837910
 AnimatorState:
   serializedVersion: 6

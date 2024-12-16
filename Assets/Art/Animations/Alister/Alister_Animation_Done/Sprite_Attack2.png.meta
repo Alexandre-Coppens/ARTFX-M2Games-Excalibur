@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7edd5bfd31069d4ba58de7c00caab3b
+guid: f754340a9c8665e4589ca9e1120e1450
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 950
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,253 +136,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_0
+      name: Sprite_Attack2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34297121ebe464c4cbaeff6fac8ae66a
+      internalID: 1183547695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8379499353be47149b0791ac04b5a7e0
+      internalID: 1551215664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67aa5090effa51748ba88bf92217888c
+      internalID: -1043833990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52c4c611c4137d469f677c334e90298
+      internalID: 1548244688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83f18c0984605445a22ca1cbe1af5f9
+      internalID: 1506591861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f98eac8604e1204a9d4b2670bc0ffcc
+      internalID: -909485459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b981450511983840b0f2c2fdd7e4900
+      internalID: 1238363136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc59d6be4f35c24b95cb9386743a090
+      internalID: 1059084961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Attack2_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad657c643896b154ca0a6a6720660dc4
-      internalID: -75278785
+      spriteID: def3e17e54b113142bf0026399fe7c39
+      internalID: -1903449969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_1
+      name: Sprite_Attack2_9
       rect:
         serializedVersion: 2
-        x: 974
+        x: 1920
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e90ca02fb876994293d743db8f97858
-      internalID: 1305929294
+      spriteID: add8a43239280754fb3844f7d975230b
+      internalID: 1590525335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_2
+      name: Sprite_Attack2_10
       rect:
         serializedVersion: 2
-        x: 1948
+        x: 3840
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1637530725e7d91438ca15edc796dde4
-      internalID: -763050228
+      spriteID: 6e4497f0fe4c85642acf5b1055c6882c
+      internalID: -998013834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_3
+      name: Sprite_Attack2_11
       rect:
         serializedVersion: 2
-        x: 2922
+        x: 5760
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab569fac999ffe34eb5d2eacc76ed04d
-      internalID: -901462175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_4
-      rect:
-        serializedVersion: 2
-        x: 3896
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bb263d9515779343a7c83b5a4e767c6
-      internalID: 1475435450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_5
-      rect:
-        serializedVersion: 2
-        x: 4870
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c75506a20befee341a247bb393883f6d
-      internalID: 1700171824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_6
-      rect:
-        serializedVersion: 2
-        x: 5844
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d7dd01bacb9814d9c1a6dd4201e131
-      internalID: -1671344848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_7
-      rect:
-        serializedVersion: 2
-        x: 6818
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7d6c7e233a03a341aaae618e4bee824
-      internalID: 460170354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_8
-      rect:
-        serializedVersion: 2
-        x: 7792
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcbb09001a6aea44d9f24b75badd682a
-      internalID: 1519400346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_9
-      rect:
-        serializedVersion: 2
-        x: 8766
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 897efcf2bbc6af148be5f9566c139b47
-      internalID: 1537071573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_10
-      rect:
-        serializedVersion: 2
-        x: 9740
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d10631113c866c40aa070fb165d3ba6
-      internalID: 707122551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_11
-      rect:
-        serializedVersion: 2
-        x: 10714
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c5cf34df4379df4e95dbe70beaec5f3
-      internalID: -1091854552
+      spriteID: 63320b63a99b36a43a580c146d3a5fe6
+      internalID: 1734693981
       vertices: []
       indices: 
       edges: []
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet_sorcerer_iddle2_0: -75278785
-      Spritesheet_sorcerer_iddle2_1: 1305929294
-      Spritesheet_sorcerer_iddle2_10: 707122551
-      Spritesheet_sorcerer_iddle2_11: -1091854552
-      Spritesheet_sorcerer_iddle2_2: -763050228
-      Spritesheet_sorcerer_iddle2_3: -901462175
-      Spritesheet_sorcerer_iddle2_4: 1475435450
-      Spritesheet_sorcerer_iddle2_5: 1700171824
-      Spritesheet_sorcerer_iddle2_6: -1671344848
-      Spritesheet_sorcerer_iddle2_7: 460170354
-      Spritesheet_sorcerer_iddle2_8: 1519400346
-      Spritesheet_sorcerer_iddle2_9: 1537071573
+      Sprite_Attack2_0: 1183547695
+      Sprite_Attack2_1: 1551215664
+      Sprite_Attack2_10: -998013834
+      Sprite_Attack2_11: 1734693981
+      Sprite_Attack2_2: -1043833990
+      Sprite_Attack2_3: 1548244688
+      Sprite_Attack2_4: 1506591861
+      Sprite_Attack2_5: -909485459
+      Sprite_Attack2_6: 1238363136
+      Sprite_Attack2_7: 1059084961
+      Sprite_Attack2_8: -1903449969
+      Sprite_Attack2_9: 1590525335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

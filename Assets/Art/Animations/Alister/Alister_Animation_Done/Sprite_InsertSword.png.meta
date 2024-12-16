@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7edd5bfd31069d4ba58de7c00caab3b
+guid: a25b359a9d370554dac794e7f041486a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 950
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,253 +136,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_0
+      name: Sprite_InsertSword_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46afbebe8b4d1414f8eddfcd8bcc6df1
+      internalID: -1166745425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2b2ef01794c4448ad3e811aec33747
+      internalID: -383685150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0cdfd73ea0e06409756b73b1ddf294
+      internalID: 48659944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc9aa3f0f22d5c44999b6c4c0fdbbed
+      internalID: 2132281755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031e3e57bb9b70745986e3869e810507
+      internalID: -2098734213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8081f52850351c74087b8a12f79ce816
+      internalID: 2055410186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a7dde993ca0034386e7cfa4efe1afe
+      internalID: -427556855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9e806eee0b74348b796b07f64e7076
+      internalID: -322458320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_InsertSword_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad657c643896b154ca0a6a6720660dc4
-      internalID: -75278785
+      spriteID: 560db470883e453418eef1a74e7a2a49
+      internalID: 246971616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_1
+      name: Sprite_InsertSword_9
       rect:
         serializedVersion: 2
-        x: 974
+        x: 1920
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e90ca02fb876994293d743db8f97858
-      internalID: 1305929294
+      spriteID: faeca65dd3f79a047ada601b374dca0c
+      internalID: 355366942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_2
+      name: Sprite_InsertSword_10
       rect:
         serializedVersion: 2
-        x: 1948
+        x: 3840
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1637530725e7d91438ca15edc796dde4
-      internalID: -763050228
+      spriteID: aeb83043c5157b045a76b6c59c2e4332
+      internalID: -554607762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_3
+      name: Sprite_InsertSword_11
       rect:
         serializedVersion: 2
-        x: 2922
+        x: 5760
         y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab569fac999ffe34eb5d2eacc76ed04d
-      internalID: -901462175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_4
-      rect:
-        serializedVersion: 2
-        x: 3896
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bb263d9515779343a7c83b5a4e767c6
-      internalID: 1475435450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_5
-      rect:
-        serializedVersion: 2
-        x: 4870
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c75506a20befee341a247bb393883f6d
-      internalID: 1700171824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_6
-      rect:
-        serializedVersion: 2
-        x: 5844
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d7dd01bacb9814d9c1a6dd4201e131
-      internalID: -1671344848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_7
-      rect:
-        serializedVersion: 2
-        x: 6818
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7d6c7e233a03a341aaae618e4bee824
-      internalID: 460170354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_8
-      rect:
-        serializedVersion: 2
-        x: 7792
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcbb09001a6aea44d9f24b75badd682a
-      internalID: 1519400346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_9
-      rect:
-        serializedVersion: 2
-        x: 8766
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 897efcf2bbc6af148be5f9566c139b47
-      internalID: 1537071573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_10
-      rect:
-        serializedVersion: 2
-        x: 9740
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d10631113c866c40aa070fb165d3ba6
-      internalID: 707122551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_sorcerer_iddle2_11
-      rect:
-        serializedVersion: 2
-        x: 10714
-        y: 0
-        width: 974
-        height: 2563
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c5cf34df4379df4e95dbe70beaec5f3
-      internalID: -1091854552
+      spriteID: a5b31b78685fce348bf6cd87bff9ee2d
+      internalID: 1636295543
       vertices: []
       indices: 
       edges: []
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet_sorcerer_iddle2_0: -75278785
-      Spritesheet_sorcerer_iddle2_1: 1305929294
-      Spritesheet_sorcerer_iddle2_10: 707122551
-      Spritesheet_sorcerer_iddle2_11: -1091854552
-      Spritesheet_sorcerer_iddle2_2: -763050228
-      Spritesheet_sorcerer_iddle2_3: -901462175
-      Spritesheet_sorcerer_iddle2_4: 1475435450
-      Spritesheet_sorcerer_iddle2_5: 1700171824
-      Spritesheet_sorcerer_iddle2_6: -1671344848
-      Spritesheet_sorcerer_iddle2_7: 460170354
-      Spritesheet_sorcerer_iddle2_8: 1519400346
-      Spritesheet_sorcerer_iddle2_9: 1537071573
+      Sprite_InsertSword_0: -1166745425
+      Sprite_InsertSword_1: -383685150
+      Sprite_InsertSword_10: -554607762
+      Sprite_InsertSword_11: 1636295543
+      Sprite_InsertSword_2: 48659944
+      Sprite_InsertSword_3: 2132281755
+      Sprite_InsertSword_4: -2098734213
+      Sprite_InsertSword_5: 2055410186
+      Sprite_InsertSword_6: -427556855
+      Sprite_InsertSword_7: -322458320
+      Sprite_InsertSword_8: 246971616
+      Sprite_InsertSword_9: 355366942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
