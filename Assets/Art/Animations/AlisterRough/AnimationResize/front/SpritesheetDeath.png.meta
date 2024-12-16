@@ -140,11 +140,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 5402
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: SpritesheetDeath_1
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 5402
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 1920
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: SpritesheetDeath_2
       rect:
         serializedVersion: 2
-        x: 3798
-        y: 5402
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 3840
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: SpritesheetDeath_3
       rect:
         serializedVersion: 2
-        x: 5697
-        y: 5402
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 5760
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,11 +224,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4324
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: SpritesheetDeath_5
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 4324
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: SpritesheetDeath_6
       rect:
         serializedVersion: 2
-        x: 3798
-        y: 4324
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,12 +286,12 @@ TextureImporter:
       name: SpritesheetDeath_7
       rect:
         serializedVersion: 2
-        x: 5697
-        y: 4324
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,11 +308,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3246
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: SpritesheetDeath_9
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 3246
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,12 +349,12 @@ TextureImporter:
       name: SpritesheetDeath_10
       rect:
         serializedVersion: 2
-        x: 3798
-        y: 3246
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,12 +370,12 @@ TextureImporter:
       name: SpritesheetDeath_11
       rect:
         serializedVersion: 2
-        x: 5697
-        y: 3246
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -392,11 +392,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2168
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,12 +412,12 @@ TextureImporter:
       name: SpritesheetDeath_13
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 2168
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,12 +433,12 @@ TextureImporter:
       name: SpritesheetDeath_14
       rect:
         serializedVersion: 2
-        x: 3798
-        y: 2168
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,12 +454,12 @@ TextureImporter:
       name: SpritesheetDeath_15
       rect:
         serializedVersion: 2
-        x: 5697
-        y: 2168
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -476,11 +476,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1090
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,12 +496,12 @@ TextureImporter:
       name: SpritesheetDeath_17
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 1090
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -517,12 +517,12 @@ TextureImporter:
       name: SpritesheetDeath_18
       rect:
         serializedVersion: 2
-        x: 3798
-        y: 1090
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,12 +538,12 @@ TextureImporter:
       name: SpritesheetDeath_19
       rect:
         serializedVersion: 2
-        x: 5697
-        y: 1090
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -560,11 +560,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,12 +580,12 @@ TextureImporter:
       name: SpritesheetDeath_21
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 12
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -601,12 +601,12 @@ TextureImporter:
       name: SpritesheetDeath_22
       rect:
         serializedVersion: 2
-        x: 3798
-        y: 12
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -622,12 +622,12 @@ TextureImporter:
       name: SpritesheetDeath_23
       rect:
         serializedVersion: 2
-        x: 5697
-        y: 12
-        width: 1899
-        height: 1078
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.33, y: 0.13}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
