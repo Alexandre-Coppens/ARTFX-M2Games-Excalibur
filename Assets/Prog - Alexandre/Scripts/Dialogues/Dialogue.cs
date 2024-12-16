@@ -8,6 +8,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private string[] dialogueTexts;
 
     DialogueUIMain mainDialogue;
+    private bool waitInteract;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,17 @@ public class Dialogue : MonoBehaviour
 
     public void Interacted()
     {
+        if (waitInteract) return;
         if (currentSpeech == 0) { mainDialogue.StartDialogue(); }
         mainDialogue.ChangeDialogue(dialogueTexts[currentSpeech]);
         currentSpeech++;
-        if (currentSpeech >= dialogueTexts.Length) { mainDialogue.EndDialogue(); currentSpeech = 0; };
+        if (currentSpeech >= dialogueTexts.Length) { mainDialogue.EndDialogue(); currentSpeech = 0; StartCoroutine("WaitBeforeInteract"); };
+    }
+
+    private IEnumerator WaitBeforeInteract()
+    {
+        waitInteract = true;
+        yield return new WaitForSeconds(2);
+        waitInteract = false;
     }
 }
