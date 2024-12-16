@@ -1,23 +1,45 @@
+using Cinemachine.Utility;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //ENEMY FLIP IS RIGHT
     [Header("Variables")]
     [Tooltip("Define what the enemy is currently doing")]
     [SerializeField] private EnemyAction currentAction;
     [Tooltip("The level of difficulty of the enemy")]
     [SerializeField, Range(1,3)] private int ennemyLevel = 1;
+    [Tooltip("The number of health of the ennemy")]
+    [SerializeField, Range(1, 10)] private int health = 3;
+
     [Header("CheckPlayer")]
     [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
     [SerializeField] private Vector2 ennCheckSize = Vector2.one;
+    [Tooltip("Enemy chasing range")]
+    [SerializeField] private float enChaseRange = 10f;
+    [Tooltip("Left Check to not fall from platforms")]
+    [SerializeField] private Vector3 leftPlatCheck = Vector2.zero;
+    [Tooltip("Right Check to not fall from platforms")]
+    [SerializeField] private Vector3 rightPlatCheck = Vector2.zero;
+
     [Header("Roaming")]
-    [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
+    [Tooltip("Enemy normal speed")]
     [SerializeField] private float ennWalkSpeed = 2f;
     [Tooltip("X is left range of enemy & Y is the right range of the enemy")]
     [SerializeField] private Vector2 ennWalkRange;
+
+    [Header("Chasing")]
+    [Tooltip("When the enemy see the player he will stop for before chasing")]
+    [SerializeField] private float enStopTime = 2f;
+    [Tooltip("Enemy chasing speed")]
+    [SerializeField] private float ennChaseSpeed = 2f;
+
     [Header("Attack")]
     [Tooltip("Time taken for an attack")]
     [SerializeField] private float attackTime = 0.2f;
@@ -30,6 +52,19 @@ public class Enemy : MonoBehaviour
     [Tooltip("Changes the size of the attack collider")]
     [SerializeField] private Vector2 attackSize = Vector2.one;
 
+    [Header("Hit")]
+    [Tooltip("Velocity with wich the ennemy will move when hit")]
+    [SerializeField] private float hitVelocity = 3f;
+    [Tooltip("Nbr in seconds of stun when hit")]
+    [SerializeField] private float hitStunTime = 0.7f;
+
+    [Header("Debug Idle")]
+    private float idleLeft;
+    private EnemyAction nextAction;
+
+    [Header("Debug Chase")]
+    private Vector3 chasePoint;
+
     [Header("Debug Roaming")]
     private Vector2 ennWalkBoundaries;
 
@@ -40,6 +75,8 @@ public class Enemy : MonoBehaviour
     [Header("Elements")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Player_Behaviour player;
 
     public enum EnemyAction
     {
@@ -47,6 +84,8 @@ public class Enemy : MonoBehaviour
         Roaming,
         Attacking,
         Hit,
+        Chase,
+        Dead,
     }
 
     void Start()
@@ -54,6 +93,8 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ennWalkBoundaries = new Vector2(transform.position.x + ennWalkRange.x, transform.position.x + ennWalkRange.y);
+        player = Player_Behaviour._instance;
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -61,15 +102,34 @@ public class Enemy : MonoBehaviour
         switch (currentAction)
         {
             case EnemyAction.Idle:
-                CheckForPlayer();
+                IdleWait();
                 break;
             case EnemyAction.Roaming:
+                if(animator.GetInteger("State") != 1) { animator.SetInteger("State", 1); animator.SetTrigger("Change"); }
                 CheckForPlayer();
                 Roaming();
                 break;
             case EnemyAction.Attacking:
+                if (animator.GetInteger("State") != 2) { animator.SetInteger("State", 2); animator.SetTrigger("Change"); }
                 Attack();
                 break;
+            case EnemyAction.Chase:
+                if (animator.GetInteger("State") != 4) { animator.SetInteger("State", 4); animator.SetTrigger("Change"); }
+                CheckForPlayer();
+                Chase();
+                break;
+        }
+    }
+
+    private void IdleWait()
+    {
+        if (idleLeft <= 0)
+        {
+            currentAction = nextAction;
+        }
+        else
+        {
+            idleLeft -= Time.deltaTime;
         }
     }
 
@@ -91,12 +151,13 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
+        rb.velocity = Vector2.zero;
         if(currentAttackTime == 0)
         {
             currentAttackTime += Time.deltaTime;
             attackDifference = new Vector3(Mathf.Abs(attackDifference.x) * (spriteRenderer.flipX ? 1 : -1), attackDifference.y);
         }
-        else if (currentAttackTime < attackTime && !hasAttacked)
+        else if (currentAttackTime < attackTime && currentAttackTime > hurtTime && !hasAttacked)
         {
             hasAttacked = true;
             Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize, 0);
@@ -117,36 +178,111 @@ public class Enemy : MonoBehaviour
         {
             currentAttackTime = 0;
             hasAttacked = false;
+            CheckForPlayer();
+        }
+    }
+
+    private void Chase()
+    {
+        if (chasePoint.x > transform.position.x) spriteRenderer.flipX = true;
+        else spriteRenderer.flipX = false;
+
+        Debug.Log(Vector3.Distance(chasePoint, transform.position));
+        if (Vector3.Distance(chasePoint, transform.position) > 1f)
+        {
+            if (spriteRenderer.flipX) { rb.velocity = new Vector2(ennChaseSpeed, rb.velocity.y); }
+            else { rb.velocity = new Vector2(-ennChaseSpeed, rb.velocity.y); }
+        }
+        else
+        {
+            idleLeft = 1f;
+            if (animator.GetInteger("State") != 0) { animator.SetInteger("State", 0); animator.SetTrigger("Change"); }
+            nextAction = EnemyAction.Roaming;
             currentAction = EnemyAction.Idle;
+            CheckForPlayer();
         }
     }
 
     private void CheckForPlayer()
     {
         Collider2D[] hit = Physics2D.OverlapBoxAll(transform.position, ennCheckSize, 0);
-        bool playerInRange = false;
-        bool playerIsLeft = false;
+        RaycastHit2D[] ray = Physics2D.RaycastAll(transform.position, player.transform.position.x<transform.position.x?Vector2.left:Vector2.right, enChaseRange);
         foreach (Collider2D col in hit)
         {
             if (col.CompareTag("Player"))
             {
-                playerInRange = true;
-                playerIsLeft = transform.position.x > col.transform.position.x;
+                rb.velocity = Vector2.zero;
+                currentAction = EnemyAction.Attacking;
+                if (currentAttackTime == 0) { spriteRenderer.flipX = transform.position.x < player.transform.position.x; }
+                return;
+            }
+        }
+
+        bool grounded = false;
+        hit = !spriteRenderer.flipX?Physics2D.OverlapCircleAll(transform.position + leftPlatCheck, 0.05f): Physics2D.OverlapCircleAll(transform.position + rightPlatCheck, 0.05f);
+        foreach (Collider2D col in hit)
+        {
+            if (col.CompareTag("Ground"))
+            {
+                grounded = true;
                 break;
             }
         }
-        if (playerInRange)
+        if (!grounded) 
         {
-            rb.velocity = Vector2.zero;
-            currentAction = EnemyAction.Attacking;
-            if(currentAttackTime == 0) { spriteRenderer.flipX = !playerIsLeft; }
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            if (currentAction == EnemyAction.Roaming)
+            {
+                spriteRenderer.flipX = !spriteRenderer.flipX;
+            }
+            if (currentAction == EnemyAction.Chase)
+            {
+                chasePoint = transform.position;
+            }
+            return; 
         }
-        else
+        if (ennemyLevel == 1) { return; }
+        foreach (RaycastHit2D raycast in ray)
+        {
+            if (raycast.collider.CompareTag("Player"))
+            {
+                chasePoint = player.transform.position;
+                if (currentAction != EnemyAction.Chase)
+                {
+                    nextAction = EnemyAction.Chase;
+                    if (animator.GetInteger("State") != 0) { animator.SetInteger("State", 0); animator.SetTrigger("Change"); }
+                    idleLeft = enStopTime;
+                    currentAction = EnemyAction.Idle;
+                }
+                return;
+            }
+        }
+
+        if(currentAction != EnemyAction.Chase)
         {
             currentAction = EnemyAction.Roaming;
         }
     }
 
+    public void Attacked()
+    {
+        health -= 1;
+        if (health > 0)
+        {
+            idleLeft = hitStunTime;
+            if (animator.GetInteger("State") != 3) { animator.SetInteger("State", 3); animator.SetTrigger("Change"); }
+            nextAction = EnemyAction.Attacking;
+            currentAction = EnemyAction.Idle;
+            rb.velocity = new Vector2(hitVelocity * (player.transform.position.x > transform.position.x ? -1 : 1), 0);
+        }
+        else
+        {
+            animator.SetTrigger("Dead");
+            currentAction = EnemyAction.Dead;
+            gameObject.tag = "Untagged";
+            Destroy(GetComponent<CanBeHit>());
+        }
+    }
     private void OnDrawGizmosSelected()
     {
         if (!EditorApplication.isPlaying)
@@ -181,6 +317,12 @@ public class Enemy : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
         }
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(chasePoint, 0.1f);
+        Gizmos.DrawWireSphere(transform.position + leftPlatCheck, 0.1f);
+        Gizmos.DrawWireSphere(transform.position + rightPlatCheck, 0.1f);
+
 
     }
 }

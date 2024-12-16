@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8696784704678086862}
   - component: {fileID: 1301971126963263596}
+  - component: {fileID: 4244092173860831174}
   - component: {fileID: 8307393578300398062}
   - component: {fileID: 8450393889199608836}
   - component: {fileID: 4117976389636434511}
@@ -48,18 +49,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b972105317eb540ba04bdceea43469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAction: 2
-  ennemyLevel: 1
+  currentAction: 1
+  ennemyLevel: 2
+  health: 3
   ennCheckSize: {x: 3.45, y: 1}
+  enChaseRange: 10
+  leftPlatCheck: {x: -0.79, y: -1.39, z: 0}
+  rightPlatCheck: {x: 0.79, y: -1.39, z: 0}
   ennWalkSpeed: 2
   ennWalkRange: {x: -4.24, y: 1.88}
+  enStopTime: 0.7
+  ennChaseSpeed: 4
   attackTime: 0.5
   hurtTime: 0.2
   hitForce: {x: 6, y: 2}
-  attackDifference: {x: -1.21, y: 0}
-  attackSize: {x: 1, y: 1}
+  attackDifference: {x: -0.82, y: 0}
+  attackSize: {x: 1.94, y: 1}
+  hitVelocity: 3
+  hitStunTime: 0.7
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &4244092173860831174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6559912219511761232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ae12c417edd5f408f7dbec52832d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionAssigned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1301971126963263596}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: Attacked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &8307393578300398062
 Rigidbody2D:
   serializedVersion: 4
@@ -177,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8229183219902933823}
   - component: {fileID: 8469958533919711669}
+  - component: {fileID: 5564729472402863694}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -193,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 7275713684323572180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -240,7 +279,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8c49a7a4c1331fd46aae1f6463c76b69, type: 3}
+  m_Sprite: {fileID: 844177864, guid: 629ff9b5dbb84664ba47e2613caf5d96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -251,3 +290,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5564729472402863694
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275713684323572180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de40f0ceef13cbb45a5388c3fe68d776, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
