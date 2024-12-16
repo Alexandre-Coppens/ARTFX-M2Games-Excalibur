@@ -12,7 +12,7 @@ public class Player_Behaviour : MonoBehaviour
     [Tooltip("The maximum of the player's life")]
     [SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
-    [SerializeField] private int playerLife = 5;
+    public int playerLife = 5;
     
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
