@@ -187,7 +187,6 @@ public class Enemy : MonoBehaviour
         if (chasePoint.x > transform.position.x) spriteRenderer.flipX = true;
         else spriteRenderer.flipX = false;
 
-        Debug.Log(Vector3.Distance(chasePoint, transform.position));
         if (Vector3.Distance(chasePoint, transform.position) > 1f)
         {
             if (spriteRenderer.flipX) { rb.velocity = new Vector2(ennChaseSpeed, rb.velocity.y); }
