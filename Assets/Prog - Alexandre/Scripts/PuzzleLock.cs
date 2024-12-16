@@ -24,16 +24,17 @@ public class PuzzleLock : MonoBehaviour
         if (!hasSword)
         {
             if (!player.hasSword){ return; }
-            EnterSword();
+            StartCoroutine(EnterSword());
         }
         else
         {
-            RemoveSword();
+            StartCoroutine(RemoveSword());
         }
     }
 
-    private void EnterSword()
+    private IEnumerator EnterSword()
     {
+        yield return new WaitForSeconds(0.5f);
         hasSword = true;
         sword.GetToPosition(transform, true);
         foreach (var func in functionsOpen)
@@ -42,8 +43,9 @@ public class PuzzleLock : MonoBehaviour
         }
     }
 
-    private void RemoveSword()
+    private IEnumerator RemoveSword()
     {
+        yield return new WaitForSeconds(0.2f);
         hasSword = false;
         sword.GetToPosition(null, false);
         foreach (var func in functionsClose)
