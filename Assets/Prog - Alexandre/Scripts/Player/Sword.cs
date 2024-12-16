@@ -37,6 +37,10 @@ public class Sword : MonoBehaviour
             pos = parent;
             player.hasSword = true;
         }
+        else
+        {
+            player.hasSword = false;
+        }
         GetComponent<Rigidbody2D>().simulated = false;
         transform.SetParent(pos);
         transform.localPosition = Vector3.zero;
