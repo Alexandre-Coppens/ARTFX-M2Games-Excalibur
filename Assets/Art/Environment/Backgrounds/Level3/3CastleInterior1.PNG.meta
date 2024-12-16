@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 39be4914e4fed7947a7cbd87f79472e8
+=======
+guid: 0f469c3719cbaad40b56e3638eb56052
+>>>>>>> origin/Alexandre
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
