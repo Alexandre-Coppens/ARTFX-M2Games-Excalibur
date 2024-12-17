@@ -8134,7 +8134,7 @@ PrefabInstance:
     - target: {fileID: 5856958774881159284, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 2800000, guid: 7d1cf057d4f104644b47d1a7ddd6b270, type: 3}
+      objectReference: {fileID: 2800000, guid: bdd59fa02d6b0b8478d548db66d193cd, type: 3}
     - target: {fileID: 5856958774881159284, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Overridden
       value: 1
@@ -8268,10 +8268,14 @@ PrefabInstance:
     - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 713065552, guid: f1b693f2bf0e59149b225ab0f2c0556f, type: 3}
+      objectReference: {fileID: -22933123, guid: 7184f86595c4a8a49924d6c5c900d096, type: 3}
     - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855203239485329068, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 3008132212000594439, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
