@@ -72,6 +72,7 @@ public class Player_Behaviour : MonoBehaviour
     private bool isAttackFlipped = false;
     private float attackPressTime;
     private bool hasHit;
+    private bool signThrow;
 
     [Header("Debug Interaction")]
     private bool hasInteracted = false;
@@ -208,6 +209,12 @@ public class Player_Behaviour : MonoBehaviour
         {
             attackPressTime += Time.deltaTime;
 
+            if(attackPressTime > attackThrowTime && !signThrow && hasSword)
+            {
+                inputs.AddRumble(new Vector2(1, 1), 0.1f);
+                signThrow = true;
+            }
+
             if(hasAttacked) { return; }
 
             Collider2D[] allObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
@@ -260,6 +267,7 @@ public class Player_Behaviour : MonoBehaviour
             if(attackPressTime > attackThrowTime)
             {
                 ThrowSword();
+                signThrow = false;
             }
             attackPressTime = 0;
             hasAttacked = false;

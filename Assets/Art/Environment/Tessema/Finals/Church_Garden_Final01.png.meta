@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b025094a47e65d4fb9b5ee2db082747
+guid: 8dcfeb64b902ec140b792b0a4a2737e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 550
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,190 +136,316 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_defeat_0
+      name: Church_Garden_Final01_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3053.3335
-        width: 2000
-        height: 1526.6666
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 257
+        y: 659
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f30481527a094549baba7e1d7cc8cf4
-      internalID: 640453903
+      spriteID: d3fdbcc5cf1e4604b9111571d8fa92fb
+      internalID: -1935778433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_1
+      name: Church_Garden_Final01_5
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 3053.3335
-        width: 2000
-        height: 1526.6666
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 513
+        y: 659
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4e4b87c99da3a4cbbb3b3a4233be70
-      internalID: -336132975
+      spriteID: d7379a2637ebd364784a64d09350058f
+      internalID: 212161368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_2
+      name: Church_Garden_Final01_6
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 3053.3335
-        width: 2000
-        height: 1526.6666
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 769
+        y: 659
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc9d1c246325d1d40b287576c7fba2d2
-      internalID: 1955115889
+      spriteID: 8ddb3ef992379fd4cb2ac73bd8fce455
+      internalID: -1502800864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_3
+      name: Church_Garden_Final01_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1527
-        width: 2000
-        height: 1521
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 1025
+        y: 659
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88806daf13a175447ac526f689d8ee6a
-      internalID: -1210548958
+      spriteID: 68be41fa2d0ec0949bcfe63193414540
+      internalID: -1233459352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_4
+      name: Church_Garden_Final01_8
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1527
-        width: 2000
-        height: 1521
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 1281
+        y: 659
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 387fee8fd0dddf6429261232268a886d
-      internalID: 1458451090
+      spriteID: ea417b9dbf4f9dc46a8cd96141606e42
+      internalID: 2119730231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_5
+      name: Church_Garden_Final01_9
       rect:
         serializedVersion: 2
-        x: 3999
-        y: 1527
-        width: 2001
-        height: 1521
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 257
+        y: 403
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9181d65140c2ab499d1a6371f1028aa
-      internalID: 1044762086
+      spriteID: ca0f73bd77afa134091e147ffbae3614
+      internalID: -1319069460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_6
+      name: Church_Garden_Final01_10
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 1999
-        height: 1519
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 513
+        y: 403
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca6ee60fdcc045645a1e4d27098a2fa2
-      internalID: 1742134568
+      spriteID: 8901eeba26dae5945b794d6727d1faa0
+      internalID: -400285559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_7
+      name: Church_Garden_Final01_11
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1.333374
-        width: 2000
-        height: 1526.6666
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 769
+        y: 403
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8518f22b7627224592c5c7b33ba5fd1
-      internalID: -1705593894
+      spriteID: 5b90c395812db344586e5380e4c43698
+      internalID: -1073291746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_defeat_8
+      name: Church_Garden_Final01_12
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 1.333374
-        width: 2000
-        height: 1526.6666
-      alignment: 9
-      pivot: {x: 0.67, y: 0}
+        x: 1025
+        y: 403
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f792b052caf7ac14b942a860ddfcddfb
-      internalID: 983750901
+      spriteID: 88133f7dfee86ad46afa92d968319534
+      internalID: 2089798239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Church_Garden_Final01_13
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 403
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c602e98d300d90f44bbd09888f11cc5a
+      internalID: -888142877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Church_Garden_Final01_14
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 147
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8287dad7d06d3804ab363ac898f83fe2
+      internalID: 1735449910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Church_Garden_Final01_15
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 147
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d77964260acaa948984222b94a141ae
+      internalID: 65693076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Church_Garden_Final01_16
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 147
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ac28287b7546044b791e7bbe08bad8
+      internalID: 1514519144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Church_Garden_Final01_17
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 147
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9af346ed8d09a54d91216bdc3ca5840
+      internalID: 985912291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Church_Garden_Final01_18
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 147
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0578042eb01e42bab3e85bf7b9ab1
+      internalID: -2069792094
       vertices: []
       indices: 
       edges: []
@@ -335,15 +461,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheet_defeat_0: 640453903
-      spritesheet_defeat_1: -336132975
-      spritesheet_defeat_2: 1955115889
-      spritesheet_defeat_3: -1210548958
-      spritesheet_defeat_4: 1458451090
-      spritesheet_defeat_5: 1044762086
-      spritesheet_defeat_6: 1742134568
-      spritesheet_defeat_7: -1705593894
-      spritesheet_defeat_8: 983750901
+      Church_Garden_Final01_0: -1459748480
+      Church_Garden_Final01_1: 726457389
+      Church_Garden_Final01_10: -400285559
+      Church_Garden_Final01_11: -1073291746
+      Church_Garden_Final01_12: 2089798239
+      Church_Garden_Final01_13: -888142877
+      Church_Garden_Final01_14: 1735449910
+      Church_Garden_Final01_15: 65693076
+      Church_Garden_Final01_16: 1514519144
+      Church_Garden_Final01_17: 985912291
+      Church_Garden_Final01_18: -2069792094
+      Church_Garden_Final01_2: 524733286
+      Church_Garden_Final01_3: -1577227279
+      Church_Garden_Final01_4: -1935778433
+      Church_Garden_Final01_5: 212161368
+      Church_Garden_Final01_6: -1502800864
+      Church_Garden_Final01_7: -1233459352
+      Church_Garden_Final01_8: 2119730231
+      Church_Garden_Final01_9: -1319069460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
