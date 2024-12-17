@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PuzzleLock : MonoBehaviour
 {
-    private bool hasSword = false;
+    [SerializeField] private bool hasSword = false;
 
     Player_Behaviour player;
     Sword sword;
@@ -36,7 +36,7 @@ public class PuzzleLock : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         hasSword = true;
-        sword.GetToPosition(transform, true);
+        sword.GetToPosition(transform);
         foreach (var func in functionsOpen)
         {
             func.Invoke();
@@ -47,7 +47,7 @@ public class PuzzleLock : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         hasSword = false;
-        sword.GetToPosition(null, false);
+        sword.GetToPosition(null);
         foreach (var func in functionsClose)
         {
             func.Invoke();
