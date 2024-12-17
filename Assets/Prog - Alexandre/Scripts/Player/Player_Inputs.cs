@@ -29,7 +29,7 @@ public class Player_Inputs : MonoBehaviour
 
     void Rumble()
     {
-        if (Input.GetJoystickNames().Length <= 1) { return; }
+        if (Input.GetJoystickNames().Length <= 0) { return; }
         if (rumbleList.Count == 0) { Gamepad.current.SetMotorSpeeds(0, 0); return; }
         while (rumbleList[0][2] < Time.realtimeSinceStartup)
         {
