@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -265,13 +265,13 @@ TextureImporter:
       name: spritesheet_attack_6
       rect:
         serializedVersion: 2
-        x: 3001
-        y: 964
-        width: 1499
-        height: 958
+        x: 3002
+        y: 967
+        width: 1498
+        height: 955
       alignment: 9
       pivot: {x: 0.52, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 2, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

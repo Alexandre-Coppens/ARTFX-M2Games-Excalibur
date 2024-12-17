@@ -16,6 +16,7 @@ public class Sword : MonoBehaviour
     private Player_Behaviour player;
 
     private Vector3 velocity;
+    [HideInInspector] public bool comeback = false;
 
     private void Awake()
     {
@@ -26,6 +27,22 @@ public class Sword : MonoBehaviour
     {
         player = Player_Behaviour._instance;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if(comeback)
+        {
+            if (Vector3.Distance(transform.position, player.transform.position) > 1.5f)
+            {
+                transform.position = Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime);
+            }
+            else
+            {
+                GetToPosition(null);
+                comeback = false ;
+            }
+        }
     }
 
     public void Interacted()
@@ -48,16 +65,7 @@ public class Sword : MonoBehaviour
         transform.SetParent(pos);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
-    }
-
-    public IEnumerator ComeBack()
-    {
-        while (Vector3.Distance(transform.position, player.transform.position) > 0.5f)
-        {
-            yield return new WaitForFixedUpdate();
-            transform.position = Vector3.SmoothDamp(transform.position, player.transform.position, ref velocity, speed * Time.deltaTime);
-        }
-        GetToPosition(null);
+        transform.localScale = Vector3.one;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -67,7 +75,14 @@ public class Sword : MonoBehaviour
             if (collision.CompareTag("Ground"))
             {
                 velocity = Vector2.zero;
-                StartCoroutine(ComeBack());
+                comeback = true ;
+            }
+            else if (collision.CompareTag("Interactible"))
+            {
+                if (collision.GetComponent<PuzzleLock>() != null)
+                {
+                    collision.GetComponent<Interactible>().Interacted();
+                }
             }
         }
     }

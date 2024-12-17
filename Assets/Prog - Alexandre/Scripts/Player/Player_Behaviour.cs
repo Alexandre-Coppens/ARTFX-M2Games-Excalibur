@@ -51,7 +51,7 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private float stunTime = 0.2f;
 
     [Header("Interaction")]
-    [Tooltip("The radius of the interaction range")]
+    [Tooltip("The player cannot move in interaction")]
     public bool isInInteraction = false;
     [Tooltip("The radius of the interaction range")]
     [SerializeField] private float interactionRadius = 0.2f;
@@ -211,7 +211,8 @@ public class Player_Behaviour : MonoBehaviour
 
             if(attackPressTime > attackThrowTime && !signThrow && hasSword)
             {
-                inputs.AddRumble(new Vector2(1, 1), 0.1f);
+                inputs.AddRumble(new Vector2(2, 5), 0.3f);
+                Debug.Log("Rumble");
                 signThrow = true;
             }
 
@@ -253,6 +254,7 @@ public class Player_Behaviour : MonoBehaviour
             {
                 if (currentAttackTime == 0)
                 {
+                    StartCoroutine(PlayerAttack());
                     hasAttacked = true;
                     isAttackFlipped = spriteRenderer.flipX;
                     currentAttackTime += Time.deltaTime;
@@ -319,7 +321,12 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetTrigger("Hit");
         StartCoroutine("PlayerStun");
     }
-
+    private IEnumerator PlayerAttack()
+    {
+        isInInteraction = true;
+        yield return new WaitForSeconds(attackTime);
+        isInInteraction = false;
+    }
     private IEnumerator PlayerStun()
     {
         isInInteraction = true;

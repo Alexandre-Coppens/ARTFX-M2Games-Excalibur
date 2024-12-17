@@ -224,9 +224,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1097.3334
+        y: 1097
         width: 1500
-        height: 1096.6666
+        height: 1093
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: spritesheet_run_5
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1097.3334
-        width: 1500
-        height: 1096.6666
+        x: 1499
+        y: 1097
+        width: 1501
+        height: 1093
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: spritesheet_run_6
       rect:
         serializedVersion: 2
-        x: 2994
-        y: 1097
-        width: 1500
-        height: 1097
+        x: 3000
+        y: 1094
+        width: 1501
+        height: 1091
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: spritesheet_run_7
       rect:
         serializedVersion: 2
-        x: 4500
-        y: 1097.3334
-        width: 1500
-        height: 1096.6666
+        x: 4503
+        y: 1095
+        width: 1493
+        height: 1086
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: spritesheet_run_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1.333374
-        width: 1500
-        height: 1096.6666
+        x: 1
+        y: 1
+        width: 1499
+        height: 1088
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,9 +329,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1500
-        y: 1.333374
-        width: 1500
-        height: 1096.6666
+        y: 3
+        width: 1498
+        height: 1085
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: spritesheet_run_10
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 1.333374
-        width: 1500
-        height: 1096.6666
+        x: 2996
+        y: 1
+        width: 1504
+        height: 1084
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: spritesheet_run_11
       rect:
         serializedVersion: 2
-        x: 4500
-        y: 1.333374
-        width: 1500
-        height: 1096.6666
+        x: 4497
+        y: 1
+        width: 1503
+        height: 1082
       alignment: 9
       pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

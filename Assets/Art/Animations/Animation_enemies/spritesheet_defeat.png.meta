@@ -202,7 +202,7 @@ TextureImporter:
       name: spritesheet_defeat_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 1527
         width: 2000
         height: 1521
