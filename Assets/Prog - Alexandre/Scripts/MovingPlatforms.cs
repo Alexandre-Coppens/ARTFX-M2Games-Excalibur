@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class MovingPlatforms : MonoBehaviour
 {
     [Tooltip("The position the platform goes when the lock is activated")]
-    [SerializeField] private Vector2 openPosition;
+    public Vector2 openPosition;
     [Tooltip("The position the platform goes when the lock is deactivated")]
-    [SerializeField] private Vector2 closedPosition;
+    public Vector2 closedPosition;
+
+    public float speed;
 
     private Vector2 currentTarget = Vector2.zero;
 
@@ -30,7 +34,7 @@ public class MovingPlatforms : MonoBehaviour
     {
         if(Vector3.Distance(currentTarget, transform.position) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, currentTarget, Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
         }
     }
 
