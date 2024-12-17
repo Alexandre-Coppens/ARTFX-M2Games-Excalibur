@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class MovingPlatforms : MonoBehaviour
 {
     [Tooltip("The position the platform goes when the lock is activated")]
-    [SerializeField] private Vector2 openPosition;
+    public Vector2 openPosition;
     [Tooltip("The position the platform goes when the lock is deactivated")]
-    [SerializeField] private Vector2 closedPosition;
+    public Vector2 closedPosition;
+
+    public bool continousMovement;
+    public float speed;
 
     private Vector2 currentTarget = Vector2.zero;
+    private bool move = false;
 
     private void Start()
     {
@@ -18,20 +25,38 @@ public class MovingPlatforms : MonoBehaviour
 
     public void OpenEvent()
     {
-        currentTarget = openPosition;
+        if(!continousMovement) currentTarget = openPosition;
+        else move = true;
     }
 
     public void CloseEvent()
     {
-        currentTarget = closedPosition;
+        if (!continousMovement) currentTarget = openPosition;
+        else move = false;
     }
 
     private void Update()
     {
-        if(Vector3.Distance(currentTarget, transform.position) > 0.1f)
+        if (!continousMovement)
         {
-            transform.position = Vector3.MoveTowards(transform.position, currentTarget, Time.deltaTime);
+            if (Vector3.Distance(currentTarget, transform.position) > 0.1f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+            }
         }
+        else
+        {
+            if(move)
+            {
+                if (Vector3.Distance(currentTarget, transform.position) > 0.1f)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+                }
+                else if (currentTarget == openPosition) currentTarget = closedPosition;
+                else currentTarget = openPosition;
+            }
+        }
+
     }
 
     private void OnDrawGizmosSelected()
