@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53e66f9f1e1d8734796ab37ab9a1230e
+guid: fc70c9cc491a8c143be3a4c5df160421
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,7 +136,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_GetItem_0
+      name: Sprite_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6054c39816bfd348a45cefabea2b562
+      internalID: 586570266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e081c927c822a014bbc9aed071c88e4b
+      internalID: 2032164130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ba48faed81ef84e877c64e56d44dc0
+      internalID: 1144380625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b967380cfe33444ea98c4245bcb1f19
+      internalID: 1828670578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Walk_4
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef10c087d2dc0c441b5e7790eca47216
-      internalID: -389380696
+      spriteID: d978fc521e3b546419b234ab8ad33b05
+      internalID: 902651709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_1
+      name: Sprite_Walk_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -171,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a629d22d66cca545bd094826037cb3d
-      internalID: 953619586
+      spriteID: 55c9478bcf08b4e47a53831af7bfdeda
+      internalID: 1180932329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_2
+      name: Sprite_Walk_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -192,14 +276,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420f8bafe7304254cb0056071ec7010f
-      internalID: 111636839
+      spriteID: 09066923c0d1f434b94778098543b9ec
+      internalID: 427349267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_3
+      name: Sprite_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f662bdb45da6fea46a16877eb595e3b6
+      internalID: 1321071523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Walk_8
       rect:
         serializedVersion: 2
         x: 0
@@ -213,17 +318,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c748c65634354dd4f81344073115b6ef
-      internalID: -1613737393
+      spriteID: 2414c078b55fbeb47a19655da823e6d5
+      internalID: -38636120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_4
+      name: Sprite_Walk_9
       rect:
         serializedVersion: 2
-        x: 1924
+        x: 1920
         y: 0
         width: 1920
         height: 1080
@@ -234,8 +339,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d993792dfe86d0c41ac99652572a1759
-      internalID: -919275578
+      spriteID: 12163f4df26e6c440954bf48b1e29a48
+      internalID: 1015067673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2941efdcc1151dc4aa9197d9779a6370
+      internalID: 1544000307
       vertices: []
       indices: 
       edges: []
@@ -251,11 +377,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_GetItem_0: -389380696
-      Sprite_GetItem_1: 953619586
-      Sprite_GetItem_2: 111636839
-      Sprite_GetItem_3: -1613737393
-      Sprite_GetItem_4: -919275578
+      Sprite_Walk_0: 586570266
+      Sprite_Walk_1: 2032164130
+      Sprite_Walk_10: 1544000307
+      Sprite_Walk_2: 1144380625
+      Sprite_Walk_3: 1828670578
+      Sprite_Walk_4: 902651709
+      Sprite_Walk_5: 1180932329
+      Sprite_Walk_6: 427349267
+      Sprite_Walk_7: 1321071523
+      Sprite_Walk_8: -38636120
+      Sprite_Walk_9: 1015067673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53e66f9f1e1d8734796ab37ab9a1230e
+guid: 3f187834813c2ff4fa1e06fbc1e48b59
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,7 +136,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_GetItem_0
+      name: Sprite_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a64be11f8ea6d84fa899ecf05e8d2db
+      internalID: -866529505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9376fa56e3b047849812aa6f7182a4ec
+      internalID: 385766537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a7c8c9dee48254193af4c3b17633d2
+      internalID: -536269909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8570d74ab3040bf46ae1670ed61f5892
+      internalID: 1579722144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_4
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef10c087d2dc0c441b5e7790eca47216
-      internalID: -389380696
+      spriteID: 0763c2197dbde474ebea82980a935f14
+      internalID: 986910049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_1
+      name: Sprite_Jump_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -171,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a629d22d66cca545bd094826037cb3d
-      internalID: 953619586
+      spriteID: f57898f29ca9a6442bbacdf48555f5f5
+      internalID: -928551752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_2
+      name: Sprite_Jump_6
       rect:
         serializedVersion: 2
         x: 3840
@@ -192,14 +276,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420f8bafe7304254cb0056071ec7010f
-      internalID: 111636839
+      spriteID: d8493b8a8868d3848aa2befdc4aeabc3
+      internalID: 682406157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_3
+      name: Sprite_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86ed71902460b74794c14a48ca2565e
+      internalID: -1660863849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_8
       rect:
         serializedVersion: 2
         x: 0
@@ -213,17 +318,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c748c65634354dd4f81344073115b6ef
-      internalID: -1613737393
+      spriteID: e419b77a4f11afb44b18d5a670f1b27e
+      internalID: 1539806417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_GetItem_4
+      name: Sprite_Jump_9
       rect:
         serializedVersion: 2
-        x: 1924
+        x: 1920
         y: 0
         width: 1920
         height: 1080
@@ -234,8 +339,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d993792dfe86d0c41ac99652572a1759
-      internalID: -919275578
+      spriteID: b024e673e41ef434885dc07e31caf90e
+      internalID: -836981230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383d587e4a214134299fd0e6524b5b7b
+      internalID: 848930452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ba01c1a39d98a44ad98fec4a1dfdc5
+      internalID: 2023326499
       vertices: []
       indices: 
       edges: []
@@ -251,11 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_GetItem_0: -389380696
-      Sprite_GetItem_1: 953619586
-      Sprite_GetItem_2: 111636839
-      Sprite_GetItem_3: -1613737393
-      Sprite_GetItem_4: -919275578
+      Sprite_Jump_0: -866529505
+      Sprite_Jump_1: 385766537
+      Sprite_Jump_10: 848930452
+      Sprite_Jump_11: 2023326499
+      Sprite_Jump_2: -536269909
+      Sprite_Jump_3: 1579722144
+      Sprite_Jump_4: 986910049
+      Sprite_Jump_5: -928551752
+      Sprite_Jump_6: 682406157
+      Sprite_Jump_7: -1660863849
+      Sprite_Jump_8: 1539806417
+      Sprite_Jump_9: -836981230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
