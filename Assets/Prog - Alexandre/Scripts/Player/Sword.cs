@@ -65,6 +65,7 @@ public class Sword : MonoBehaviour
         transform.SetParent(pos);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        transform.localScale = Vector3.one;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,6 +76,13 @@ public class Sword : MonoBehaviour
             {
                 velocity = Vector2.zero;
                 comeback = true ;
+            }
+            else if (collision.CompareTag("Interactible"))
+            {
+                if (collision.GetComponent<PuzzleLock>() != null)
+                {
+                    collision.GetComponent<Interactible>().Interacted();
+                }
             }
         }
     }
