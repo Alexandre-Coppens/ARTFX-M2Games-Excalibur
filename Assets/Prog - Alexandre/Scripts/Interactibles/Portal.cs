@@ -11,6 +11,7 @@ public class Portal : MonoBehaviour
     public void Interacted()
     {
         player = Player_Behaviour._instance;
+        Camera.main.transform.position = new Vector3(teleportTo.x, teleportTo.y, Camera.main.transform.position.z);
         player.transform.position = teleportTo;
     }
 
