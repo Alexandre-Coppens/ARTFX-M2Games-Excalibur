@@ -11,6 +11,8 @@ public class MovingPlatforms : MonoBehaviour
     [Tooltip("The position the platform goes when the lock is deactivated")]
     public Vector2 closedPosition;
 
+    public float speed;
+
     private Vector2 currentTarget = Vector2.zero;
 
     private void Start()
@@ -32,7 +34,7 @@ public class MovingPlatforms : MonoBehaviour
     {
         if(Vector3.Distance(currentTarget, transform.position) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, currentTarget, Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
         }
     }
 
