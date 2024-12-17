@@ -12,7 +12,7 @@ public class Player_Behaviour : MonoBehaviour
     [Tooltip("The maximum of the player's life")]
     [SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
-    [SerializeField] private int playerLife = 5;
+    public int playerLife = 5;
     
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -55,6 +55,8 @@ public class Player_Behaviour : MonoBehaviour
     public bool isInInteraction = false;
     [Tooltip("The radius of the interaction range")]
     [SerializeField] private float interactionRadius = 0.2f;
+    [Tooltip("Time it takes for the player to take or remove his sword")]
+    [SerializeField] private float interactionTime = 0.2f;
 
     [Header("Debug Jump")]
     private bool isOnGround = true;
@@ -81,7 +83,7 @@ public class Player_Behaviour : MonoBehaviour
     private Animator animator;
 
     [Header("Debug Controller")]
-    private float movement;
+    [HideInInspector]public float movement;
     private bool jumpPressed;
     private bool attackPressed;
 
@@ -113,8 +115,12 @@ public class Player_Behaviour : MonoBehaviour
 
     private void GetInputs()
     {
-        movement = inputs.movement;
-        jumpPressed = inputs.jumpPressed;
+        if (!isInInteraction)
+        {
+            movement = inputs.movement;
+        }
+
+            jumpPressed = inputs.jumpPressed;
         attackPressed = inputs.attackPressed;
     }
 
@@ -231,8 +237,10 @@ public class Player_Behaviour : MonoBehaviour
             if (nearestInteractible != null && !enemiesNear)
             {
                 hasAttacked = true;
+                movement = 0;
                 nearestInteractible.gameObject.GetComponent<Interactible>().Interacted();
                 Debug.Log("Interacted with: " + nearestInteractible.name);
+                StartCoroutine(Interact());
             }
             else if (hasSword)
             {
@@ -290,9 +298,10 @@ public class Player_Behaviour : MonoBehaviour
 
     private void Animations()
     {
-        animator.SetFloat("velX", Mathf.Abs(movement));
+        animator.SetFloat("velX", Mathf.Abs(movement) + Mathf.Abs(rb.velocity.x));
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
+        animator.SetBool("hasSword", hasSword);
     }
 
     public void GetHurt(Vector2 ejectForce)
@@ -307,6 +316,13 @@ public class Player_Behaviour : MonoBehaviour
     {
         isInInteraction = true;
         yield return new WaitForSeconds(stunTime);
+        isInInteraction = false;
+    }
+    private IEnumerator Interact()
+    {
+        isInInteraction = true;
+        animator.SetTrigger("Interact");
+        yield return new WaitForSeconds(interactionTime);
         isInInteraction = false;
     }
 
