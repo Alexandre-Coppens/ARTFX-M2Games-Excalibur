@@ -260,6 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
+  dropPotion: 0
+  potionPREFAB: {fileID: 0}
 --- !u!114 &6394952595246958015
 MonoBehaviour:
   m_ObjectHideFlags: 0
