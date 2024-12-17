@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/UI/Excalibur credits.png.meta
 guid: 1b7be359f5f0e84419d58d4d43117ec4
+========
+guid: 515113282b58eb04aabf57b966e8279f
+>>>>>>>> Stashed changes:Assets/LD - Cassandra/placeholders/New Text Document - Copy.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
