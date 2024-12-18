@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4f22356b6a782fc44be5856331ec5c24
+=======
+guid: 8ba5877faf72de643a684389f55cf7b8
+>>>>>>> origin/Baptiste
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +52,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 256
+=======
+  spritePixelsToUnits: 100
+>>>>>>> origin/Baptiste
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1

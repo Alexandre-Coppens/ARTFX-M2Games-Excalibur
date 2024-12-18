@@ -276,6 +276,14 @@ public class Player_Behaviour : MonoBehaviour
                     animator.SetTrigger("Attack");
                 }
             }
+            else if (!hasSword)
+            {
+                if (sword.transform.parent.CompareTag("Interactible"))
+                {
+                    sword.GetComponent<Sword>().ComeBack();
+                    animator.SetTrigger("GetSword");
+                }
+            }
         }
         else
         {
