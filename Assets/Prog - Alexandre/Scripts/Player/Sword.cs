@@ -38,6 +38,7 @@ public class Sword : MonoBehaviour
     {
         if(comeback)
         {
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             if (Vector3.Distance(transform.position, player.transform.position) > 1.5f)
             {
                 transform.position = Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime);
@@ -101,6 +102,12 @@ public class Sword : MonoBehaviour
                     collision.GetComponent<PuzzleLock>().SwordInteracted();
                     GetComponent<Rigidbody2D>().velocity = Vector2.zero ;
                 }
+            }
+            else if (collision.CompareTag("Enemies"))
+            {
+                collision.GetComponent<Enemy>().Attacked();
+                velocity = Vector2.zero;
+                comeback = true ;
             }
         }
     }
