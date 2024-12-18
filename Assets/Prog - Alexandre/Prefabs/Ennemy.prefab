@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8307393578300398062}
   - component: {fileID: 8450393889199608836}
   - component: {fileID: 4117976389636434511}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Ennemy
   m_TagString: Enemies
   m_Icon: {fileID: 0}
@@ -109,8 +109,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 2.8819792
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 8229183219902933823}
   - component: {fileID: 8469958533919711669}
   - component: {fileID: 5564729472402863694}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 844177864, guid: 629ff9b5dbb84664ba47e2613caf5d96, type: 3}
+  m_Sprite: {fileID: 1222335077, guid: ba77515490202da49b5258e60b4098c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

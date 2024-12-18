@@ -6,9 +6,12 @@ public class Dialogue : MonoBehaviour
 {
     [SerializeField] private int currentSpeech = 0;
     [SerializeField] private string[] dialogueTexts;
+    [SerializeField] private float maxDialogueDist;
 
     DialogueUIMain mainDialogue;
     private bool waitInteract;
+
+    Player_Behaviour playerBehaviour;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +22,21 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(currentSpeech != 0)
+        {
+            if (Vector3.Distance(playerBehaviour.transform.position, transform.position) > maxDialogueDist)
+            {
+                mainDialogue.EndDialogue(); 
+                currentSpeech = 0;
+                playerBehaviour = null;
+            }
+        }
     }
 
     public void Interacted()
     {
         if (waitInteract) return;
-        if (currentSpeech == 0) { mainDialogue.StartDialogue(); }
+        if (currentSpeech == 0) { mainDialogue.StartDialogue(); playerBehaviour = Player_Behaviour._instance; }
         mainDialogue.ChangeDialogue(dialogueTexts[currentSpeech]);
         currentSpeech++;
         if (currentSpeech >= dialogueTexts.Length) { mainDialogue.EndDialogue(); currentSpeech = 0; StartCoroutine("WaitBeforeInteract"); };

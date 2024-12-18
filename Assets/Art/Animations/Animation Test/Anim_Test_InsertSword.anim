@@ -65,14 +65,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SwordSlot
+    path: Placeholder/SwordSlot
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.199, y: 0.625, z: 0}
+        value: {x: -0.119, y: 0.512, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: 0}
         outSlope: {x: Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -81,7 +81,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0.33333334}
       - serializedVersion: 3
         time: 0.11666667
-        value: {x: -0.08769593, y: 0.61, z: 0}
+        value: {x: 0.014, y: 0.508, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: 0}
         outSlope: {x: Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -90,7 +90,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0.33333334}
       - serializedVersion: 3
         time: 0.23333333
-        value: {x: -0.034, y: 0.625, z: 0}
+        value: {x: 0.097, y: 0.59, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: 0}
         outSlope: {x: Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -99,7 +99,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.35
-        value: {x: 0.319, y: 0.618, z: 0}
+        value: {x: 0.319, y: 0.477, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: 0}
         outSlope: {x: Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -108,7 +108,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0.33333334}
       - serializedVersion: 3
         time: 0.46666667
-        value: {x: 0.312, y: 0.779, z: 0}
+        value: {x: 0.231, y: 0.656, z: 0}
         inSlope: {x: -Infinity, y: Infinity, z: 0}
         outSlope: {x: -Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -117,7 +117,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0.33333334}
       - serializedVersion: 3
         time: 0.56666666
-        value: {x: 0.331, y: 0.802, z: 0}
+        value: {x: 0.246, y: 0.677, z: 0}
         inSlope: {x: -Infinity, y: Infinity, z: 0}
         outSlope: {x: -Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -126,7 +126,7 @@ AnimationClip:
         outWeight: {x: 0, y: 0, z: 0.33333334}
       - serializedVersion: 3
         time: 0.7
-        value: {x: 0.297, y: 0.648, z: 0}
+        value: {x: 0.223, y: 0.528, z: 0}
         inSlope: {x: -Infinity, y: Infinity, z: 0}
         outSlope: {x: -Infinity, y: Infinity, z: 0}
         tangentMode: 0
@@ -136,7 +136,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: SwordSlot
+    path: Placeholder/SwordSlot
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
@@ -171,7 +171,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1906172058
+      path: 1067484557
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -180,7 +180,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1906172058
+      path: 1067484557
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -233,7 +233,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.199
+        value: -0.119
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -242,7 +242,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.11666667
-        value: -0.08769593
+        value: 0.014
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -251,7 +251,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.23333333
-        value: -0.034
+        value: 0.097
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -269,7 +269,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.46666667
-        value: 0.312
+        value: 0.231
         inSlope: -Infinity
         outSlope: -Infinity
         tangentMode: 0
@@ -278,7 +278,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.56666666
-        value: 0.331
+        value: 0.246
         inSlope: -Infinity
         outSlope: -Infinity
         tangentMode: 0
@@ -287,7 +287,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.7
-        value: 0.297
+        value: 0.223
         inSlope: -Infinity
         outSlope: -Infinity
         tangentMode: 0
@@ -298,7 +298,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -308,7 +308,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.625
+        value: 0.512
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -317,7 +317,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.11666667
-        value: 0.61
+        value: 0.508
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -326,7 +326,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.23333333
-        value: 0.625
+        value: 0.59
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -335,7 +335,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.35
-        value: 0.618
+        value: 0.477
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -344,7 +344,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.46666667
-        value: 0.779
+        value: 0.656
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -353,7 +353,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.56666666
-        value: 0.802
+        value: 0.677
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -362,7 +362,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 0.7
-        value: 0.648
+        value: 0.528
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -373,7 +373,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -448,7 +448,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -505,10 +505,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -562,10 +562,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   - serializedVersion: 2
     curve:
       serializedVersion: 2
@@ -619,10 +619,10 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
-    flags: 16
+    flags: 0
   m_EulerEditorCurves:
   - serializedVersion: 2
     curve:
@@ -631,8 +631,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: SwordSlot
+    attribute: m_LocalEulerAngles.z
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -644,7 +644,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SwordSlot
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -655,8 +655,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: SwordSlot
+    attribute: m_LocalEulerAngles.x
+    path: Placeholder/SwordSlot
     classID: 4
     script: {fileID: 0}
     flags: 0

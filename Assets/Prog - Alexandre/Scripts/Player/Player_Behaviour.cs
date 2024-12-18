@@ -13,7 +13,9 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
     public int playerLife = 5;
-    
+    [Tooltip("Put the placeholder here (animations)")]
+    public GameObject placeholder;
+
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
     [SerializeField] private float jumpForce = 1f;
@@ -47,8 +49,12 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private Vector2 attackSize = Vector2.one;
     [Tooltip("The strength used to throw the sword")]
     [SerializeField] private Vector2 swordSpeed = Vector2.one;
+
+    [Header("Hit")]
     [Tooltip("When the player is hit, it's the stun time before the player can move again")]
     [SerializeField] private float stunTime = 0.2f;
+    [Tooltip("Transition when the player fall into the spikes")]
+    [SerializeField] private Animator transiAnim;
 
     [Header("Interaction")]
     [Tooltip("The player cannot move in interaction")]
@@ -57,6 +63,14 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private float interactionRadius = 0.2f;
     [Tooltip("Time it takes for the player to take or remove his sword")]
     [SerializeField] private float interactionTime = 0.2f;
+
+    [Header("Power Ups")]
+    [Tooltip("First Power Up")]
+    public bool canBreakPOW = false;
+    [Tooltip("Second Power Up")]
+    public bool canThrowPOW = false;
+    [Tooltip("Third Power Up")]
+    public bool lastPOW = false;
 
     [Header("Debug Jump")]
     private bool isOnGround = true;
@@ -76,6 +90,7 @@ public class Player_Behaviour : MonoBehaviour
 
     [Header("Debug Interaction")]
     private bool hasInteracted = false;
+    private Vector3 lastCheckpoint;
 
     [Header("Debug Components")]
     private Player_Inputs inputs;
@@ -209,7 +224,7 @@ public class Player_Behaviour : MonoBehaviour
         {
             attackPressTime += Time.deltaTime;
 
-            if(attackPressTime > attackThrowTime && !signThrow && hasSword)
+            if(attackPressTime > attackThrowTime && !signThrow && hasSword && canThrowPOW)
             {
                 inputs.AddRumble(new Vector2(2, 5), 0.3f);
                 Debug.Log("Rumble");
@@ -263,10 +278,19 @@ public class Player_Behaviour : MonoBehaviour
                     animator.SetTrigger("Attack");
                 }
             }
+            else if (!hasSword)
+            {
+                if (sword.transform.parent == null || !canThrowPOW) return;
+                if (sword.transform.parent.CompareTag("Interactible"))
+                {
+                    sword.GetComponent<Sword>().ComeBack();
+                    animator.SetTrigger("GetSword");
+                }
+            }
         }
         else
         {
-            if(attackPressTime > attackThrowTime)
+            if(attackPressTime > attackThrowTime && canThrowPOW)
             {
                 ThrowSword();
                 signThrow = false;
@@ -294,7 +318,7 @@ public class Player_Behaviour : MonoBehaviour
                 }
                 if (nearestHit != null)
                 {
-                    nearestHit.Attacked();
+                    if (canBreakPOW || nearestHit.CompareTag("Enemies")) nearestHit.Attacked();
                 }
                 hasHit = true;
             }
@@ -312,6 +336,7 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
         animator.SetBool("hasSword", hasSword);
+        placeholder.transform.eulerAngles = new Vector3(0f, spriteRenderer.flipX?180:0, 0f);
     }
 
     public void GetHurt(Vector2 ejectForce)
@@ -339,6 +364,29 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetTrigger("Interact");
         yield return new WaitForSeconds(interactionTime);
         isInInteraction = false;
+    }
+
+    public IEnumerator Spiked()
+    {
+        playerLife--;
+        isInInteraction = true;
+        animator.SetBool("Die", true);
+        yield return new WaitForSeconds(0.2f);
+        transiAnim.SetTrigger("Ended");
+        yield return new WaitForSeconds(0.6f);
+        transform.position = lastCheckpoint;
+        transiAnim.SetTrigger("Started");
+        animator.SetBool("Die", false);
+        yield return new WaitForSeconds(0.2f);
+        isInInteraction = false ;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            lastCheckpoint = collision.transform.position;
+        }
     }
 
     private void OnDrawGizmosSelected()

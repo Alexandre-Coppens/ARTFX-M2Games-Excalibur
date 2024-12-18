@@ -28,10 +28,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.954, z: 0}
-  m_LocalScale: {x: 1, y: 1.8, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5118380914830040809}
+  - {fileID: 5799067102531783559}
   m_Father: {fileID: 5538079610133339832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2274956570917545923
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1660402579, guid: 624c25785852c7f4196e2a659db97352, type: 3}
+  m_Sprite: {fileID: -22933123, guid: 7184f86595c4a8a49924d6c5c900d096, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &1829625218466586844
+--- !u!1 &4241633278490001701
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,27 +115,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5118380914830040809}
+  - component: {fileID: 5799067102531783559}
   m_Layer: 0
-  m_Name: SwordSlot
+  m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5118380914830040809
+--- !u!4 &5799067102531783559
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829625218466586844}
+  m_GameObject: {fileID: 4241633278490001701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.43999958, y: 0.83555555, z: 0}
-  m_LocalScale: {x: 0.8990774, y: 0.5925053, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5085872240345631986}
   m_Father: {fileID: 2855203239485329068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4622224672390573645
@@ -233,6 +234,37 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!1 &5293114313998743134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5085872240345631986}
+  m_Layer: 0
+  m_Name: SwordSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5085872240345631986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5293114313998743134}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0049999026, y: 0.84700006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5799067102531783559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6496098872457844770
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,27 +315,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c01674567a40349b0a66bb4821e396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 5
   maxPlayerLife: 5
   playerLife: 5
-  jumpForce: 3
+  placeholder: {fileID: 4241633278490001701}
+  jumpForce: 3.5
   jumpAirTime: 0.4
-  gravityScale: {x: 9.8, y: 15}
+  gravityScale: {x: 1.5, y: 2}
   groundDifference: -0.8
-  checkSize: 0.5
+  checkSize: 0.44
   groundLayer: 6
-  hasSword: 1
+  hasSword: 0
   sword: {fileID: 0}
-  attackTime: 0.5
+  attackTime: 0.6
   attackHitTime: 0.2
-  attackThrowTime: 1.5
+  attackThrowTime: 0.8
   attackDifference: {x: 1.69, y: 0.34}
   attackSize: {x: 1.83, y: 1.69}
-  swordSpeed: {x: 6, y: 4}
+  swordSpeed: {x: 6, y: 0}
   stunTime: 0.2
+  transiAnim: {fileID: 0}
   isInInteraction: 0
   interactionRadius: 0.9
   interactionTime: 0.2
+  canBreakPOW: 0
+  canThrowPOW: 0
   movement: 0
 --- !u!114 &2761813578929391037
 MonoBehaviour:
@@ -378,8 +414,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 100
+  m_UseAutoMass: 1
+  m_Mass: 1.8
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
