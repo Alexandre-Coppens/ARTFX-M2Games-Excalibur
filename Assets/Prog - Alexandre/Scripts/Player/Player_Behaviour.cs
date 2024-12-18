@@ -66,9 +66,11 @@ public class Player_Behaviour : MonoBehaviour
 
     [Header("Power Ups")]
     [Tooltip("First Power Up")]
-    [SerializeField] private bool canBreakPOW = false;
+    public bool canBreakPOW = false;
     [Tooltip("Second Power Up")]
-    [SerializeField] private bool canThrowPOW = false;
+    public bool canThrowPOW = false;
+    [Tooltip("Third Power Up")]
+    public bool lastPOW = false;
 
     [Header("Debug Jump")]
     private bool isOnGround = true;
@@ -222,7 +224,7 @@ public class Player_Behaviour : MonoBehaviour
         {
             attackPressTime += Time.deltaTime;
 
-            if(attackPressTime > attackThrowTime && !signThrow && hasSword)
+            if(attackPressTime > attackThrowTime && !signThrow && hasSword && canThrowPOW)
             {
                 inputs.AddRumble(new Vector2(2, 5), 0.3f);
                 Debug.Log("Rumble");
@@ -278,6 +280,7 @@ public class Player_Behaviour : MonoBehaviour
             }
             else if (!hasSword)
             {
+                if (sword.transform.parent == null || !canThrowPOW) return;
                 if (sword.transform.parent.CompareTag("Interactible"))
                 {
                     sword.GetComponent<Sword>().ComeBack();
@@ -287,7 +290,7 @@ public class Player_Behaviour : MonoBehaviour
         }
         else
         {
-            if(attackPressTime > attackThrowTime)
+            if(attackPressTime > attackThrowTime && canThrowPOW)
             {
                 ThrowSword();
                 signThrow = false;
@@ -315,7 +318,7 @@ public class Player_Behaviour : MonoBehaviour
                 }
                 if (nearestHit != null)
                 {
-                    nearestHit.Attacked();
+                    if (canBreakPOW || nearestHit.CompareTag("Enemies")) nearestHit.Attacked();
                 }
                 hasHit = true;
             }
