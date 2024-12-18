@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 6bb4773204dcadd4485f4fd76b404586
-=======
-guid: cbbc17773092f614b8b80bb4348c117a
->>>>>>> origin/Baptiste
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,24 +39,16 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> origin/Baptiste
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
   spritePixelsToUnits: 256
-=======
-  spritePixelsToUnits: 100
->>>>>>> origin/Baptiste
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,7 +134,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Env_Lvl3_Tile_Brick_Tileset1_0
@@ -163,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96c440001eacdb342a476ee531dc498d
-      internalID: 775996509
+      spriteID: 21e5e16502c125447bbd1674c0309ffd
+      internalID: 1159246845
       vertices: []
       indices: 
       edges: []
@@ -184,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c4238770733e844af42f26b162848f
-      internalID: 1367636494
+      spriteID: bb756c159360c1840bbf2dea7a44b8eb
+      internalID: 1957779457
       vertices: []
       indices: 
       edges: []
@@ -205,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51e2b9f726a52e4d880b5028546304a
-      internalID: 109040525
+      spriteID: 2e02bf0a1e9a29c44b4362cff90f20d1
+      internalID: 671023088
       vertices: []
       indices: 
       edges: []
@@ -226,8 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c2989a15d6212549aacc5ad8200e21f
-      internalID: -748498403
+      spriteID: a0f8f211cea7aac48800fb9f38a16480
+      internalID: -1123835387
       vertices: []
       indices: 
       edges: []
@@ -247,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39a15cc03e29ded46a7a24870acfd0ab
-      internalID: 14674074
+      spriteID: 9e3c39f321a8bf8479d5ec5282bac7d0
+      internalID: -1084442316
       vertices: []
       indices: 
       edges: []
@@ -268,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04caf9e28211cd74796ce93b5c45cf99
-      internalID: 151282198
+      spriteID: 84a301a4dddb73a40a7a81ba20e359e2
+      internalID: -1956713441
       vertices: []
       indices: 
       edges: []
@@ -289,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5f59bc6168d9d469740f1e93aaf5d4
-      internalID: -203408772
+      spriteID: 19d0274ad5b866b46a90fec0f211cfae
+      internalID: -752935231
       vertices: []
       indices: 
       edges: []
@@ -310,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccc107cde1e8ae34eb18de9071bcdbc8
-      internalID: -789415549
+      spriteID: 787285a7bb9ee2148bafce96e5f25777
+      internalID: -1473940570
       vertices: []
       indices: 
       edges: []
@@ -331,15 +318,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bf84f0bb01aa5147967fb25887d9d07
-      internalID: -1197099899
+      spriteID: f18ed0bee9e321a4bbd9a6ed2b175202
+      internalID: 697695576
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> origin/Baptiste
     outline: []
     physicsShape: []
     bones: []
@@ -350,20 +334,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      Env_Lvl3_Tile_Brick_Tileset1_0: 775996509
-      Env_Lvl3_Tile_Brick_Tileset1_1: 1367636494
-      Env_Lvl3_Tile_Brick_Tileset1_2: 109040525
-      Env_Lvl3_Tile_Brick_Tileset1_3: -748498403
-      Env_Lvl3_Tile_Brick_Tileset1_4: 14674074
-      Env_Lvl3_Tile_Brick_Tileset1_5: 151282198
-      Env_Lvl3_Tile_Brick_Tileset1_6: -203408772
-      Env_Lvl3_Tile_Brick_Tileset1_7: -789415549
-      Env_Lvl3_Tile_Brick_Tileset1_8: -1197099899
-=======
-    nameFileIdTable: {}
->>>>>>> origin/Baptiste
+      Env_Lvl3_Tile_Brick_Tileset1_0: 1159246845
+      Env_Lvl3_Tile_Brick_Tileset1_1: 1957779457
+      Env_Lvl3_Tile_Brick_Tileset1_2: 671023088
+      Env_Lvl3_Tile_Brick_Tileset1_3: -1123835387
+      Env_Lvl3_Tile_Brick_Tileset1_4: -1084442316
+      Env_Lvl3_Tile_Brick_Tileset1_5: -1956713441
+      Env_Lvl3_Tile_Brick_Tileset1_6: -752935231
+      Env_Lvl3_Tile_Brick_Tileset1_7: -1473940570
+      Env_Lvl3_Tile_Brick_Tileset1_8: 697695576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

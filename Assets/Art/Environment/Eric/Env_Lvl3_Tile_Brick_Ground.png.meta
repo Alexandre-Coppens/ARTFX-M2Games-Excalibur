@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 1e43e660f33d30c4383a9bd53b958d0b
-=======
-guid: fd834f42f337a244eb52a2f99082dcfa
->>>>>>> origin/Baptiste
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,24 +39,16 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> origin/Baptiste
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
   spritePixelsToUnits: 256
-=======
-  spritePixelsToUnits: 100
->>>>>>> origin/Baptiste
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,7 +134,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Env_Lvl3_Tile_Brick_Ground_0
@@ -163,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27cebfc0eda3a544b8e536a800583f0a
-      internalID: -79470141
+      spriteID: c83d1e208d6ce0841820d4f27201969a
+      internalID: 1716381782
       vertices: []
       indices: 
       edges: []
@@ -184,8 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47552b127d07e3c428f69a5139ff7c9b
-      internalID: 1014688898
+      spriteID: 4d4a7273672fa60439a4791e378fe810
+      internalID: -1898531530
       vertices: []
       indices: 
       edges: []
@@ -205,15 +192,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c3ed3d9a828e845a9ba82ac27c6430
-      internalID: 601583019
+      spriteID: 30500fb5ba8a01848b197fbf9b8d3920
+      internalID: -1046552211
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> origin/Baptiste
     outline: []
     physicsShape: []
     bones: []
@@ -224,14 +208,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable:
-      Env_Lvl3_Tile_Brick_Ground_0: -79470141
-      Env_Lvl3_Tile_Brick_Ground_1: 1014688898
-      Env_Lvl3_Tile_Brick_Ground_2: 601583019
-=======
-    nameFileIdTable: {}
->>>>>>> origin/Baptiste
+      Env_Lvl3_Tile_Brick_Ground_0: 1716381782
+      Env_Lvl3_Tile_Brick_Ground_1: -1898531530
+      Env_Lvl3_Tile_Brick_Ground_2: -1046552211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
