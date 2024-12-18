@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 650181994068584434}
   - component: {fileID: 6030587656098068338}
   - component: {fileID: 3674833654493409191}
-  - component: {fileID: 5531014003492133411}
+  - component: {fileID: 7820945910134548857}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -68,7 +68,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 100
+  field of view: 88
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -138,7 +138,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &5531014003492133411
+--- !u!114 &7820945910134548857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7114351610459900158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c17dbc3a3473b4491b58a221fbf535, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e90e0fbc73a0684481be4d7aa6a276c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   yDifference: 5.5
   ySpeed: 2
   blindYSpot: {x: -0.3, y: 0.7}
-  maxCameraX: {x: 1, y: 2000}
+  maxCameraX: {x: 1, y: 579}
   maxCameraY: {x: 5, y: 5}
   xStops: []
   yStops: []
