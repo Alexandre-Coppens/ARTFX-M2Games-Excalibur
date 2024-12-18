@@ -77,9 +77,9 @@ public class CameraMain : MonoBehaviour
         float topBoundary = transform.position.y + cameraHeight;
 
         float clampedX = Mathf.Clamp(player.transform.position.x, leftBoundary, rightBoundary);
-        float clampedY = Mathf.Clamp(player.transform.position.y, bottomBoundary, topBoundary);
+        //float clampedY = Mathf.Clamp(player.transform.position.y, bottomBoundary, topBoundary);
 
-        player.transform.position = new Vector3(clampedX, clampedY, player.transform.position.z);
+        player.transform.position = new Vector3(clampedX, player.transform.position.y, player.transform.position.z);
     }
 
     public void RemoveBlock()
