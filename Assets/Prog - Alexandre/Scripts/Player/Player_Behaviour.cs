@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Behaviour : MonoBehaviour
@@ -9,8 +8,8 @@ public class Player_Behaviour : MonoBehaviour
     [Header("Variables")]
     [Tooltip("The player speed")]
     [SerializeField] private float movementSpeed = 3f;
-    [Tooltip("The maximum of the player's life")]
-    [SerializeField] private int maxPlayerLife = 5;
+    //[Tooltip("The maximum of the player's life")]
+    //[SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
     public int playerLife = 5;
     [Tooltip("Put the placeholder here (animations)")]
@@ -89,7 +88,7 @@ public class Player_Behaviour : MonoBehaviour
     private bool signThrow;
 
     [Header("Debug Interaction")]
-    private bool hasInteracted = false;
+    //private bool hasInteracted = false;
     private Vector3 lastCheckpoint;
 
     [Header("Debug Components")]
