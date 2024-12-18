@@ -8,41 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: m_Size.x
-      value: 19.199999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: m_Size.y
-      value: 10.799999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -22933123, guid: 7184f86595c4a8a49924d6c5c900d096, type: 3}
-    - target: {fileID: 2274956570917545923, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2855203239485329068, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008132212000594439, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008132212000594439, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.06
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.53
+      value: 1.8212729
       objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5538079610133339832, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -77,40 +49,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: checkSize
-      value: 0.44
+      propertyPath: hasSword
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: jumpForce
-      value: 3.5
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: movementSpeed
-      value: 5
+      propertyPath: attackTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: placeholder
+      value: 
+      objectReference: {fileID: 8366768343214610890}
+    - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+      propertyPath: attackHitTime
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: gravityScale.x
-      value: 1.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6278594626809836802, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: gravityScale.y
-      value: 2
+      propertyPath: attackThrowTime
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6496098872457844770, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7267372631661476283, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: lockState
-      value: 
-      objectReference: {fileID: 21300000, guid: 8f9c2ec1e0642ab4688ffbfe5ef1c77c, type: 3}
-    - target: {fileID: 7267372631661476283, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
-      propertyPath: normalState
-      value: 
-      objectReference: {fileID: 21300000, guid: 979ecdaa20b644b4a9e941178a2d0b28, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7974235589828860460, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+--- !u!1 &8366768343214610890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4241633278490001701, guid: bede59ecf1f3e6143b8fe7d756e73f99, type: 3}
+  m_PrefabInstance: {fileID: 5675086956918544623}
+  m_PrefabAsset: {fileID: 0}

@@ -32,6 +32,11 @@ public class PuzzleLock : MonoBehaviour
         }
     }
 
+    public void SwordInteracted()
+    {
+        StartCoroutine(EnterSword());
+    }
+
     private IEnumerator EnterSword()
     {
         yield return new WaitForSeconds(0.5f);

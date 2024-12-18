@@ -13,7 +13,9 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
     public int playerLife = 5;
-    
+    [Tooltip("Put the placeholder here (animations)")]
+    public GameObject placeholder;
+
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
     [SerializeField] private float jumpForce = 1f;
@@ -64,9 +66,11 @@ public class Player_Behaviour : MonoBehaviour
 
     [Header("Power Ups")]
     [Tooltip("First Power Up")]
-    [SerializeField] private bool canBreakPOW = false;
+    public bool canBreakPOW = false;
     [Tooltip("Second Power Up")]
-    [SerializeField] private bool canThrowPOW = false;
+    public bool canThrowPOW = false;
+    [Tooltip("Third Power Up")]
+    public bool lastPOW = false;
 
     [Header("Debug Jump")]
     private bool isOnGround = true;
@@ -220,7 +224,7 @@ public class Player_Behaviour : MonoBehaviour
         {
             attackPressTime += Time.deltaTime;
 
-            if(attackPressTime > attackThrowTime && !signThrow && hasSword)
+            if(attackPressTime > attackThrowTime && !signThrow && hasSword && canThrowPOW)
             {
                 inputs.AddRumble(new Vector2(2, 5), 0.3f);
                 Debug.Log("Rumble");
@@ -274,10 +278,19 @@ public class Player_Behaviour : MonoBehaviour
                     animator.SetTrigger("Attack");
                 }
             }
+            else if (!hasSword)
+            {
+                if (sword.transform.parent == null || !canThrowPOW) return;
+                if (sword.transform.parent.CompareTag("Interactible"))
+                {
+                    sword.GetComponent<Sword>().ComeBack();
+                    animator.SetTrigger("GetSword");
+                }
+            }
         }
         else
         {
-            if(attackPressTime > attackThrowTime)
+            if(attackPressTime > attackThrowTime && canThrowPOW)
             {
                 ThrowSword();
                 signThrow = false;
@@ -305,7 +318,7 @@ public class Player_Behaviour : MonoBehaviour
                 }
                 if (nearestHit != null)
                 {
-                    nearestHit.Attacked();
+                    if (canBreakPOW || nearestHit.CompareTag("Enemies")) nearestHit.Attacked();
                 }
                 hasHit = true;
             }
@@ -323,6 +336,7 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
         animator.SetBool("hasSword", hasSword);
+        placeholder.transform.eulerAngles = new Vector3(0f, spriteRenderer.flipX?180:0, 0f);
     }
 
     public void GetHurt(Vector2 ejectForce)
