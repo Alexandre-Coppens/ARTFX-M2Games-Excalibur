@@ -78,6 +78,13 @@ public class Sword : MonoBehaviour
         transform.localScale = Vector3.one;
     }
 
+    public void ComeBack()
+    {
+        transform.localScale = Vector3.one;
+        comeback = true;
+        transform.parent = null;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (transform.parent == null && !comeback)
