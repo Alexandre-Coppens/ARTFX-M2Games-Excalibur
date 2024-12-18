@@ -31,7 +31,7 @@ public class MovingPlatforms : MonoBehaviour
 
     public void CloseEvent()
     {
-        if (!continousMovement) currentTarget = openPosition;
+        if (!continousMovement) currentTarget = closedPosition;
         else move = false;
     }
 
