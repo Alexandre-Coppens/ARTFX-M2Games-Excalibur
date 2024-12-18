@@ -47,16 +47,26 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private Vector2 attackSize = Vector2.one;
     [Tooltip("The strength used to throw the sword")]
     [SerializeField] private Vector2 swordSpeed = Vector2.one;
+
+    [Header("Hit")]
     [Tooltip("When the player is hit, it's the stun time before the player can move again")]
     [SerializeField] private float stunTime = 0.2f;
+    [Tooltip("Transition when the player fall into the spikes")]
+    [SerializeField] private Animator transiAnim;
 
     [Header("Interaction")]
-    [Tooltip("The radius of the interaction range")]
+    [Tooltip("The player cannot move in interaction")]
     public bool isInInteraction = false;
     [Tooltip("The radius of the interaction range")]
     [SerializeField] private float interactionRadius = 0.2f;
     [Tooltip("Time it takes for the player to take or remove his sword")]
     [SerializeField] private float interactionTime = 0.2f;
+
+    [Header("Power Ups")]
+    [Tooltip("First Power Up")]
+    [SerializeField] private bool canBreakPOW = false;
+    [Tooltip("Second Power Up")]
+    [SerializeField] private bool canThrowPOW = false;
 
     [Header("Debug Jump")]
     private bool isOnGround = true;
@@ -76,6 +86,7 @@ public class Player_Behaviour : MonoBehaviour
 
     [Header("Debug Interaction")]
     private bool hasInteracted = false;
+    private Vector3 lastCheckpoint;
 
     [Header("Debug Components")]
     private Player_Inputs inputs;
@@ -211,7 +222,8 @@ public class Player_Behaviour : MonoBehaviour
 
             if(attackPressTime > attackThrowTime && !signThrow && hasSword)
             {
-                inputs.AddRumble(new Vector2(1, 1), 0.1f);
+                inputs.AddRumble(new Vector2(2, 5), 0.3f);
+                Debug.Log("Rumble");
                 signThrow = true;
             }
 
@@ -253,6 +265,7 @@ public class Player_Behaviour : MonoBehaviour
             {
                 if (currentAttackTime == 0)
                 {
+                    StartCoroutine(PlayerAttack());
                     hasAttacked = true;
                     isAttackFlipped = spriteRenderer.flipX;
                     currentAttackTime += Time.deltaTime;
@@ -319,7 +332,12 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetTrigger("Hit");
         StartCoroutine("PlayerStun");
     }
-
+    private IEnumerator PlayerAttack()
+    {
+        isInInteraction = true;
+        yield return new WaitForSeconds(attackTime);
+        isInInteraction = false;
+    }
     private IEnumerator PlayerStun()
     {
         isInInteraction = true;
@@ -332,6 +350,29 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetTrigger("Interact");
         yield return new WaitForSeconds(interactionTime);
         isInInteraction = false;
+    }
+
+    public IEnumerator Spiked()
+    {
+        playerLife--;
+        isInInteraction = true;
+        animator.SetBool("Die", true);
+        yield return new WaitForSeconds(0.2f);
+        transiAnim.SetTrigger("Ended");
+        yield return new WaitForSeconds(0.6f);
+        transform.position = lastCheckpoint;
+        transiAnim.SetTrigger("Started");
+        animator.SetBool("Die", false);
+        yield return new WaitForSeconds(0.2f);
+        isInInteraction = false ;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            lastCheckpoint = collision.transform.position;
+        }
     }
 
     private void OnDrawGizmosSelected()
