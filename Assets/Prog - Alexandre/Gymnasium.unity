@@ -3076,6 +3076,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600369638}
   m_CullTransparentMesh: 1
+--- !u!4 &1634843976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+  m_PrefabInstance: {fileID: 1977941797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667636827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8128,6 +8133,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1977941797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2034464870}
+    m_Modifications:
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707756075112535917, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176453922217592232, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: dropPotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394383142980556654, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
+      propertyPath: m_Name
+      value: Breakable Wall (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19dcb67804e2dd94b937d5c9f6cabe0d, type: 3}
 --- !u!1 &2015675503
 GameObject:
   m_ObjectHideFlags: 0
@@ -8252,6 +8318,7 @@ Transform:
   - {fileID: 1473618580}
   - {fileID: 522052520}
   - {fileID: 1696664631}
+  - {fileID: 1634843976}
   - {fileID: 57047954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8772,37 +8839,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1275201445}
     m_Modifications:
-    - target: {fileID: 307418965795659278, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3251552800859320561, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3767033414554640370, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
       propertyPath: m_Name
       value: PowerUps
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767033414554640370, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595087445209117564, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595087445209117564, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: da9c251ed418e1a40832360beca40561, type: 3}
-    - target: {fileID: 6775637148449880635, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_fontColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6775637148449880635, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6980472423705220832, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
       propertyPath: m_Pivot.x
