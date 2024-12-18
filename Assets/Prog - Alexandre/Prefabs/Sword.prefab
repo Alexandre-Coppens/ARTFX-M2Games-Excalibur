@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7267487590578766564}
   - component: {fileID: 1699168506231616919}
   - component: {fileID: 5042130981202940880}
-  - component: {fileID: 1150597181307922862}
+  - component: {fileID: 4503084609610671806}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Interactible
@@ -30,14 +30,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904769635270855158}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8276884234842833015}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 48.088966}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2448076525423449041
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   speed: 5
+  maxTimerOut: 3
   comeback: 0
 --- !u!114 &7267487590578766564
 MonoBehaviour:
@@ -164,7 +165,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.07510206}
+  m_Offset: {x: -0.008560367, y: 0.005427763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -175,7 +176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.8549791}
+  m_Size: {x: 0.14452033, y: 0.3542517}
   m_EdgeRadius: 0
 --- !u!50 &5042130981202940880
 Rigidbody2D:
@@ -204,8 +205,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1150597181307922862
-BoxCollider2D:
+--- !u!58 &4503084609610671806
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -236,19 +237,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.074536696}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7016, y: 0.9923183}
-    newSize: {x: 3.48, y: 14.31}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.8500583}
-  m_EdgeRadius: 0
+  m_Radius: 0.22
 --- !u!1 &4855677944748083122
 GameObject:
   m_ObjectHideFlags: 0
