@@ -94,6 +94,10 @@ public class Sword : MonoBehaviour
             {
                 velocity = Vector2.zero;
                 comeback = true ;
+                if(collision.GetComponent<CanBeHit>() != null)
+                {
+                    collision.GetComponent<CanBeHit>().Attacked();
+                }
             }
             else if (collision.CompareTag("Interactible"))
             {
