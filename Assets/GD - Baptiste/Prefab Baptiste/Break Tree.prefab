@@ -26,9 +26,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2651690518298676105}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -1.4848915, z: 0.04436638}
-  m_LocalScale: {x: 2, y: 1.5384616, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8651463055971881125}
@@ -54,7 +54,16 @@ VisualEffect:
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: -1.5, z: 0}
+        m_Name: Position
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 6, z: 0}
+        m_Name: Size
+        m_Overridden: 1
+      - m_Value: {x: 0, y: -3.42, z: 0}
+        m_Name: Position Collision
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -69,7 +78,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 2800000, guid: 1a79ccf7acb508c4f851adcc68d17d30, type: 3}
+      - m_Value: {fileID: 2800000, guid: 3ff70e5de8e13f0409bcb18d29746597, type: 3}
         m_Name: Breaking texture
         m_Overridden: 1
     m_Bool:
@@ -113,7 +122,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
 --- !u!1 &6392316265730775597
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8651463055971881125}
   - component: {fileID: 3913226277908144775}
-  - component: {fileID: 2156687958638667045}
-  - component: {fileID: 6699194769781716298}
   - component: {fileID: 6394952595246958015}
+  - component: {fileID: 6699194769781716298}
+  - component: {fileID: 2156687958638667045}
   m_Layer: 6
   m_Name: Break Tree
   m_TagString: Ground
@@ -143,8 +152,8 @@ Transform:
   m_GameObject: {fileID: 6392316265730775597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 202.83365, y: 3.2508545, z: -0.04436638}
-  m_LocalScale: {x: 0.5, y: 0.65, z: 1}
+  m_LocalPosition: {x: -6.56, y: -1.79, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4119010109829931557}
@@ -191,17 +200,59 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b3d4f97a8ab0ad46ae1f2dc11cad993, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd87991ed91024a4989be94d8aaadff0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.65, y: 5.57}
+  m_Size: {x: 5.12, y: 7.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6394952595246958015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392316265730775597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ae12c417edd5f408f7dbec52832d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionAssigned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6699194769781716298}
+        m_TargetAssemblyTypeName: BreakableWall, Assembly-CSharp
+        m_MethodName: Attacked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6699194769781716298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392316265730775597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64aaf3d62c2fff84db4e54c44d7149d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 3
+  dropPotion: 1
+  potionPREFAB: {fileID: 1629904266932514348, guid: e33a37ad9c40f554eb94f0c269e1cd92, type: 3}
 --- !u!61 &2156687958638667045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -234,58 +285,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09033489, y: -0.37060356}
+  m_Offset: {x: -0.026212692, y: 0.00577569}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.65, y: 5.57}
-    newSize: {x: 3.65, y: 5.57}
+    oldSize: {x: 5.12, y: 7.68}
+    newSize: {x: 5.12, y: 7.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6663609, y: 4.8287935}
+  m_Size: {x: 4.924671, y: 7.615517}
   m_EdgeRadius: 0
---- !u!114 &6699194769781716298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6392316265730775597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64aaf3d62c2fff84db4e54c44d7149d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 1
-  dropPotion: 0
-  potionPREFAB: {fileID: 0}
---- !u!114 &6394952595246958015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6392316265730775597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45ae12c417edd5f408f7dbec52832d08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  functionAssigned:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6699194769781716298}
-        m_TargetAssemblyTypeName: BreakableWall, Assembly-CSharp
-        m_MethodName: Attacked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
