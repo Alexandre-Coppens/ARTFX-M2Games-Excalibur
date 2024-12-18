@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d5704804525ac44d88d61f99f5e5513
+guid: 66b10f07feead2547ba95075307637d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,253 +136,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_0
+      name: Sprite_Attack1_Slash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 2160
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b910de92127637948b83d897f78f09e7
-      internalID: -1196172999
+      spriteID: f5cf5479431d062498303d9024e0e852
+      internalID: -1940314680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_1
+      name: Sprite_Attack1_Slash_1
       rect:
         serializedVersion: 2
         x: 1920
         y: 2160
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca81100ce21155340a3398c34fc99ed5
-      internalID: 882853814
+      spriteID: fd04f5910e2a1e34197469ce472f03cd
+      internalID: -309807430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_2
+      name: Sprite_Attack1_Slash_2
       rect:
         serializedVersion: 2
         x: 3840
         y: 2160
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10058e797c9278443a8303d034ef1b31
-      internalID: 1935056430
+      spriteID: b3b245d7726ad4a4dad05420635e0155
+      internalID: 1221237351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_3
+      name: Sprite_Attack1_Slash_3
       rect:
         serializedVersion: 2
         x: 5760
         y: 2160
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c1f28e143a0da04da0a7e37f1af5072
-      internalID: -1097903041
+      spriteID: 8b919243077c9a54d97ff97fd3ec3e49
+      internalID: -1114578644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_4
+      name: Sprite_Attack1_Slash_4
       rect:
         serializedVersion: 2
         x: 0
         y: 1080
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d59e2b266e439d48a387f9d684f4282
-      internalID: -1071877662
+      spriteID: ba493060a2ee93b44bf9e27ee59fbf96
+      internalID: 99216175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_5
+      name: Sprite_Attack1_Slash_5
       rect:
         serializedVersion: 2
         x: 1920
         y: 1080
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b44e1f2cf307e95448afa08aa30a63d9
-      internalID: -813849698
+      spriteID: 24242ee6f511d604489752ae0220a355
+      internalID: -1836931551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_6
+      name: Sprite_Attack1_Slash_6
       rect:
         serializedVersion: 2
         x: 3840
         y: 1080
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78d5c5a7af5c44842af75ca86d75e5b9
-      internalID: -1387501163
+      spriteID: afe19d7c14b75f4459e0b0a96e07fe12
+      internalID: 259273404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_7
+      name: Sprite_Attack1_Slash_7
       rect:
         serializedVersion: 2
         x: 5760
         y: 1080
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d5fca118875093469038941346da419
-      internalID: -1367378018
+      spriteID: 7a72534dcec96ff438883d473fe0b495
+      internalID: 1488124155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_8
+      name: Sprite_Attack1_Slash_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f67cafa36413416459b762b344ad471b
-      internalID: 512878560
+      spriteID: 9d567ad9063554d47a3740d09d118179
+      internalID: -1879641065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_9
+      name: Sprite_Attack1_Slash_9
       rect:
         serializedVersion: 2
         x: 1920
         y: 0
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d28497395cb288447ac8e43dc88560cf
-      internalID: -1146204173
+      spriteID: de9fa797125c16f4db9e2efaa6d4c924
+      internalID: 1477687131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_10
+      name: Sprite_Attack1_Slash_10
       rect:
         serializedVersion: 2
         x: 3840
         y: 0
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e77532eca7a681642b2aacce545c21e1
-      internalID: -2046249981
+      spriteID: 9c4d66d3d988144448176b4359f42de7
+      internalID: -962452855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alister_GetSwordBack_Spritesheet_11
+      name: Sprite_Attack1_Slash_11
       rect:
         serializedVersion: 2
         x: 5760
         y: 0
         width: 1920
         height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bfd15f7c2e4c21448e0b481712dafc5
-      internalID: -807303521
+      spriteID: ff420c6e90bef9f44a5ac06454644b69
+      internalID: 1479219931
       vertices: []
       indices: 
       edges: []
@@ -398,18 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Alister_GetSwordBack_Spritesheet_0: -1196172999
-      Alister_GetSwordBack_Spritesheet_1: 882853814
-      Alister_GetSwordBack_Spritesheet_10: -2046249981
-      Alister_GetSwordBack_Spritesheet_11: -807303521
-      Alister_GetSwordBack_Spritesheet_2: 1935056430
-      Alister_GetSwordBack_Spritesheet_3: -1097903041
-      Alister_GetSwordBack_Spritesheet_4: -1071877662
-      Alister_GetSwordBack_Spritesheet_5: -813849698
-      Alister_GetSwordBack_Spritesheet_6: -1387501163
-      Alister_GetSwordBack_Spritesheet_7: -1367378018
-      Alister_GetSwordBack_Spritesheet_8: 512878560
-      Alister_GetSwordBack_Spritesheet_9: -1146204173
+      Sprite_Attack1_Slash_0: -1940314680
+      Sprite_Attack1_Slash_1: -309807430
+      Sprite_Attack1_Slash_10: -962452855
+      Sprite_Attack1_Slash_11: 1479219931
+      Sprite_Attack1_Slash_2: 1221237351
+      Sprite_Attack1_Slash_3: -1114578644
+      Sprite_Attack1_Slash_4: 99216175
+      Sprite_Attack1_Slash_5: -1836931551
+      Sprite_Attack1_Slash_6: 259273404
+      Sprite_Attack1_Slash_7: 1488124155
+      Sprite_Attack1_Slash_8: -1879641065
+      Sprite_Attack1_Slash_9: 1477687131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

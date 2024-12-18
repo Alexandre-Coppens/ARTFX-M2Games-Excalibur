@@ -13,10 +13,19 @@ public class PuzzleLock : MonoBehaviour
     [SerializeField] private UnityEvent[] functionsOpen;
     [SerializeField] private UnityEvent[] functionsClose;
 
+    private float maxTimerOut = 3f;
+    private float timerOut;
+
     private void Start()
     {
         player = Player_Behaviour._instance;
         sword = Sword.instance;
+    }
+
+    private void Update()
+    {
+        if(transform.parent != null) { timerOut = 0; }
+        else { timerOut += Time.deltaTime; }
     }
 
     public void Interacted()
@@ -30,6 +39,11 @@ public class PuzzleLock : MonoBehaviour
         {
             StartCoroutine(RemoveSword());
         }
+    }
+
+    public void SwordInteracted()
+    {
+        StartCoroutine(EnterSword());
     }
 
     private IEnumerator EnterSword()
