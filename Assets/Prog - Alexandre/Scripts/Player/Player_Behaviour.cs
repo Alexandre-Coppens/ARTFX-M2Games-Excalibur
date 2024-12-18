@@ -13,7 +13,9 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
     public int playerLife = 5;
-    
+    [Tooltip("Put the placeholder here (animations)")]
+    public GameObject placeholder;
+
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
     [SerializeField] private float jumpForce = 1f;
@@ -274,6 +276,14 @@ public class Player_Behaviour : MonoBehaviour
                     animator.SetTrigger("Attack");
                 }
             }
+            else if (!hasSword)
+            {
+                if (sword.transform.parent.CompareTag("Interactible"))
+                {
+                    sword.GetComponent<Sword>().ComeBack();
+                    animator.SetTrigger("GetSword");
+                }
+            }
         }
         else
         {
@@ -323,6 +333,7 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetFloat("velY", rb.velocity.y);
         animator.SetBool("isOnGround", isOnGround);
         animator.SetBool("hasSword", hasSword);
+        placeholder.transform.eulerAngles = new Vector3(0f, spriteRenderer.flipX?180:0, 0f);
     }
 
     public void GetHurt(Vector2 ejectForce)

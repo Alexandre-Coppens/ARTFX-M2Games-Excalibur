@@ -280,6 +280,9 @@ public class Enemy : MonoBehaviour
             currentAction = EnemyAction.Dead;
             gameObject.tag = "Untagged";
             Destroy(GetComponent<CanBeHit>());
+            Destroy(GetComponent<Rigidbody2D>());
+            Destroy(GetComponent<Collider2D>());
+            Destroy(GetComponent<CircleCollider2D>());
         }
     }
     private void OnDrawGizmosSelected()

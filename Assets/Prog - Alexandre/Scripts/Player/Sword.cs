@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Sword : MonoBehaviour
@@ -11,12 +12,16 @@ public class Sword : MonoBehaviour
     [SerializeField] private Transform parent;
     [Tooltip("The speed at which it comes back")]
     [SerializeField] private float speed;
+    [Tooltip("The max time before the sword comes back automaticaly")]
+    [SerializeField] private float maxTimerOut = 3f;
 
     private SpriteRenderer spriteRenderer;
     private Player_Behaviour player;
 
     private Vector3 velocity;
     [HideInInspector] public bool comeback = false;
+
+    private float timerOut;
 
     private void Awake()
     {
@@ -43,6 +48,11 @@ public class Sword : MonoBehaviour
                 comeback = false ;
             }
         }
+
+        if (transform.parent != null && !comeback) { timerOut = 0; }
+        else { timerOut += Time.deltaTime; }
+        if (timerOut > maxTimerOut) { comeback = true; }
+       
     }
 
     public void Interacted()
@@ -68,9 +78,16 @@ public class Sword : MonoBehaviour
         transform.localScale = Vector3.one;
     }
 
+    public void ComeBack()
+    {
+        transform.localScale = Vector3.one;
+        comeback = true;
+        transform.parent = null;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (transform.parent == null)
+        if (transform.parent == null && !comeback)
         {
             if (collision.CompareTag("Ground"))
             {
@@ -81,7 +98,8 @@ public class Sword : MonoBehaviour
             {
                 if (collision.GetComponent<PuzzleLock>() != null)
                 {
-                    collision.GetComponent<Interactible>().Interacted();
+                    collision.GetComponent<PuzzleLock>().SwordInteracted();
+                    GetComponent<Rigidbody2D>().velocity = Vector2.zero ;
                 }
             }
         }

@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,9 +140,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3687
-        width: 1638
-        height: 921
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Sprite_Death_1
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 3687
-        width: 1638
-        height: 921
+        x: 1920
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Sprite_Death_2
       rect:
         serializedVersion: 2
-        x: 3276
-        y: 3687
-        width: 1638
-        height: 921
+        x: 3840
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: Sprite_Death_3
       rect:
         serializedVersion: 2
-        x: 4914
-        y: 3687
-        width: 1638
-        height: 921
+        x: 5760
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: Sprite_Death_4
       rect:
         serializedVersion: 2
-        x: 6552
-        y: 3687
-        width: 1638
-        height: 921
+        x: 0
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: Sprite_Death_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2766
-        width: 1638
-        height: 921
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Sprite_Death_6
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 2766
-        width: 1638
-        height: 921
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: Sprite_Death_7
       rect:
         serializedVersion: 2
-        x: 3276
-        y: 2766
-        width: 1638
-        height: 921
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: Sprite_Death_8
       rect:
         serializedVersion: 2
-        x: 4914
-        y: 2766
-        width: 1638
-        height: 921
+        x: 0
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: Sprite_Death_9
       rect:
         serializedVersion: 2
-        x: 6552
-        y: 2766
-        width: 1638
-        height: 921
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +349,10 @@ TextureImporter:
       name: Sprite_Death_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1845
-        width: 1638
-        height: 921
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Sprite_Death_11
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 1845
-        width: 1638
-        height: 921
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +391,10 @@ TextureImporter:
       name: Sprite_Death_12
       rect:
         serializedVersion: 2
-        x: 3276
-        y: 1845
-        width: 1638
-        height: 921
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: Sprite_Death_13
       rect:
         serializedVersion: 2
-        x: 4914
-        y: 1845
-        width: 1638
-        height: 921
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: Sprite_Death_14
       rect:
         serializedVersion: 2
-        x: 6552
-        y: 1845
-        width: 1638
-        height: 921
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: Sprite_Death_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 924
-        width: 1638
-        height: 921
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +475,10 @@ TextureImporter:
       name: Sprite_Death_16
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 924
-        width: 1638
-        height: 921
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: Sprite_Death_17
       rect:
         serializedVersion: 2
-        x: 3276
-        y: 924
-        width: 1638
-        height: 921
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: Sprite_Death_18
       rect:
         serializedVersion: 2
-        x: 4914
-        y: 924
-        width: 1638
-        height: 921
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: Sprite_Death_19
       rect:
         serializedVersion: 2
-        x: 6552
-        y: 924
-        width: 1638
-        height: 921
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,9 +560,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 1638
-        height: 921
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: Sprite_Death_21
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 3
-        width: 1638
-        height: 921
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 9
       pivot: {x: 0.24, y: 0.12}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,6 +593,48 @@ TextureImporter:
       bones: []
       spriteID: 08506ead0d54d484fa882dcc7b9c81bf
       internalID: -51927164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Death_22
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e71abb1022c5cd4cbd2849cbce400da
+      internalID: -1830990772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Death_23
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 9
+      pivot: {x: 0.24, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce68a707f8c22b49b056b033d39e42f
+      internalID: 59678034
       vertices: []
       indices: 
       edges: []
@@ -623,6 +665,8 @@ TextureImporter:
       Sprite_Death_2: 1604980104
       Sprite_Death_20: 561907315
       Sprite_Death_21: -51927164
+      Sprite_Death_22: -1830990772
+      Sprite_Death_23: 59678034
       Sprite_Death_3: 143311598
       Sprite_Death_4: 228555505
       Sprite_Death_5: 1135898927

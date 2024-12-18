@@ -6,6 +6,7 @@ public class Dialogue : MonoBehaviour
 {
     [SerializeField] private int currentSpeech = 0;
     [SerializeField] private string[] dialogueTexts;
+    [SerializeField] private float maxDialogueDist;
 
     DialogueUIMain mainDialogue;
     private bool waitInteract;
@@ -23,7 +24,7 @@ public class Dialogue : MonoBehaviour
     {
         if(currentSpeech != 0)
         {
-            if (Vector3.Distance(playerBehaviour.transform.position, transform.position) > 2)
+            if (Vector3.Distance(playerBehaviour.transform.position, transform.position) > maxDialogueDist)
             {
                 mainDialogue.EndDialogue(); 
                 currentSpeech = 0;
