@@ -15,6 +15,8 @@ public class Player_Behaviour : MonoBehaviour
     public int playerLife = 5;
     [Tooltip("Put the placeholder here (animations)")]
     public GameObject placeholder;
+    [Tooltip("Put the Game Over here (animations)")]
+    public GameObject gameOver;
 
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -87,6 +89,7 @@ public class Player_Behaviour : MonoBehaviour
     private float attackPressTime;
     private bool hasHit;
     private bool signThrow;
+    private bool isDead;
 
     [Header("Debug Interaction")]
     private bool hasInteracted = false;
@@ -119,6 +122,7 @@ public class Player_Behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDead) return;
         GetInputs();
         CheckGround();
         InteractionAttack();
@@ -337,6 +341,13 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetBool("isOnGround", isOnGround);
         animator.SetBool("hasSword", hasSword);
         placeholder.transform.eulerAngles = new Vector3(0f, spriteRenderer.flipX?180:0, 0f);
+        if (playerLife == 0)
+        {
+            animator.SetBool("Die", true);
+            gameOver.GetComponent<Animation>().Play();
+            isDead = true;
+            StartCoroutine(Die());
+        }
     }
 
     public void GetHurt(Vector2 ejectForce)
@@ -379,6 +390,12 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetBool("Die", false);
         yield return new WaitForSeconds(0.2f);
         isInInteraction = false ;
+    }
+
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1.9f);
+        Time.timeScale = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
