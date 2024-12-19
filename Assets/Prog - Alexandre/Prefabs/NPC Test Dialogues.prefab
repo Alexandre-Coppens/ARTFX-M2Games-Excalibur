@@ -140,9 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeech: 0
+  maxDialogueDist: 0
   dialogueTexts:
   - I do need capital. And votes.
-  - Wanna know why?
+  - Wanna know why
   - '"I have a dream."'
   - That one day, every person in this nation will control their OWN destiny.
   - A land of the TRULY free, dammit.
@@ -169,6 +170,9 @@ MonoBehaviour:
   - In my new America, people will die and kill for what they BELIEVE!
   - Not for money, not for oil!
   - Not for what they're told is right. Every man will be free to fight his own wars!
+  functionAssigned:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &3474218800889562725
 BoxCollider2D:
   m_ObjectHideFlags: 0
