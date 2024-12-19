@@ -15,6 +15,14 @@ public class Sword : MonoBehaviour
     [Tooltip("The max time before the sword comes back automaticaly")]
     [SerializeField] private float maxTimerOut = 3f;
 
+    [Header("Sword Skins")]
+    [SerializeField] private Sprite lvl1;
+    [SerializeField] private Sprite lvl1_handle;
+    [SerializeField] private Sprite lvl2;
+    [SerializeField] private Sprite lvl2_handle;
+    [SerializeField] private Sprite lvl3;
+    [SerializeField] private Sprite lvl3_handle;
+
     private SpriteRenderer spriteRenderer;
     private Player_Behaviour player;
 
@@ -84,6 +92,27 @@ public class Sword : MonoBehaviour
         transform.localScale = Vector3.one;
         comeback = true;
         transform.parent = null;
+    }
+
+    public void ChangeSkin(int nbr)
+    {
+        switch (nbr)
+        {
+            case 1:
+                spriteRenderer.sprite = lvl1;
+                gameObject.GetComponentsInChildren<SpriteRenderer>()[1].sprite = lvl1_handle;
+                break;
+
+            case 2:
+                spriteRenderer.sprite = lvl2;
+                gameObject.GetComponentsInChildren<SpriteRenderer>()[1].sprite = lvl2_handle;
+                break;
+
+            case 3:
+                spriteRenderer.sprite = lvl3;
+                gameObject.GetComponentsInChildren<SpriteRenderer>()[1].sprite = lvl3_handle;
+                break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
