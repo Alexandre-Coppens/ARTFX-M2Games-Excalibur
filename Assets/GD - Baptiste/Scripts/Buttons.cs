@@ -85,6 +85,7 @@ public class Buttons : MonoBehaviour
             if(buttons[currentChoice - 1] == "menu")    menu.Select();
             if(buttons[currentChoice - 1] == "quit")    quit.Select();
         }
+        else currentChoice = 0;
     }
 
 
