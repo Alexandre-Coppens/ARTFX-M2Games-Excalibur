@@ -16,6 +16,12 @@ public class Player_Behaviour : MonoBehaviour
     public GameObject placeholder;
     [Tooltip("Put the Game Over here (animations)")]
     public GameObject gameOver;
+    [Tooltip("Put the Game Over Buttons Script here")]
+    public Buttons gameOverButtons;
+    [Tooltip("Put the Pause Gameobject here")]
+    public GameObject pauseMenu;
+    [Tooltip("Put the Pause Buttons Script here")]
+    public Buttons pauseButtons;
 
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -93,6 +99,7 @@ public class Player_Behaviour : MonoBehaviour
     [Header("Debug Interaction")]
     //private bool hasInteracted = false;
     private Vector3 lastCheckpoint;
+    private bool hasPaused = true;
 
     [Header("Debug Components")]
     private Player_Inputs inputs;
@@ -112,6 +119,7 @@ public class Player_Behaviour : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         inputs = Player_Inputs.instance;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -130,6 +138,7 @@ public class Player_Behaviour : MonoBehaviour
             Movements();
         }
         Animations();
+        Pause();
     }
 
     private void GetInputs()
@@ -141,6 +150,26 @@ public class Player_Behaviour : MonoBehaviour
 
             jumpPressed = inputs.jumpPressed;
         attackPressed = inputs.attackPressed;
+    }
+
+    private void Pause()
+    {
+        if (inputs.pausePressed && hasPaused) return;
+        if (!inputs.pausePressed) {hasPaused = false; return; }
+        if(Time.timeScale == 0)
+        {
+            pauseButtons.canInteractController = false;
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+            hasPaused = true;
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
+            pauseButtons.canInteractController = true;
+            Time.timeScale = 0;
+            hasPaused = true;
+        }
     }
 
     private void CheckGround()
@@ -345,6 +374,7 @@ public class Player_Behaviour : MonoBehaviour
             animator.SetBool("Die", true);
             gameOver.GetComponent<Animation>().Play();
             isDead = true;
+            gameOverButtons.canInteractController = true;
             StartCoroutine(Die());
         }
     }

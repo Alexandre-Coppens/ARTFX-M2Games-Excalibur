@@ -10,10 +10,11 @@ public class Player_Inputs : MonoBehaviour
     public bool attackPressed = false;
     public bool interactionPressed = false;
     public bool throwPressed = false;
+    public bool pausePressed = false;
     public float movement = 0f;
+    public float menu = 0f;
     [SerializeField] private List<float[]> rumbleList = new List<float[]>();
 
-    PlayerInput InputAction;
     public static Player_Inputs instance;
 
     private void Awake()
@@ -53,6 +54,11 @@ public class Player_Inputs : MonoBehaviour
         movement = context.ReadValue<float>();
     }
 
+    public void Menu(InputAction.CallbackContext context)
+    {
+        menu = context.ReadValue<float>();
+    }
+
     public void Attack(InputAction.CallbackContext context)
     {
         attackPressed = context.ReadValue<float>() > 0 ? true : false;
@@ -71,5 +77,10 @@ public class Player_Inputs : MonoBehaviour
     public void Throw(InputAction.CallbackContext context)
     {
         throwPressed = context.ReadValue<float>() > 0 ? true : false;
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        pausePressed = context.ReadValue<float>() > 0 ? true : false;
     }
 }
