@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Buttons : MonoBehaviour
 {
     public Button start;
+    public Button restart;
     public Button resume;
     public Button menu;
     public Button quit;
@@ -14,6 +15,7 @@ public class Buttons : MonoBehaviour
     void Start()
     {
         start.GetComponent<Button>().onClick.AddListener(StartFunction);
+        restart.GetComponent<Button>().onClick.AddListener(RestartFunction);
         resume.GetComponent<Button>().onClick.AddListener(ResumeFunction);
         menu.GetComponent<Button>().onClick.AddListener(MenuFunction);
         quit.GetComponent<Button>().onClick.AddListener(QuitFunction);
@@ -29,6 +31,10 @@ public class Buttons : MonoBehaviour
  public   void StartFunction()
     {
         SceneManager.LoadScene(1);
+    }
+ public   void RestartFunction()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void ResumeFunction()
     {
