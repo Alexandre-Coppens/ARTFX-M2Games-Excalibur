@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GD - Baptiste/Level 1 test.unity
     guid: bea6a1ad55d122843920239c77a70712
+  - enabled: 1
+    path: Assets/LD - Cassandra/Level 2.unity
+    guid: 3a11c7c26ca23a54a9af61fd4f04ae07
   m_configObjects: {}

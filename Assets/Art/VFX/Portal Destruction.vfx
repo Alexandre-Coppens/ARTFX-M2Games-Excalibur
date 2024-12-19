@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: Coniuous Purle Magic
+  m_Name: Portal Destruction
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -286,7 +286,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":4.28000020980835,"y":4.230000019073486,"z":0.0}}'
+      m_SerializableObject: '{"vector":{"x":4.329999923706055,"y":4.329999923706055,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -688,7 +688,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2
+      m_SerializableObject: 5
     m_Space: 2147483647
   m_Property:
     name: B
@@ -1921,7 +1921,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":4.329999923706055,"y":4.289999961853027,"z":0.0}}'
+      m_SerializableObject: '{"vector":{"x":4.329999923706055,"y":4.329999923706055,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: A
