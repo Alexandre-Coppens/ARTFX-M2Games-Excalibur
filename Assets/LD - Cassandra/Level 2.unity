@@ -3495,6 +3495,14 @@ PrefabInstance:
       value: 2nd relic
       objectReference: {fileID: 0}
     - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[0]
+      value: 'Allistair : That is... Merlin''s head'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[1]
+      value: 'Arthur : ...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
       propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 82676732}
@@ -7378,8 +7386,38 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[0]
+      value: 'Allistair: If we forget the walking dead, this place look normal.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[1]
+      value: 'Arthur: Look in the distance child, this place too is not what it should
+        be.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[2]
+      value: 'Allistair : Floating rocks and ghost houses. I have seen everything'
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[3]
+      value: 'Arthur : That sorcerer, I do not understnad his aim.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[4]
+      value: 'Allistair : He brought you and the knights back and clearly he want
+        those houses back too.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
       propertyPath: dialogueTexts.Array.data[5]
-      value: 'Arthur : I earned my rest.'
+      value: 'Arthur : You thought of something child, do tell. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[6]
+      value: 'Allistair : Maybe he''s not here to destroy but to rebuild.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 872005381313162240, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
+      propertyPath: dialogueTexts.Array.data[7]
+      value: 'Arthur : Rebuilding is not that monstrous.'
       objectReference: {fileID: 0}
     - target: {fileID: 2582155924909101211, guid: ea41c80ef2a851746a4833d50fa9e1c7, type: 3}
       propertyPath: m_Name
