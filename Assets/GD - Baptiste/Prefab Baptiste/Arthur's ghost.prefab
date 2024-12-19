@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1664285917199147584
+--- !u!1 &2582155924909101211
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1856911452384981665}
-  - component: {fileID: 8705833784429133259}
-  - component: {fileID: 2527470155499952526}
-  - component: {fileID: 7815833530340246287}
-  - component: {fileID: 4011120193405179458}
-  - component: {fileID: 3474218800889562725}
+  - component: {fileID: 218637915323944778}
+  - component: {fileID: 235026636362274752}
+  - component: {fileID: 4682966879639998554}
+  - component: {fileID: 6868327505205158276}
+  - component: {fileID: 8499653902067947156}
+  - component: {fileID: 872005381313162240}
+  - component: {fileID: 6949187311384212198}
   m_Layer: 0
-  m_Name: NPC Test Dialogues
+  m_Name: Arthur's ghost
   m_TagString: Interactible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1856911452384981665
+--- !u!4 &218637915323944778
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664285917199147584}
+  m_GameObject: {fileID: 2582155924909101211}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6, y: -3.16, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -159.89542, y: -0.73181343, z: 0.046038862}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8705833784429133259
+--- !u!212 &235026636362274752
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664285917199147584}
+  m_GameObject: {fileID: 2582155924909101211}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
-  m_RendererPriority: -3
+  m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
@@ -76,37 +77,58 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 449d0ff58ca43854181a55df7ef9d596, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 1011727961, guid: 868749e4e0cca844eafba9fa528973b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 23.420319, y: 19.089998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2527470155499952526
+--- !u!95 &4682966879639998554
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2582155924909101211}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f2e99ac7fc092f46b5ea6370cb488d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6868327505205158276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664285917199147584}
+  m_GameObject: {fileID: 2582155924909101211}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdbbb4fc4ada2d948939caffea9fdb5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7815833530340246287
+--- !u!114 &8499653902067947156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664285917199147584}
+  m_GameObject: {fileID: 2582155924909101211}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f666ba22f54dfc54a8990c3c2b1740de, type: 3}
@@ -115,8 +137,8 @@ MonoBehaviour:
   functionAssigned:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4011120193405179458}
-        m_TargetAssemblyTypeName: TestCube, Assembly-CSharp
+      - m_Target: {fileID: 872005381313162240}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
         m_MethodName: Interacted
         m_Mode: 1
         m_Arguments:
@@ -127,59 +149,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4011120193405179458
+--- !u!114 &872005381313162240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664285917199147584}
+  m_GameObject: {fileID: 2582155924909101211}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a40040134b1896e42a9a59a728e99cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeech: 0
-  maxDialogueDist: 0
+  maxDialogueDist: 3
   dialogueTexts:
-  - I do need capital. And votes.
-  - Wanna know why
-  - '"I have a dream."'
-  - That one day, every person in this nation will control their OWN destiny.
-  - A land of the TRULY free, dammit.
+  - 'Allistair : Is that... an hand ?'
+  - 'Arthur : Yes... a conduit for foul magic it would seem.'
+  - 'Allistair : I can feel the sword reacting to it'
+  - 'Arthur : Call it by it''s proper name child : Excalibur. '
+  - 'Arthur : Knowing that, what we have to do now is obvious. Destroy this blashemy
+    !'
   - A nation of ACTION, not words. Ruled by STRENGTH, not committee.
-  - Where the law changes to suit the individual, not the other way around.
-  - 'Where power and justice are back where they belong: in the hands of the people!'
-  - Where every man is free to think -- to act -- for himself!
-  - Fuck all these limp-dick lawyers and chicken-shit bureaucrats.
-  - Fuck this 24/7 Internet spew of trivia and celebrity bullshit.
-  - Fuck "American pride". Fuck the media!
-  - Fuck all of it!
-  - America is diseased. Rotten to the core.
-  - There's no saving it --
-  - we need to pull it out by the roots.
-  - WIpe the slate clean. BURN IT DOWN!
-  - And from the ashes, a new America will be born.
-  - Evolved, but untamed!
-  - The weak will be purged, and the strongest will thrive --
-  - free to live as they see fit,
-  - 'they will make America GREAT AGAIN! '
-  - 
-  - You still don't get it. I'm using war as a business to get elected...
-  - so I can end war as a business!
-  - In my new America, people will die and kill for what they BELIEVE!
-  - Not for money, not for oil!
-  - Not for what they're told is right. Every man will be free to fight his own wars!
   functionAssigned:
     m_PersistentCalls:
       m_Calls: []
---- !u!61 &3474218800889562725
+--- !u!61 &6949187311384212198
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664285917199147584}
+  m_GameObject: {fileID: 2582155924909101211}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -209,12 +210,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.72, y: 8.07}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 23.420319, y: 19.089998}
+    newSize: {x: 23.420319, y: 19.089998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0
