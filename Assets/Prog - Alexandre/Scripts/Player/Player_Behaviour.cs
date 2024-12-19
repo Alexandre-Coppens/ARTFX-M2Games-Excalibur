@@ -17,6 +17,8 @@ public class Player_Behaviour : MonoBehaviour
     public GameObject placeholder;
     [Tooltip("Put the Game Over here (animations)")]
     public GameObject gameOver;
+    [Tooltip("Put the Game Over Buttons Script here")]
+    public Buttons gameOverButtons;
 
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -113,6 +115,7 @@ public class Player_Behaviour : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         inputs = Player_Inputs.instance;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -346,6 +349,7 @@ public class Player_Behaviour : MonoBehaviour
             animator.SetBool("Die", true);
             gameOver.GetComponent<Animation>().Play();
             isDead = true;
+            gameOverButtons.canInteractController = true;
             StartCoroutine(Die());
         }
     }
