@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Behaviour : MonoBehaviour
@@ -9,12 +8,20 @@ public class Player_Behaviour : MonoBehaviour
     [Header("Variables")]
     [Tooltip("The player speed")]
     [SerializeField] private float movementSpeed = 3f;
-    [Tooltip("The maximum of the player's life")]
-    [SerializeField] private int maxPlayerLife = 5;
+    //[Tooltip("The maximum of the player's life")]
+    //[SerializeField] private int maxPlayerLife = 5;
     [Tooltip("Current Player's life.")]
     public int playerLife = 5;
     [Tooltip("Put the placeholder here (animations)")]
     public GameObject placeholder;
+    [Tooltip("Put the Game Over here (animations)")]
+    public GameObject gameOver;
+    [Tooltip("Put the Game Over Buttons Script here")]
+    public Buttons gameOverButtons;
+    [Tooltip("Put the Pause Gameobject here")]
+    public GameObject pauseMenu;
+    [Tooltip("Put the Pause Buttons Script here")]
+    public Buttons pauseButtons;
 
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -87,10 +94,12 @@ public class Player_Behaviour : MonoBehaviour
     private float attackPressTime;
     private bool hasHit;
     private bool signThrow;
+    private bool isDead;
 
     [Header("Debug Interaction")]
-    private bool hasInteracted = false;
+    //private bool hasInteracted = false;
     private Vector3 lastCheckpoint;
+    private bool hasPaused = true;
 
     [Header("Debug Components")]
     private Player_Inputs inputs;
@@ -110,6 +119,7 @@ public class Player_Behaviour : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         inputs = Player_Inputs.instance;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -119,6 +129,7 @@ public class Player_Behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDead) return;
         GetInputs();
         CheckGround();
         InteractionAttack();
@@ -127,6 +138,7 @@ public class Player_Behaviour : MonoBehaviour
             Movements();
         }
         Animations();
+        Pause();
     }
 
     private void GetInputs()
@@ -138,6 +150,26 @@ public class Player_Behaviour : MonoBehaviour
 
             jumpPressed = inputs.jumpPressed;
         attackPressed = inputs.attackPressed;
+    }
+
+    private void Pause()
+    {
+        if (inputs.pausePressed && hasPaused) return;
+        if (!inputs.pausePressed) {hasPaused = false; return; }
+        if(Time.timeScale == 0)
+        {
+            pauseButtons.canInteractController = false;
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+            hasPaused = true;
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
+            pauseButtons.canInteractController = true;
+            Time.timeScale = 0;
+            hasPaused = true;
+        }
     }
 
     private void CheckGround()
@@ -337,6 +369,14 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetBool("isOnGround", isOnGround);
         animator.SetBool("hasSword", hasSword);
         placeholder.transform.eulerAngles = new Vector3(0f, spriteRenderer.flipX?180:0, 0f);
+        if (playerLife == 0)
+        {
+            animator.SetBool("Die", true);
+            gameOver.GetComponent<Animation>().Play();
+            isDead = true;
+            gameOverButtons.canInteractController = true;
+            StartCoroutine(Die());
+        }
     }
 
     public void GetHurt(Vector2 ejectForce)
@@ -379,6 +419,12 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetBool("Die", false);
         yield return new WaitForSeconds(0.2f);
         isInInteraction = false ;
+    }
+
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1.9f);
+        Time.timeScale = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
