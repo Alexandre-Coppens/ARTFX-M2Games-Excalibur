@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Portal : MonoBehaviour
 {
-    [Tooltip("Where the player will be teleported to")]
-    [SerializeField] private Vector3 teleportTo;
-    private Player_Behaviour player;
+    [Tooltip("Ending VFX")]
+    [SerializeField] private VisualEffect vfx;
+    [SerializeField] private float scaleVFX;
+    private bool isPlaying;
 
-    public void Interacted()
+    private void Start()
     {
-        player = Player_Behaviour._instance;
-        Camera.main.transform.position = new Vector3(teleportTo.x, teleportTo.y, Camera.main.transform.position.z);
-        player.transform.position = teleportTo;
+        vfx = GetComponentInChildren<VisualEffect>();
     }
 
-    private void OnDrawGizmosSelected()
+    private void Update()
     {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(teleportTo, 1.0f);
+        if (isPlaying) { vfx.gameObject.transform.localScale += new Vector3(scaleVFX, scaleVFX) * Time.deltaTime; }
+    }
+
+    public void DestroyPortal()
+    {
+        vfx.Play();
+        isPlaying = true;
     }
 }

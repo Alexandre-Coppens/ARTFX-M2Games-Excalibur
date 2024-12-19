@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Player_Behaviour : MonoBehaviour
 {
@@ -62,6 +63,8 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private float stunTime = 0.2f;
     [Tooltip("Transition when the player fall into the spikes")]
     [SerializeField] private Animator transiAnim;
+    [Tooltip("VFX when player is hit")]
+    [SerializeField] private VisualEffect vfx;
 
     [Header("Interaction")]
     [Tooltip("The player cannot move in interaction")]
@@ -124,6 +127,7 @@ public class Player_Behaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
+        vfx = GetComponentInChildren<VisualEffect>();
     }
 
     // Update is called once per frame
@@ -384,6 +388,7 @@ public class Player_Behaviour : MonoBehaviour
         playerLife -= 1;
         rb.velocity = ejectForce;
         animator.SetTrigger("Hit");
+        vfx.Play();
         StartCoroutine("PlayerStun");
     }
     private IEnumerator PlayerAttack()
