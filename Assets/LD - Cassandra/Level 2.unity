@@ -3495,12 +3495,41 @@ PrefabInstance:
       value: 2nd relic
       objectReference: {fileID: 0}
     - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
       propertyPath: dialogueTexts.Array.data[0]
-      value: 'Allistair : That is... Merlin''s head'
+      value: 'Allistair : That''s... Merlin''s head'
       objectReference: {fileID: 0}
     - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
       propertyPath: dialogueTexts.Array.data[1]
       value: 'Arthur : ...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[2]
+      value: 'Allistair : We can probably beat the sorcerer without it. We can leave
+        it alone'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[3]
+      value: 'Arthur : No we can''t. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[4]
+      value: 'Allistair : I can give you a moment if you want'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[5]
+      value: 'Arthur : No. I''ll have eternity to mourn him. Do what you must'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[6]
+      value: A nation of ACTION, not words. Ruled by STRENGTH, not committee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
+      propertyPath: dialogueTexts.Array.data[7]
+      value: A nation of ACTION, not words. Ruled by STRENGTH, not committee.
       objectReference: {fileID: 0}
     - target: {fileID: 7012958425809948938, guid: f65bb807e2ce7ab45b133a1db0aa10e3, type: 3}
       propertyPath: functionAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Target
