@@ -5502,7 +5502,7 @@ PrefabInstance:
     - target: {fileID: 6775637148449880635, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 41ed46cd48e3c4342a78d5b1dd4261b2, type: 2}
+      objectReference: {fileID: 11400000, guid: 35ef8d47ee92bd84380d82de5ab82192, type: 2}
     - target: {fileID: 6775637148449880635, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
       propertyPath: m_fontColor.a
       value: 0
@@ -6809,8 +6809,8 @@ MonoBehaviour:
     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
     in culpa qui officia deserunt mollit anim id est laborum.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 35ef8d47ee92bd84380d82de5ab82192, type: 2}
+  m_sharedMaterial: {fileID: -7861792930618177391, guid: 35ef8d47ee92bd84380d82de5ab82192, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

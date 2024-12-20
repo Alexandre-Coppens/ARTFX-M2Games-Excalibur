@@ -3771,7 +3771,7 @@ MonoBehaviour:
     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
     in culpa qui officia deserunt mollit anim id est laborum.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 41ed46cd48e3c4342a78d5b1dd4261b2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 35ef8d47ee92bd84380d82de5ab82192, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5203,6 +5203,14 @@ PrefabInstance:
     - target: {fileID: 3767033414554640370, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
       propertyPath: m_Name
       value: PowerUps
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775637148449880635, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 35ef8d47ee92bd84380d82de5ab82192, type: 2}
+    - target: {fileID: 6775637148449880635, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6980472423705220832, guid: 005ad98dfdcff8144b7171a87bc8a02b, type: 3}
       propertyPath: m_Pivot.x
