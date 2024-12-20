@@ -149,7 +149,7 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(0, rb.velocity.y);
         if(currentAttackTime == 0)
         {
             currentAttackTime += Time.deltaTime;
@@ -174,6 +174,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            nextAction = EnemyAction.Roaming;
             currentAttackTime = 0;
             hasAttacked = false;
             CheckForPlayer();
@@ -238,7 +239,7 @@ public class Enemy : MonoBehaviour
             }
             return; 
         }
-        if (ennemyLevel == 1) { return; }
+        if (ennemyLevel == 1) { nextAction = EnemyAction.Roaming; return; }
         foreach (RaycastHit2D raycast in ray)
         {
             if (raycast.collider.CompareTag("Player"))

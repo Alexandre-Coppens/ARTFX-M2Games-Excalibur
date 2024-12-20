@@ -23,6 +23,8 @@ public class Player_Behaviour : MonoBehaviour
     public GameObject pauseMenu;
     [Tooltip("Put the Pause Buttons Script here")]
     public Buttons pauseButtons;
+    [Tooltip("Put the Life UI GameObject here")]
+    public GameObject healthUI;
 
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -164,12 +166,14 @@ public class Player_Behaviour : MonoBehaviour
         {
             pauseButtons.canInteractController = false;
             pauseMenu.SetActive(false);
+            healthUI.SetActive(true);
             Time.timeScale = 1;
             hasPaused = true;
         }
         else
         {
             pauseMenu.SetActive(true);
+            healthUI.SetActive(false);
             pauseButtons.canInteractController = true;
             Time.timeScale = 0;
             hasPaused = true;
@@ -386,6 +390,7 @@ public class Player_Behaviour : MonoBehaviour
     public void GetHurt(Vector2 ejectForce)
     {
         playerLife -= 1;
+        healthUI.GetComponent<UIHealth>().UpdateHealth(playerLife);
         rb.velocity = ejectForce;
         animator.SetTrigger("Hit");
         vfx.Play();
@@ -415,6 +420,7 @@ public class Player_Behaviour : MonoBehaviour
     {
         playerLife--;
         isInInteraction = true;
+        healthUI.GetComponent<UIHealth>().UpdateHealth(playerLife);
         animator.SetBool("Die", true);
         yield return new WaitForSeconds(0.2f);
         transiAnim.SetTrigger("Ended");
@@ -429,6 +435,7 @@ public class Player_Behaviour : MonoBehaviour
     private IEnumerator Die()
     {
         yield return new WaitForSeconds(1.9f);
+        healthUI.SetActive(false);
         Time.timeScale = 0;
     }
 
