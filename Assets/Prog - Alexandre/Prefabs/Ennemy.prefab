@@ -57,19 +57,19 @@ MonoBehaviour:
   leftPlatCheck: {x: -0.79, y: -1.39, z: 0}
   rightPlatCheck: {x: 0.79, y: -1.39, z: 0}
   ennWalkSpeed: 2
-  ennWalkRange: {x: -4.24, y: 1.88}
+  ennWalkRange: {x: -7.13, y: 1.88}
   enStopTime: 0.7
   ennChaseSpeed: 4
-  attackTime: 0.5
-  hurtTime: 0.2
+  attackTime: 1.5
+  hurtTime: 1.25
   hitForce: {x: 6, y: 2}
   attackDifference: {x: -0.82, y: 0}
   attackSize: {x: 1.94, y: 1}
   hitVelocity: 3
   hitStunTime: 0.7
-  rb: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  animator: {fileID: 0}
+  rb: {fileID: 8307393578300398062}
+  spriteRenderer: {fileID: 8469958533919711669}
+  animator: {fileID: 5564729472402863694}
   player: {fileID: 0}
 --- !u!114 &4244092173860831174
 MonoBehaviour:
