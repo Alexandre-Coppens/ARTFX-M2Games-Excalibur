@@ -1,4 +1,4 @@
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -285,46 +285,46 @@ public class Enemy : MonoBehaviour
             Destroy(GetComponent<CircleCollider2D>());
         }
     }
-    private void OnDrawGizmosSelected()
-    {
-        if (!EditorApplication.isPlaying)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.x, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.x, transform.position.y + 1));
-            Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.y, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.y, transform.position.y + 1));
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.x - transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.x - transform.localScale.x * 0.5f, transform.position.y));
-            Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.y + transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.y + transform.localScale.x * 0.5f, transform.position.y));
+    //private void OnDrawGizmosSelected()
+    //{
+    //    if (!EditorApplication.isPlaying)
+    //    {
+    //        Gizmos.color = Color.green;
+    //        Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.x, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.x, transform.position.y + 1));
+    //        Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.y, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.y, transform.position.y + 1));
+    //        Gizmos.color = Color.red;
+    //        Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.x - transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.x - transform.localScale.x * 0.5f, transform.position.y));
+    //        Gizmos.DrawLine(new Vector3(transform.position.x + ennWalkRange.y + transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(transform.position.x + ennWalkRange.y + transform.localScale.x * 0.5f, transform.position.y));
 
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
-        }
-        else
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(new Vector3(ennWalkBoundaries.x, transform.position.y - 1), new Vector3(ennWalkBoundaries.x, transform.position.y + 1));
-            Gizmos.DrawLine(new Vector3(ennWalkBoundaries.y, transform.position.y - 1), new Vector3(ennWalkBoundaries.y, transform.position.y + 1));
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(new Vector3(ennWalkBoundaries.x - transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(ennWalkBoundaries.x - transform.localScale.x * 0.5f, transform.position.y));
-            Gizmos.DrawLine(new Vector3(ennWalkBoundaries.y + transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(ennWalkBoundaries.y + transform.localScale.x * 0.5f, transform.position.y));
-        }
+    //        Gizmos.color = Color.red;
+    //        Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
+    //    }
+    //    else
+    //    {
+    //        Gizmos.color = Color.green;
+    //        Gizmos.DrawLine(new Vector3(ennWalkBoundaries.x, transform.position.y - 1), new Vector3(ennWalkBoundaries.x, transform.position.y + 1));
+    //        Gizmos.DrawLine(new Vector3(ennWalkBoundaries.y, transform.position.y - 1), new Vector3(ennWalkBoundaries.y, transform.position.y + 1));
+    //        Gizmos.color = Color.red;
+    //        Gizmos.DrawLine(new Vector3(ennWalkBoundaries.x - transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(ennWalkBoundaries.x - transform.localScale.x * 0.5f, transform.position.y));
+    //        Gizmos.DrawLine(new Vector3(ennWalkBoundaries.y + transform.localScale.x * 0.5f, transform.position.y - 1), new Vector3(ennWalkBoundaries.y + transform.localScale.x * 0.5f, transform.position.y));
+    //    }
 
-        Gizmos.color = Color.gray;
-        Gizmos.DrawWireCube(transform.position, ennCheckSize);
-        Gizmos.DrawLine(new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.05f, transform.position.y), new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.4f, transform.position.y));
-        Gizmos.DrawLine(new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.05f, transform.position.y), new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.4f, transform.position.y));
+    //    Gizmos.color = Color.gray;
+    //    Gizmos.DrawWireCube(transform.position, ennCheckSize);
+    //    Gizmos.DrawLine(new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.05f, transform.position.y), new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.4f, transform.position.y));
+    //    Gizmos.DrawLine(new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.05f, transform.position.y), new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.4f, transform.position.y));
 
-        if (currentAttackTime > 0)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
-        }
+    //    if (currentAttackTime > 0)
+    //    {
+    //        Gizmos.color = Color.red;
+    //        Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
+    //    }
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(chasePoint, 0.1f);
-        Gizmos.DrawWireSphere(transform.position + leftPlatCheck, 0.1f);
-        Gizmos.DrawWireSphere(transform.position + rightPlatCheck, 0.1f);
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(chasePoint, 0.1f);
+    //    Gizmos.DrawWireSphere(transform.position + leftPlatCheck, 0.1f);
+    //    Gizmos.DrawWireSphere(transform.position + rightPlatCheck, 0.1f);
 
 
-    }
+    //}
 }

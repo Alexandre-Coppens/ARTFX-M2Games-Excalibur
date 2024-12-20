@@ -9,7 +9,7 @@ public class Potion : MonoBehaviour
     public void Interacted()
     {
         player = Player_Behaviour._instance;
-        player.playerLife += 1;
+        if (player.playerLife != 3) player.playerLife += 1;
         Destroy(gameObject);
     }
 }
