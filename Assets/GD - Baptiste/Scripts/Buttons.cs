@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -102,6 +101,7 @@ public class Buttons : MonoBehaviour
     public void ResumeFunction()
     {
         if (!canInteractController) { return; }
+        playerInputs.pausePressed = true;
     }
 
   public void MenuFunction() 

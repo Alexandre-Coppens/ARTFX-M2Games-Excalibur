@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LD - Cassandra/Level 2.5.unity
     guid: 8ddfba1cf2d94a34e8df7049288e9195
+  - enabled: 1
+    path: Assets/GD - Baptiste/Final.unity
+    guid: 1f3c1ad854b2bc04e8579a291bbf81e9
   - enabled: 0
     path: Assets/Prog - Alexandre/Gymnasium.unity
     guid: fc1ce83b4d99dd8488799da439a6b764

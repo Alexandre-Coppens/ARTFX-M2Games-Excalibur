@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
 public class Portal : MonoBehaviour
@@ -8,6 +8,7 @@ public class Portal : MonoBehaviour
     [Tooltip("Ending VFX")]
     [SerializeField] private VisualEffect vfx;
     [SerializeField] private float scaleVFX;
+    [SerializeField] private Animation theEnd;
     private bool isPlaying;
 
     private void Start()
@@ -24,5 +25,13 @@ public class Portal : MonoBehaviour
     {
         vfx.Play();
         isPlaying = true;
+        theEnd.Play();
+        StartCoroutine(Ending());
+    }
+
+    private IEnumerator Ending()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(4);
     }
 }

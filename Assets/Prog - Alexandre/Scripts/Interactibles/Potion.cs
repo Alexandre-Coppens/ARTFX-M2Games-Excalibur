@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Potion : MonoBehaviour
@@ -10,6 +8,8 @@ public class Potion : MonoBehaviour
     {
         player = Player_Behaviour._instance;
         if (player.playerLife != 3) player.playerLife += 1;
+        UIHealth health = UIHealth.instance;
+        health.UpdateHealth(player.playerLife);
         Destroy(gameObject);
     }
 }
