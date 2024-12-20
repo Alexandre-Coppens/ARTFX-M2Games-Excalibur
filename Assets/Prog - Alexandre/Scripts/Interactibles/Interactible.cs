@@ -7,6 +7,7 @@ public class Interactible : MonoBehaviour
 
     public void Interacted()
     {
+        if (functionAssigned == null) return;
         functionAssigned.Invoke();
     }
 }

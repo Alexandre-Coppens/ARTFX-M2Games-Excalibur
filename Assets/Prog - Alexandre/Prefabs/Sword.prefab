@@ -105,6 +105,12 @@ MonoBehaviour:
   parent: {fileID: 0}
   speed: 5
   maxTimerOut: 3
+  lvl1: {fileID: 21300000, guid: ad56d676e6ffac44988eb43ce8d7b919, type: 3}
+  lvl1_handle: {fileID: 21300000, guid: 2e047b299751366448e6e9aca7f94e04, type: 3}
+  lvl2: {fileID: 21300000, guid: b15394a6b6fcb094db692f264fb59812, type: 3}
+  lvl2_handle: {fileID: 21300000, guid: 00f4ef08955c0814ca59132502d111a1, type: 3}
+  lvl3: {fileID: 21300000, guid: 57f089ea4d727054494de0ff646157b4, type: 3}
+  lvl3_handle: {fileID: 21300000, guid: 8bfbb271cb1db8a44be2ea34f900b371, type: 3}
   comeback: 0
 --- !u!114 &7267487590578766564
 MonoBehaviour:

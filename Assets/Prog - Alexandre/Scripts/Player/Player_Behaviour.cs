@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Player_Behaviour : MonoBehaviour
 {
@@ -14,6 +15,16 @@ public class Player_Behaviour : MonoBehaviour
     public int playerLife = 5;
     [Tooltip("Put the placeholder here (animations)")]
     public GameObject placeholder;
+    [Tooltip("Put the Game Over here (animations)")]
+    public GameObject gameOver;
+    [Tooltip("Put the Game Over Buttons Script here")]
+    public Buttons gameOverButtons;
+    [Tooltip("Put the Pause Gameobject here")]
+    public GameObject pauseMenu;
+    [Tooltip("Put the Pause Buttons Script here")]
+    public Buttons pauseButtons;
+    [Tooltip("Put the Life UI GameObject here")]
+    public GameObject healthUI;
 
     [Header("Jump")]
     [Tooltip("Player Y speed when he jumps")]
@@ -54,6 +65,8 @@ public class Player_Behaviour : MonoBehaviour
     [SerializeField] private float stunTime = 0.2f;
     [Tooltip("Transition when the player fall into the spikes")]
     [SerializeField] private Animator transiAnim;
+    [Tooltip("VFX when player is hit")]
+    [SerializeField] private VisualEffect vfx;
 
     [Header("Interaction")]
     [Tooltip("The player cannot move in interaction")]
@@ -86,10 +99,12 @@ public class Player_Behaviour : MonoBehaviour
     private float attackPressTime;
     private bool hasHit;
     private bool signThrow;
+    private bool isDead;
 
     [Header("Debug Interaction")]
     //private bool hasInteracted = false;
     private Vector3 lastCheckpoint;
+    private bool hasPaused = true;
 
     [Header("Debug Components")]
     private Player_Inputs inputs;
@@ -109,15 +124,18 @@ public class Player_Behaviour : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         inputs = Player_Inputs.instance;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
+        vfx = GetComponentInChildren<VisualEffect>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isDead) return;
         GetInputs();
         CheckGround();
         InteractionAttack();
@@ -126,6 +144,7 @@ public class Player_Behaviour : MonoBehaviour
             Movements();
         }
         Animations();
+        Pause();
     }
 
     private void GetInputs()
@@ -137,6 +156,28 @@ public class Player_Behaviour : MonoBehaviour
 
             jumpPressed = inputs.jumpPressed;
         attackPressed = inputs.attackPressed;
+    }
+
+    private void Pause()
+    {
+        if (inputs.pausePressed && hasPaused) return;
+        if (!inputs.pausePressed) {hasPaused = false; return; }
+        if(Time.timeScale == 0)
+        {
+            pauseButtons.canInteractController = false;
+            pauseMenu.SetActive(false);
+            healthUI.SetActive(true);
+            Time.timeScale = 1;
+            hasPaused = true;
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
+            healthUI.SetActive(false);
+            pauseButtons.canInteractController = true;
+            Time.timeScale = 0;
+            hasPaused = true;
+        }
     }
 
     private void CheckGround()
@@ -336,13 +377,23 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetBool("isOnGround", isOnGround);
         animator.SetBool("hasSword", hasSword);
         placeholder.transform.eulerAngles = new Vector3(0f, spriteRenderer.flipX?180:0, 0f);
+        if (playerLife == 0)
+        {
+            animator.SetBool("Die", true);
+            gameOver.GetComponent<Animation>().Play();
+            isDead = true;
+            gameOverButtons.canInteractController = true;
+            StartCoroutine(Die());
+        }
     }
 
     public void GetHurt(Vector2 ejectForce)
     {
         playerLife -= 1;
+        healthUI.GetComponent<UIHealth>().UpdateHealth(playerLife);
         rb.velocity = ejectForce;
         animator.SetTrigger("Hit");
+        vfx.Play();
         StartCoroutine("PlayerStun");
     }
     private IEnumerator PlayerAttack()
@@ -369,6 +420,7 @@ public class Player_Behaviour : MonoBehaviour
     {
         playerLife--;
         isInInteraction = true;
+        healthUI.GetComponent<UIHealth>().UpdateHealth(playerLife);
         animator.SetBool("Die", true);
         yield return new WaitForSeconds(0.2f);
         transiAnim.SetTrigger("Ended");
@@ -378,6 +430,13 @@ public class Player_Behaviour : MonoBehaviour
         animator.SetBool("Die", false);
         yield return new WaitForSeconds(0.2f);
         isInInteraction = false ;
+    }
+
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1.9f);
+        healthUI.SetActive(false);
+        Time.timeScale = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

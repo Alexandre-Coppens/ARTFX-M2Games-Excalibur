@@ -303,27 +303,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: spritesheet_walk_8
-      rect:
-        serializedVersion: 2
-        x: 3836
-        y: 0
-        width: 1918.3334
-        height: 2000
-      alignment: 9
-      pivot: {x: 0.29, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a33a9427d239584eafeea9dd504f216
-      internalID: 1696573736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,5 +1,6 @@
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Enemy : MonoBehaviour
 {
@@ -51,6 +52,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float hitVelocity = 3f;
     [Tooltip("Nbr in seconds of stun when hit")]
     [SerializeField] private float hitStunTime = 0.7f;
+    [Tooltip("The VFX when the enemy is hurt")]
+    [SerializeField] private VisualEffect vfx;
 
     [Header("Debug Idle")]
     private float idleLeft;
@@ -89,6 +92,7 @@ public class Enemy : MonoBehaviour
         ennWalkBoundaries = new Vector2(transform.position.x + ennWalkRange.x, transform.position.x + ennWalkRange.y);
         player = Player_Behaviour._instance;
         animator = GetComponentInChildren<Animator>();
+        vfx = GetComponentInChildren<VisualEffect>();
     }
 
     void Update()
@@ -145,7 +149,7 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(0, rb.velocity.y);
         if(currentAttackTime == 0)
         {
             currentAttackTime += Time.deltaTime;
@@ -170,6 +174,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            nextAction = EnemyAction.Roaming;
             currentAttackTime = 0;
             hasAttacked = false;
             CheckForPlayer();
@@ -234,7 +239,7 @@ public class Enemy : MonoBehaviour
             }
             return; 
         }
-        if (ennemyLevel == 1) { return; }
+        if (ennemyLevel == 1) { nextAction = EnemyAction.Roaming; return; }
         foreach (RaycastHit2D raycast in ray)
         {
             if (raycast.collider.CompareTag("Player"))
@@ -260,6 +265,7 @@ public class Enemy : MonoBehaviour
     public void Attacked()
     {
         health -= 1;
+        vfx.Play();
         if (health > 0)
         {
             idleLeft = hitStunTime;
@@ -308,7 +314,7 @@ public class Enemy : MonoBehaviour
     //    Gizmos.DrawLine(new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.05f, transform.position.y), new Vector3(transform.position.x + transform.localScale.x * 0.5f + 0.4f, transform.position.y));
     //    Gizmos.DrawLine(new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.05f, transform.position.y), new Vector3(transform.position.x - transform.localScale.x * 0.5f - 0.4f, transform.position.y));
 
-    //    if(currentAttackTime > 0)
+    //    if (currentAttackTime > 0)
     //    {
     //        Gizmos.color = Color.red;
     //        Gizmos.DrawWireCube(transform.position + new Vector3(attackDifference.x, attackDifference.y), attackSize);
