@@ -22,7 +22,7 @@ public class Player_Inputs : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Rumble();
     }

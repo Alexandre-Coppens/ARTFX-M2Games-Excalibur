@@ -266,7 +266,7 @@ public class Player_Behaviour : MonoBehaviour
 
             if(attackPressTime > attackThrowTime && !signThrow && hasSword && canThrowPOW)
             {
-                inputs.AddRumble(new Vector2(2, 5), 0.3f);
+                inputs.AddRumble(new Vector2(2, 5), 0.1f);
                 Debug.Log("Rumble");
                 signThrow = true;
             }
@@ -359,6 +359,7 @@ public class Player_Behaviour : MonoBehaviour
                 if (nearestHit != null)
                 {
                     if (canBreakPOW || nearestHit.CompareTag("Enemies")) nearestHit.Attacked();
+                    inputs.AddRumble(new Vector2(200, 200), 0.1f);
                 }
                 hasHit = true;
             }
