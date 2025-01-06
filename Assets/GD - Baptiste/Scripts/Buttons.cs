@@ -12,6 +12,10 @@ public class Buttons : MonoBehaviour
     private Player_Inputs playerInputs;
     private List<string> buttons = new List<string>();
 
+    [SerializeField] private AudioClip buttonSound;
+
+    private AudioSource audioSource;
+
     public Button start;
     public Button restart;
     public Button resume;
@@ -20,6 +24,8 @@ public class Buttons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = buttonSound;
         if(SceneManager.GetActiveScene().buildIndex == 0) canInteractController=true;
         playerInputs = Player_Inputs.instance;
         if(start != null )      { buttons.Add("start");     start.GetComponent<Button>().onClick.AddListener(StartFunction); }
@@ -59,18 +65,22 @@ public class Buttons : MonoBehaviour
 
             if (playerInputs.menu > 0.5f && !wait)
             {
-                if(currentChoice == 0) { currentChoice = 1; wait = true; }
+                
+                if (currentChoice == 0) { currentChoice = 1; wait = true; audioSource.Play(); }
                 else
                 {
+                    audioSource.Play();
                     currentChoice = Mathf.Clamp(currentChoice - 1, 1, buttons.Count) ;
                     wait = true;
                 }
             }
             if (playerInputs.menu < -0.5f && !wait)
             {
-                if (currentChoice == 0) { currentChoice = 1; wait = true; }
+                
+                if (currentChoice == 0) { currentChoice = 1; wait = true; audioSource.Play(); }
                 else
                 {
+                    audioSource.Play();
                     currentChoice = Mathf.Clamp(currentChoice + 1, 1, buttons.Count);
                     wait = true;
                 }

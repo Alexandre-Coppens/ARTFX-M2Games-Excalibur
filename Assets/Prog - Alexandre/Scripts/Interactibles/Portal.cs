@@ -24,6 +24,7 @@ public class Portal : MonoBehaviour
     public void DestroyPortal()
     {
         vfx.Play();
+        GetComponent<AudioSource>().Play();
         isPlaying = true;
         theEnd.Play();
         StartCoroutine(Ending());

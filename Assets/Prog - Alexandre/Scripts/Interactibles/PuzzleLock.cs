@@ -11,6 +11,8 @@ public class PuzzleLock : MonoBehaviour
 
     [SerializeField] private UnityEvent[] functionsOpen;
     [SerializeField] private UnityEvent[] functionsClose;
+    [SerializeField] private AudioClip audioOpen;
+    [SerializeField] private AudioClip audioClose;
 
     private void Start()
     {
@@ -39,6 +41,9 @@ public class PuzzleLock : MonoBehaviour
     private IEnumerator EnterSword()
     {
         yield return new WaitForSeconds(0.5f);
+        GetComponent<AudioSource>().clip = audioOpen;
+        GetComponent<AudioSource>().Play();
+
         hasSword = true;
         sword.GetToPosition(transform);
         foreach (var func in functionsOpen)
@@ -50,6 +55,8 @@ public class PuzzleLock : MonoBehaviour
     private IEnumerator RemoveSword()
     {
         yield return new WaitForSeconds(0.2f);
+        GetComponent<AudioSource>().clip = audioClose;
+        GetComponent<AudioSource>().Play();
         hasSword = false;
         sword.GetToPosition(null);
         foreach (var func in functionsClose)

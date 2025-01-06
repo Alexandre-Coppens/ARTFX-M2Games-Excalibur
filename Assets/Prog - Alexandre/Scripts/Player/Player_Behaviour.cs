@@ -76,6 +76,13 @@ public class Player_Behaviour : MonoBehaviour
     [Tooltip("Time it takes for the player to take or remove his sword")]
     [SerializeField] private float interactionTime = 0.2f;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip moveSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip hitSound;
+
+
     [Header("Power Ups")]
     [Tooltip("First Power Up")]
     public bool canBreakPOW = false;
@@ -111,6 +118,7 @@ public class Player_Behaviour : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private AudioSource audioSource;
 
     [Header("Debug Controller")]
     [HideInInspector]public float movement;
@@ -130,6 +138,7 @@ public class Player_Behaviour : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
         vfx = GetComponentInChildren<VisualEffect>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -223,6 +232,8 @@ public class Player_Behaviour : MonoBehaviour
                 isJumping = true;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 currentAirJumpTime = 0;
+                audioSource.clip = jumpSound;
+                audioSource.Play();
             }
             else if (isJumping && currentAirJumpTime <= jumpAirTime)
             {
@@ -272,7 +283,7 @@ public class Player_Behaviour : MonoBehaviour
             }
 
             if(hasAttacked) { return; }
-
+            
             Collider2D[] allObjects = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
             Collider2D nearestInteractible = null;
             bool enemiesNear = false;
@@ -309,6 +320,8 @@ public class Player_Behaviour : MonoBehaviour
             {
                 if (currentAttackTime == 0)
                 {
+                    audioSource.clip = attackSound;
+                    audioSource.Play();
                     StartCoroutine(PlayerAttack());
                     hasAttacked = true;
                     isAttackFlipped = spriteRenderer.flipX;
@@ -395,6 +408,8 @@ public class Player_Behaviour : MonoBehaviour
         rb.velocity = ejectForce;
         animator.SetTrigger("Hit");
         vfx.Play();
+        audioSource.clip = hitSound;
+        audioSource.Play();
         StartCoroutine("PlayerStun");
     }
     private IEnumerator PlayerAttack()

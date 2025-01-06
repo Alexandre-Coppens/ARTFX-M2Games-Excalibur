@@ -54,6 +54,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float hitStunTime = 0.7f;
     [Tooltip("The VFX when the enemy is hurt")]
     [SerializeField] private VisualEffect vfx;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip deadSound;
 
     [Header("Debug Idle")]
     private float idleLeft;
@@ -74,6 +76,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
     [SerializeField] private Player_Behaviour player;
+    [SerializeField] private AudioSource audioSource;
 
     public enum EnemyAction
     {
@@ -93,6 +96,7 @@ public class Enemy : MonoBehaviour
         player = Player_Behaviour._instance;
         animator = GetComponentInChildren<Animator>();
         vfx = GetComponentInChildren<VisualEffect>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -175,6 +179,7 @@ public class Enemy : MonoBehaviour
         else
         {
             nextAction = EnemyAction.Roaming;
+            currentAction = EnemyAction.Roaming;
             currentAttackTime = 0;
             hasAttacked = false;
             CheckForPlayer();
@@ -266,6 +271,8 @@ public class Enemy : MonoBehaviour
     {
         health -= 1;
         vfx.Play();
+        audioSource.clip = hitSound;
+        audioSource.Play();
         if (health > 0)
         {
             idleLeft = hitStunTime;
@@ -279,6 +286,8 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("Dead");
             currentAction = EnemyAction.Dead;
             gameObject.tag = "Untagged";
+            audioSource.clip = deadSound;
+            audioSource.Play();
             Destroy(GetComponent<CanBeHit>());
             Destroy(GetComponent<Rigidbody2D>());
             Destroy(GetComponent<Collider2D>());

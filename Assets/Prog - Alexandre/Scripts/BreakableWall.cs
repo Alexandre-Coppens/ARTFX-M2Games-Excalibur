@@ -8,14 +8,25 @@ public class BreakableWall : MonoBehaviour
     [Tooltip("If the breakable object drop a potion when destroyed")]
     [SerializeField] private bool dropPotion = false;
     [SerializeField] private GameObject potionPREFAB;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip breakSound;
 
     private GameObject vfx;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void Attacked()
     {
         hitPoints--;
+        audioSource.clip = hitSound;
         if (hitPoints == 0)
         {
+            audioSource.clip = breakSound;
+            audioSource.Play();
             vfx = GetComponentInChildren<VisualEffect>().gameObject;
             GameObject goVfx = Instantiate(vfx);
             goVfx.transform.position = transform.position;
@@ -28,5 +39,6 @@ public class BreakableWall : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        audioSource.Play();
     }
 }
